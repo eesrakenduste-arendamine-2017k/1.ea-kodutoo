@@ -48,7 +48,7 @@
 		</script>
 		<script>
 		function openNav() {
-    		document.getElementById("mySidenav").style.width = "250px";
+    		document.getElementById("mySidenav").style.width = "300px";
 		}
 		</script>
 		<script>
@@ -64,18 +64,33 @@
 				font-family: 'Bahiana', cursive;
 				color: #ededed;
 				text-align: center;
-				margin-top: 100px;
-				font-size: 250px;
+				margin-top: 0.2em;
+				font-size: 17em;
 			}
 			
 			body{
 				background: #212121;
 			}
-			.author{
-				font-family: 'Bahiana', cursive;
-				color: #ededed;
-				font-size: 20px;
-				margin-bottom: 5px;
+
+			.author {
+			    font-family: 'Bahiana', cursive;
+			    position: relative;
+			    color: #9e0000;
+			    font-size: 2.5em;
+			    margin-top: 13.5em;
+			    margin-left: 0.5em;
+			}
+
+			span.glyphicon.glyphicon-menu-hamburger {
+			    color: #ededed;
+			    position: fixed;
+			    margin-left: 25px;
+			    margin-top: 25px;
+			    font-size: 35px;
+			}
+
+			span.glyphicon.glyphicon-menu-hamburger a:hover {
+			    background-color: #9e0000;
 			}
 
 			/* The side navigation menu */
@@ -89,7 +104,7 @@
 			    background-color: #111; /* Black*/
 			    overflow-x: hidden; /* Disable horizontal scroll */
 			    padding-top: 60px; /* Place content 60px from the top */
-			    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+			    transition: 0.25s; /* 0.5 second transition effect to slide in the sidenav */
 			}
 
 			/* The navigation menu links */
@@ -115,18 +130,6 @@
 			    font-size: 36px;
 			    margin-left: 50px;
 			}
-
-			/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
-			#main {
-			    transition: margin-left .5s;
-			    padding: 20px;
-			}
-
-			/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
-			@media screen and (max-height: 450px) {
-			    .sidenav {padding-top: 15px;}
-			    .sid
-			 }
 
 		</style> 
 		
