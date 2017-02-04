@@ -16,35 +16,90 @@
 		    var clockContainer = document.getElementById('clock');
 		    console.log(clockContainer);
 
-		    //Kuvan kohe kellaaja
-		    clockContainer.innerHTML = getCurrentDateTime();
+		    var dateContainer = document.getElementById('date');
+		    console.log(dateContainer);
+
+		    //Kuvan kohe
+		    clockContainer.innerHTML = getCurrentTime();
+		    dateContainer.innerHTML = getCurrentDate();
 			
-			//Värskendan kellaaega iga 1s tagant
+			//Värskendan iga 1s tagant
 		    window.setInterval(function(){
-		        clockContainer.innerHTML = getCurrentDateTime();
+		        clockContainer.innerHTML = getCurrentTime();
+		    }, 1000);
+
+		    window.setInterval(function(){
+		        dateContainer.innerHTML = getCurrentDate();
 		    }, 1000);
 
 		};
 
-		var getCurrentDateTime = function(){
-		    var currentDate = new Date();
+		var getCurrentTime = function(){
+		    var currentTime = new Date();
 
-		    var hours = currentDate.getHours();
-		    var minutes = currentDate.getMinutes();
-		    var seconds = currentDate.getSeconds();
+		    var hours = currentTime.getHours();
+		    var minutes = currentTime.getMinutes();
+		    var seconds = currentTime.getSeconds();
 			
-		    var dateString = addZeroBefore(hours) + ':' + addZeroBefore(minutes) + ':' + addZeroBefore(seconds);
+		    var timeString = addZeroBefore(hours) + ' : ' + addZeroBefore(minutes) + ' : ' + addZeroBefore(seconds);
 			
-		    return dateString;
+		    return timeString;
 		};
 
-		function addZeroBefore(dateNumber) {
-		    if (dateNumber < 10) {
-		        dateNumber = '0' + dateNumber;
+		var getCurrentDate = function(){
+			var currentDate = new Date();
+
+			var day = currentDate.getDay();
+			var date = currentDate.getDate();
+			var month = currentDate.getMonth();
+			var year = currentDate.getFullYear();
+
+			var dateString = numberToDay(day) + '<br />' + date + ' ' + ' ' + numberToMonth(month) + ' ' + year;
+
+			return dateString;
+		}
+
+		function addZeroBefore(timeNumber) {
+		    if (timeNumber < 10) {
+		        timeNumber = '0' + timeNumber;
 		    }
 
-		    return dateNumber;
+		    return timeNumber;
 		}
+
+		function numberToDay(dayNumber){
+
+			var days = ["Sunday","Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+			dayNumber = days[dayNumber];
+
+			return dayNumber;
+		}
+
+		function numberToMonth(monthNumber){
+
+			var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+			monthNumber = months[monthNumber];
+
+			return monthNumber;
+		}
+
+		function dateToEnglish(dateNumber){
+			if (dateNumber > 3) {
+				dateNumber = dateNumber + 'th';
+			}
+			if (dateNumber = 3) {
+				dateNumber = dateNumber + 'rd';
+			}
+			if (dateNumber = 2) {
+				dateNumber = dateNumber + 'nd';
+			}
+			if (dateNumber = 1) {
+				dateNumber = dateNumber + 'st';
+			}
+
+			return dateNumber;
+		}
+
 		</script>
 		<script>
 		function openNav() {
@@ -64,8 +119,14 @@
 				font-family: 'Bahiana', cursive;
 				color: #ededed;
 				text-align: center;
-				margin-top: 0.2em;
 				font-size: 17em;
+			}
+
+			.date{
+				font-family: 'Bahiana', cursive;
+				color: #ededed;
+				text-align: center;
+				font-size: 2.5em;
 			}
 			
 			body{
@@ -77,7 +138,7 @@
 			    position: relative;
 			    color: #9e0000;
 			    font-size: 2.5em;
-			    margin-top: 13.5em;
+			    margin-top: 7.5em;
 			    margin-left: 0.5em;
 			}
 
@@ -87,10 +148,6 @@
 			    margin-left: 25px;
 			    margin-top: 25px;
 			    font-size: 35px;
-			}
-
-			span.glyphicon.glyphicon-menu-hamburger a:hover {
-			    background-color: #9e0000;
 			}
 
 			/* The side navigation menu */
@@ -103,15 +160,18 @@
 			    left: 0;
 			    background-color: #111; /* Black*/
 			    overflow-x: hidden; /* Disable horizontal scroll */
-			    padding-top: 60px; /* Place content 60px from the top */
-			    transition: 0.25s; /* 0.5 second transition effect to slide in the sidenav */
+			    overflow-y: hidden;
+			    padding-top: 5em; /* Place content 60px from the top */
+			    transition: 5.25s; /* 0.5 second transition effect to slide in the sidenav */
 			}
 
 			/* The navigation menu links */
 			.sidenav a {
 			    padding: 8px 8px 8px 32px;
+			    font-family: 'Bahiana', cursive;
 			    text-decoration: none;
-			    font-size: 25px;
+			    font-size: 2.5em;
+			    margin-left: 0em;
 			    color: #818181;
 			    display: block;
 			    transition: 0.3s
@@ -126,9 +186,9 @@
 			.sidenav .closebtn {
 			    position: absolute;
 			    top: 0;
-			    right: 25px;
-			    font-size: 36px;
-			    margin-left: 50px;
+			    right: 0.5em;
+			    font-size: 2.5em;
+			    margin-left: 1em;
 			}
 
 		</style> 
