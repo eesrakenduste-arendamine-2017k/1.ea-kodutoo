@@ -91,7 +91,7 @@
 
 			//Sidebar'i avamine
 			function openNav() {
-	    		document.getElementById("mySidenav").style.width = "300px";
+	    		document.getElementById("mySidenav").style.width = "27.5em";
 			}
 
 
@@ -103,22 +103,26 @@
 		</script>
 		<style>
 
-			.backgroundColorBlock {
+			button.backgroundColorBlock {
 		      width: 2.5vw;
 		      height: 2.5vw;
 		      display: inline-block;
-		      margin-left: 0.5em;
+		      margin-left: 1em;
 		      margin-right: 0.5em;
-		      margin-bottom: 0.5em;
+		      margin-bottom: 1em;
+			  outline: none;
+			  border: none;
 		    }
 
-		    .textColorBlock {
+		    button.textColorBlock {
 		      width: 2.5vw;
 		      height: 2.5vw;
 		      display: inline-block;
-		      margin-left: 0.5em;
+		      margin-left: 1em;
 		      margin-right: 0.5em;
 		      margin-bottom: 0.5em;
+			  outline: none;
+			  border: none;
 		    }
 
 		    #Black {
@@ -136,7 +140,7 @@
 		    #White {
 		    	background-color: #ffffff;
 		    }
-
+			
 		    #Maroon {
 		     	background-color: #a50909;
 		    }
@@ -173,6 +177,7 @@
 				font-family: 'Bahiana', cursive;
 				color: #ededed;
 				text-align: center;
+				position: relative;
 				font-size: 2.5vw;
 			}
 			
@@ -184,26 +189,33 @@
 				font-family: 'Bahiana', cursive;
 				color: #9e0000;
 				font-size: 2.5vw;
-				margin-left: 0.5em;
+				margin-left: 0.25em;
 				margin-bottom: 0.5em;
 				margin-top: 0.5em;
 			}
 
 			.author {
 			    font-family: 'Bahiana', cursive;
-			    position: fixed;
+			    position: absolute;
 			    color: #9e0000;
 			    font-size: 2.5vw;
-			    margin-top: 5.5em;
-			    margin-left: 0.5em;
+				margin-top: 8em;
+			    margin-left: 0.25em;
 			}
 
-			span.glyphicon.glyphicon-menu-hamburger {
+			button.glyphicon.glyphicon-menu-hamburger {
 			    color: #ededed;
 			    position: absolute;
 			    margin-left: 0.5em;
 			    margin-top: 0.5em;
 			    font-size: 3vw;
+				background-color: Transparent;
+				border: none;
+				outline:none;
+			}
+
+			button.glyphicon.glyphicon-menu-hamburger:hover{
+				color: #9e0000;
 			}
 
 			/* The side navigation menu */
@@ -217,7 +229,7 @@
 			    background-color: #111; /* Black*/
 			    overflow-x: hidden; /* Disable horizontal scroll */
 			    overflow-y: hidden;
-			    padding-top: 2.5em; /* Place content 60px from the top */
+			    padding-top: 2.5em;
 			    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
 			}
 

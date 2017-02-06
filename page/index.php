@@ -4,44 +4,43 @@
 	<div id="clock" class="clock"></div>
 	<div id="date" class="date"></div>
 
-
-
 	<!-- Button to open sidebar -->
-	<span class="glyphicon glyphicon-menu-hamburger" onclick="openNav()"></span>
+	<button class="glyphicon glyphicon-menu-hamburger" onclick="openNav()"></button>
 
 	<!-- Sidebar content -->
 	<div id="mySidenav" class="sidenav">
 	  	<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
 	  	<div class="heading">Background color</div>
-	  	<div class="backgroundColorBlock" id="Black"></div>
-	  	<div class="backgroundColorBlock" id="Gray"></div>
-		<div class="backgroundColorBlock" id="Maroon"></div>
-		<div class="backgroundColorBlock" id="Khaki"></div>
-		<div class="backgroundColorBlock" id="Green"></div>
-		<div class="backgroundColorBlock" id="Sea"></div>
-		<div class="backgroundColorBlock" id="Blue"></div>
-		<div class="backgroundColorBlock" id="Purple"></div>
-		<div class="backgroundColorBlock" id="Cloudy"></div>
-		<div class="backgroundColorBlock" id="White"></div>
+	  	<button class="backgroundColorBlock" id="Black"></button>
+	  	<button class="backgroundColorBlock" id="Gray"></button>
+		<button class="backgroundColorBlock" id="Maroon"></button>
+		<button class="backgroundColorBlock" id="Khaki"></button>
+		<button class="backgroundColorBlock" id="Green"></button>
+		<button class="backgroundColorBlock" id="Sea"></button>
+		<button class="backgroundColorBlock" id="Blue"></button>
+		<button class="backgroundColorBlock" id="Purple"></button>
+		<button class="backgroundColorBlock" id="Cloudy"></button>
+		<button class="backgroundColorBlock" id="White"></button>
 		<div class="heading">Text color</div>
-		<div class="textColorBlock" id="White"></div>
-		<div class="textColorBlock" id="Black"></div>
+		<button class="textColorBlock" id="White"></button>
+		<button class="textColorBlock" id="Black"></button>
 		<script>
 			//Background color picker
-			$(".backgroundColorBlock").click(function() {
+			$("button.backgroundColorBlock").click(function() {
 		    	//Get the background color of the clicked color block by using the this object
-		    	var $backgroundColor = $(this).css("background-color");
+		    	var $backgroundColor = $(this).css("background");
 		    	//Set the body's background-color to the received background-color
-		    	$("body").css("background-color", $backgroundColor);
+		    	$("body").css("background", $backgroundColor);
 	   		});
 		</script>
 		<script>
 			//Text color picker
-			$(".textColorBlock").click(function() {
+			$("button.textColorBlock").click(function() {
 		    	//Get the background color of the clicked color block by using the this object
-		    	var $textColor = $(this).css("background-color");
+		    	var $textColor = $(this).css("color");
 		    	//Set the body's background-color to the received background-color
-		    	$("body").css("background-color", $textColor);
+		    	$(".clock").css("color", $textColor);
+				$(".date").css("color", $textColor);
 	   		});
 		</script>
 	  	<div class="author">Created by:<br>Rauno Tegelmann</div>
