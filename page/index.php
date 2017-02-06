@@ -8,7 +8,7 @@
 	<button class="glyphicon glyphicon-menu-hamburger" onclick="openNav()"></button>
 
 	<!-- Sidebar content -->
-	<div id="mySidenav" class="sidenav">
+	<div id="Sidebar" class="sidenav">
 	  	<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
 	  	<div class="heading">Background color</div>
 	  	<button class="backgroundColorBlock" id="Black"></button>
@@ -41,6 +41,7 @@
 		    	//Set the body's background-color to the received background-color
 		    	$(".clock").css("color", $textColor);
 				$(".date").css("color", $textColor);
+				$("button.glyphicon.glyphicon-menu-hamburger").css("color", $textColor);
 	   		});
 		</script>
 	  	<div class="author">Created by:<br>Rauno Tegelmann</div>
