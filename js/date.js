@@ -7,7 +7,7 @@ var getCurrentDate = function(){
 	var month = currentDate.getMonth();
 	var year = currentDate.getFullYear();
 
-	var dateString = numberToDay(day) + '<br />' + date + ' ' + ' ' + numberToMonth(month) + ' ' + year;
+	var dateString = numberToDay(day) + '<br />' + numberToMonth(month) + ' ' + date + '<br />' + year;
 
 	return dateString;
 }

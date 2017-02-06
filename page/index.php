@@ -10,7 +10,7 @@
 	<!-- Sidebar content -->
 	<div id="Sidebar" class="sidenav">
 	  	<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-	  	<div class="heading">Background color</div>
+	  	<div class="heading">Background</div>
 	  	<button class="backgroundColorBlock" id="Black"></button>
 	  	<button class="backgroundColorBlock" id="Gray"></button>
 		<button class="backgroundColorBlock" id="Maroon"></button>
@@ -21,7 +21,7 @@
 		<button class="backgroundColorBlock" id="Purple"></button>
 		<button class="backgroundColorBlock" id="Cloudy"></button>
 		<button class="backgroundColorBlock" id="White"></button>
-		<div class="heading">Text color</div>
+		<div class="heading">Text</div>
 		<button class="textColorBlock" id="White"></button>
 		<button class="textColorBlock" id="Black"></button>
 		<script>
@@ -36,7 +36,7 @@
 		//Text color picker
 		$("button.textColorBlock").click(function() {
 	    	//Get the background color of the clicked color block by using the this object
-	    	var $textColor = $(this).css("color");
+	    	var $textColor = $(this).css("backgroundColor");
 	    	//Set the body's background-color to the received background-color
 	    	$(".clock").css("color", $textColor);
 			$(".date").css("color", $textColor);

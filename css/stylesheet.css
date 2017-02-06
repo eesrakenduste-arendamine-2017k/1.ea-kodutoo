@@ -1,23 +1,23 @@
 button.backgroundColorBlock {
-  width: 2.5vw;
-  height: 2.5vw;
-  display: inline-block;
-  margin-left: 1em;
-  margin-right: 0.5em;
-  margin-bottom: 1em;
-  outline: none;
-  border: none;
+	width: 2.5vw;
+	height: 2.5vw;
+	display: inline-block;
+	margin-left: 1em;
+	margin-right: 0.5em;
+	margin-bottom: 1em;
+	outline: none;
+	border: none;
 }
 
 button.textColorBlock {
-  width: 2.5vw;
-  height: 2.5vw;
-  display: inline-block;
-  margin-left: 1em;
-  margin-right: 0.5em;
-  margin-bottom: 1em;
-  outline: none;
-  border: none;
+	width: 2.5vw;
+  	height: 2.5vw;
+	display: inline-block;
+	margin-left: 1em;
+	margin-right: 0.5em;
+	margin-bottom: 1em;
+	outline: none;
+	border: none;
 }
 
 #Black {
@@ -65,16 +65,16 @@ button.textColorBlock {
 	color: #ededed;
 	text-align: center;
 	position: relative;
-	font-size: 17.5vw;
+	font-size: 20vw;
 	text-shadow: 15px 15px 15px #000000;
 }
 
 .date{
-	font-family: 'Bahiana', cursive;
+	font-family: 'Bungee Inline', cursive;
 	color: #ededed;
 	text-align: center;
 	position: relative;
-	font-size: 2.5vw;
+	font-size: 2vw;
 }
 
 body{
@@ -82,7 +82,7 @@ body{
 }
 
 .heading {
-	font-family: 'Bahiana', cursive;
+	font-family: 'Bungee Inline', cursive;
 	color: #9e0000;
 	font-size: 2.5vw;
 	margin-left: 0.25em;
@@ -91,12 +91,20 @@ body{
 }
 
 .author {
-    font-family: 'Bahiana', cursive;
+    font-family: 'Bungee Inline', cursive;
     position: absolute;
-    color: #9e0000;
-    font-size: 2.5vw;
+  	color: #9e0000;
+  	font-size: 2.5vw;
 	margin-top: 8em;
     margin-left: 0.25em;
+}
+
+.heading:hover {
+	color: #fff;
+}
+
+.author:hover {
+	color: #fff;
 }
 
 button.glyphicon.glyphicon-menu-hamburger {
@@ -110,26 +118,24 @@ button.glyphicon.glyphicon-menu-hamburger {
 	outline:none;
 }
 
-button.glyphicon.glyphicon-menu-hamburger:hover{
-	color: #9e0000;
+button.glyphicon.glyphicon-menu-hamburger:hover {
+	color: #fff;
 }
 
-/* The side navigation menu */
 .sidenav {
-    height: 100%; /* 100% Full-height */
+    height: 100%;
     width: 0; /* 0 width - change this with JavaScript */
     position: fixed; /* Stay in place */
     z-index: 1; /* Stay on top */
     top: 0;
     left: 0;
-    background-color: #111; /* Black*/
-    overflow-x: hidden; /* Disable horizontal scroll */
+    background-color: #111;
+    overflow-x: hidden;
     overflow-y: hidden;
     padding-top: 2.5em;
     transition: 0.5s;
 }
 
-/* The navigation menu links */
 .sidenav a {
     padding: 8px 8px 8px 32px;
     font-family: 'Bahiana', cursive;

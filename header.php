@@ -8,6 +8,7 @@
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 		<!-- Font -->
 		<link href="https://fonts.googleapis.com/css?family=Bahiana" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Bungee+Inline" rel="stylesheet">
 		<!-- JQuery -->
 		<script src="http://code.jquery.com/jquery-1.11.0.min.js" type="text/javascript" charset="utf-8"></script>
 		<!-- CSS -->
