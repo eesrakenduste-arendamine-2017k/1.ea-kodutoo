@@ -25,24 +25,23 @@
 		<button class="textColorBlock" id="White"></button>
 		<button class="textColorBlock" id="Black"></button>
 		<script>
-			//Background color picker
-			$("button.backgroundColorBlock").click(function() {
-		    	//Get the background color of the clicked color block by using the this object
-		    	var $backgroundColor = $(this).css("background");
-		    	//Set the body's background-color to the received background-color
-		    	$("body").css("background", $backgroundColor);
-	   		});
-		</script>
-		<script>
-			//Text color picker
-			$("button.textColorBlock").click(function() {
-		    	//Get the background color of the clicked color block by using the this object
-		    	var $textColor = $(this).css("color");
-		    	//Set the body's background-color to the received background-color
-		    	$(".clock").css("color", $textColor);
-				$(".date").css("color", $textColor);
-				$("button.glyphicon.glyphicon-menu-hamburger").css("color", $textColor);
-	   		});
+		//Background color picker
+		$("button.backgroundColorBlock").click(function() {
+	    	//Get the background color of the clicked color block by using the this object
+	    	var $backgroundColor = $(this).css("background");
+	    	//Set the body's background-color to the received background-color
+	    	$("body").css("background", $backgroundColor);
+	   	});
+	   	
+		//Text color picker
+		$("button.textColorBlock").click(function() {
+	    	//Get the background color of the clicked color block by using the this object
+	    	var $textColor = $(this).css("color");
+	    	//Set the body's background-color to the received background-color
+	    	$(".clock").css("color", $textColor);
+			$(".date").css("color", $textColor);
+			$("button.glyphicon.glyphicon-menu-hamburger").css("color", $textColor);
+   		});
 		</script>
 	  	<div class="author">Created by:<br>Rauno Tegelmann</div>
 	</div>
