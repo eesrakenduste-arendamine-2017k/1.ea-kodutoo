@@ -84,20 +84,28 @@ button.textColorBlock {
 	text-shadow: 15px 15px 15px #000000;
 }
 
+#ShadowYes:hover {
+	color: #02a800;
+}
+
 #ShadowNo {
 	text-shadow: 0px 0px 0px #000000;
 }
 
-.clock{
+#ShadowNo:hover {
+	color: #a80000;
+}
+
+.clock {
 	font-family: 'Bahiana', cursive;
 	color: #ededed;
 	text-align: center;
-	position: relative;
+	position: static;
 	font-size: 17vw;
 	text-shadow: 15px 15px 15px #000000;
 }
 
-.date{
+.date {
 	font-family: 'Bungee Inline', cursive;
 	color: #ededed;
 	text-align: center;
@@ -105,7 +113,7 @@ button.textColorBlock {
 	font-size: 2vw;
 }
 
-body{
+body {
 	background: #212121;
 }
 
@@ -120,11 +128,9 @@ body{
 
 .author {
     font-family: 'Bungee Inline', cursive;
-    position: absolute;
+    position: relative;
   	color: #9e0000;
-  	font-size: 2.5vw;
-	margin-top: 8em;
-    margin-left: 0.25em;
+  	font-size: 1vw;
 }
 
 .heading:hover {
@@ -192,12 +198,10 @@ button.glyphicon.glyphicon-menu-hamburger:hover {
     transition: 0.3s
 }
 
-/* When you mouse over the navigation links, change their color */
-.sidenav a:hover, .offcanvas a:focus{
+.sidenav a:hover, .offcanvas a:focus {
     color: #f1f1f1;
 }
 
-/* Position and style the close button (top right corner) */
 .sidenav .closebtn {
     position: absolute;
     top: 0;

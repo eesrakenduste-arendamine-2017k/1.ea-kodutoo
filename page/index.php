@@ -1,6 +1,6 @@
 <?php require("../header.php"); ?>
 	
-	<!-- Container for clock -->
+	<!-- Container for clock/date -->
 	<div id="clock" class="clock"></div>
 	<div id="date" class="date"></div>
 
@@ -63,7 +63,6 @@
 	    	$(".clock").css("text-shadow", $shadow);
    		});
 		</script>
-	  	<div class="author">Created by:<br>Rauno Tegelmann</div>
 	</div>
 
 <?php require("../footer.php"); ?>

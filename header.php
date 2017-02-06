@@ -18,7 +18,7 @@
 		<script src="../js/date.js" type="text/javascript"></script>
 		<!-- Sidebar -->
 		<script src="../js/sidebar.js" type="text/javascript"></script>
-		<!-- Show -->
+		<!-- Show on load -->
 		<script src="../js/show.js" type="text/javascript"></script>
 	</head>
 	<body>
