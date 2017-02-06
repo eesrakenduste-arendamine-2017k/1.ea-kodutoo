@@ -33,7 +33,7 @@ button.textColorBlock {
 }
 
 #White {
-	background-color: #ffffff;
+	background-color: #ededed;
 }
 
 #Maroon {
@@ -60,12 +60,40 @@ button.textColorBlock {
 	background-color: #7d1684;
 }
 
+#Bungee {
+	font-family: 'Bungee Inline', cursive;
+}
+
+#Raleway {
+	font-family: 'Raleway', sans-serif;
+}
+
+#Indie {
+	font-family: 'Indie Flower', cursive;
+}
+
+#Bahiana {
+	font-family: 'Bahiana', cursive;
+}
+
+#Montserrat {
+	font-family: 'Montserrat', sans-serif;
+}
+
+#ShadowYes {
+	text-shadow: 15px 15px 15px #000000;
+}
+
+#ShadowNo {
+	text-shadow: 0px 0px 0px #000000;
+}
+
 .clock{
 	font-family: 'Bahiana', cursive;
 	color: #ededed;
 	text-align: center;
 	position: relative;
-	font-size: 20vw;
+	font-size: 17vw;
 	text-shadow: 15px 15px 15px #000000;
 }
 
@@ -107,6 +135,24 @@ body{
 	color: #fff;
 }
 
+.btn-default {
+	color: #fff;
+	font-size: 2em;
+	border: none;
+	outline: none;
+	background-color: Transparent;
+	margin-left: 0.5em;
+}
+
+.btn-shadow {
+	color: #fff;
+	font-size: 2em;
+	border: none;
+	outline: none;
+	background-color: Transparent;
+	margin-left: 0.5em;
+}
+
 button.glyphicon.glyphicon-menu-hamburger {
     color: #ededed;
     position: absolute;
@@ -115,7 +161,7 @@ button.glyphicon.glyphicon-menu-hamburger {
     font-size: 3vw;
 	background-color: Transparent;
 	border: none;
-	outline:none;
+	outline: none;
 }
 
 button.glyphicon.glyphicon-menu-hamburger:hover {

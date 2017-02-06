@@ -24,6 +24,15 @@
 		<div class="heading">Text</div>
 		<button class="textColorBlock" id="White"></button>
 		<button class="textColorBlock" id="Black"></button>
+		<div class="heading">Shadow</div>
+		<button class="btn-shadow" id="ShadowYes"><span class="glyphicon glyphicon-ok"></span></button>
+		<button class="btn-shadow" id="ShadowNo"><span class="glyphicon glyphicon-remove"></span></button>
+		<div class="heading">Font</div>
+		<button class="btn-default" id="Bungee"><span class="glyphicon glyphicon-font"></span></button>
+		<button class="btn-default" id="Bahiana"><span class="glyphicon glyphicon-font"></span></button>
+		<button class="btn-default" id="Indie"><span class="glyphicon glyphicon-font"></span></button>
+		<button class="btn-default" id="Raleway"><span class="glyphicon glyphicon-font"></span></button>
+		<button class="btn-default" id="Montserrat"><span class="glyphicon glyphicon-font"></span></button>
 		<script>
 		//Background color picker
 		$("button.backgroundColorBlock").click(function() {
@@ -35,12 +44,23 @@
 	   	
 		//Text color picker
 		$("button.textColorBlock").click(function() {
-	    	//Get the background color of the clicked color block by using the this object
 	    	var $textColor = $(this).css("backgroundColor");
-	    	//Set the body's background-color to the received background-color
 	    	$(".clock").css("color", $textColor);
 			$(".date").css("color", $textColor);
 			$("button.glyphicon.glyphicon-menu-hamburger").css("color", $textColor);
+   		});
+
+		//Text font picker
+		$("button.btn-default").click(function() {
+	    	var $font = $(this).css("font-family");
+	    	$(".clock").css("font-family", $font);
+			$(".date").css("font-family", $font);
+   		});
+
+		//Shadow enabler
+		$("button.btn-shadow").click(function() {
+	    	var $shadow = $(this).css("text-shadow");
+	    	$(".clock").css("text-shadow", $shadow);
    		});
 		</script>
 	  	<div class="author">Created by:<br>Rauno Tegelmann</div>
