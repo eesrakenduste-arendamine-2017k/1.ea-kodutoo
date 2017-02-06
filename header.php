@@ -8,146 +8,202 @@
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 		<!-- Clock font -->
 		<link href="https://fonts.googleapis.com/css?family=Bahiana" rel="stylesheet">
-
+		<!-- JQuery -->
+		<script src="http://code.jquery.com/jquery-1.11.0.min.js" type="text/javascript" charset="utf-8"></script>
 		<script>
-		//Ootan kuni leht on täielikult laetud
-		window.onload = function(){
+		
+			//Ootan kuni leht on täielikult laetud
+			window.onload = function(){
 
-		    var clockContainer = document.getElementById('clock');
-		    console.log(clockContainer);
+			    var clockContainer = document.getElementById('clock');
+			    console.log(clockContainer);
 
-		    var dateContainer = document.getElementById('date');
-		    console.log(dateContainer);
+			    var dateContainer = document.getElementById('date');
+			    console.log(dateContainer);
 
-		    //Kuvan kohe
-		    clockContainer.innerHTML = getCurrentTime();
-		    dateContainer.innerHTML = getCurrentDate();
-			
-			//Värskendan iga 1s tagant
-		    window.setInterval(function(){
-		        clockContainer.innerHTML = getCurrentTime();
-		    }, 1000);
+			    //Kuvan kohe
+			    clockContainer.innerHTML = getCurrentTime();
+			    dateContainer.innerHTML = getCurrentDate();
+				
+				//Värskendan iga 1s tagant
+			    window.setInterval(function(){
+			        clockContainer.innerHTML = getCurrentTime();
+			    }, 1000);
 
-		    window.setInterval(function(){
-		        dateContainer.innerHTML = getCurrentDate();
-		    }, 1000);
+			    window.setInterval(function(){
+			        dateContainer.innerHTML = getCurrentDate();
+			    }, 1000);
+			};
 
-		};
+			//Kell
+			var getCurrentTime = function(){
+			    var currentTime = new Date();
 
-		var getCurrentTime = function(){
-		    var currentTime = new Date();
+			    var hours = currentTime.getHours();
+			    var minutes = currentTime.getMinutes();
+			    var seconds = currentTime.getSeconds();
+				
+			    var timeString = addZeroBefore(hours) + ' : ' + addZeroBefore(minutes) + ' : ' + addZeroBefore(seconds);
+				
+			    return timeString;
+			};
 
-		    var hours = currentTime.getHours();
-		    var minutes = currentTime.getMinutes();
-		    var seconds = currentTime.getSeconds();
-			
-		    var timeString = addZeroBefore(hours) + ' : ' + addZeroBefore(minutes) + ' : ' + addZeroBefore(seconds);
-			
-		    return timeString;
-		};
+			//Kuupäev
+			var getCurrentDate = function(){
+				var currentDate = new Date();
 
-		var getCurrentDate = function(){
-			var currentDate = new Date();
+				var day = currentDate.getDay();
+				var date = currentDate.getDate();
+				var month = currentDate.getMonth();
+				var year = currentDate.getFullYear();
 
-			var day = currentDate.getDay();
-			var date = currentDate.getDate();
-			var month = currentDate.getMonth();
-			var year = currentDate.getFullYear();
+				var dateString = numberToDay(day) + '<br />' + date + ' ' + ' ' + numberToMonth(month) + ' ' + year;
 
-			var dateString = numberToDay(day) + '<br />' + date + ' ' + ' ' + numberToMonth(month) + ' ' + year;
+				return dateString;
+			}
 
-			return dateString;
-		}
+			//Lisada nullid
+			function addZeroBefore(timeNumber) {
+			    if (timeNumber < 10) {
+			        timeNumber = '0' + timeNumber;
+			    }
 
-		function addZeroBefore(timeNumber) {
-		    if (timeNumber < 10) {
-		        timeNumber = '0' + timeNumber;
+			    return timeNumber;
+			}
+
+			//Päeva number päeva nimeks
+			function numberToDay(dayNumber){
+
+				var days = ["Sunday","Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+				dayNumber = days[dayNumber];
+
+				return dayNumber;
+			}
+
+			//Kuu number kuu nimeks
+			function numberToMonth(monthNumber){
+
+				var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+				monthNumber = months[monthNumber];
+
+				return monthNumber;
+			}
+
+			//Sidebar'i avamine
+			function openNav() {
+	    		document.getElementById("mySidenav").style.width = "300px";
+			}
+
+
+			//Sidebar'i sulgemine
+			function closeNav() {
+			    document.getElementById("mySidenav").style.width = "0";
+			}
+
+		</script>
+		<style>
+
+			.backgroundColorBlock {
+		      width: 2.5vw;
+		      height: 2.5vw;
+		      display: inline-block;
+		      margin-left: 0.5em;
+		      margin-right: 0.5em;
+		      margin-bottom: 0.5em;
 		    }
 
-		    return timeNumber;
-		}
+		    .textColorBlock {
+		      width: 2.5vw;
+		      height: 2.5vw;
+		      display: inline-block;
+		      margin-left: 0.5em;
+		      margin-right: 0.5em;
+		      margin-bottom: 0.5em;
+		    }
 
-		function numberToDay(dayNumber){
+		    #Black {
+		    	background-color: #000000;
+		    }
 
-			var days = ["Sunday","Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-			dayNumber = days[dayNumber];
+		    #Gray {
+		    	background-color: #212121;
+		    }
 
-			return dayNumber;
-		}
+		    #Cloudy {
+		    	background-color: #dbdbdb;
+		    }
 
-		function numberToMonth(monthNumber){
+		    #White {
+		    	background-color: #ffffff;
+		    }
 
-			var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-			monthNumber = months[monthNumber];
+		    #Maroon {
+		     	background-color: #a50909;
+		    }
 
-			return monthNumber;
-		}
+		    #Khaki {
+		    	background-color: #774d09;
+		    }
 
-		function dateToEnglish(dateNumber){
-			if (dateNumber > 3) {
-				dateNumber = dateNumber + 'th';
-			}
-			if (dateNumber = 3) {
-				dateNumber = dateNumber + 'rd';
-			}
-			if (dateNumber = 2) {
-				dateNumber = dateNumber + 'nd';
-			}
-			if (dateNumber = 1) {
-				dateNumber = dateNumber + 'st';
-			}
+		    #Green {
+		    	background-color: #25822b;
+		    }
 
-			return dateNumber;
-		}
+		    #Sea {
+		    	background-color: #258278;
+		    }
 
-		</script>
-		<script>
-		function openNav() {
-    		document.getElementById("mySidenav").style.width = "300px";
-		}
-		</script>
-		<script>
-		/* Set the width of the side navigation to 0 */
-		function closeNav() {
-		    document.getElementById("mySidenav").style.width = "0";
-		}
-		</script>
+		    #Blue {
+		    	background-color: #283d91;
+		    }
 
-		<style>
+		    #Purple {
+		    	background-color: #7d1684;
+		    }
 
 			.clock{
 				font-family: 'Bahiana', cursive;
 				color: #ededed;
 				text-align: center;
-				font-size: 17em;
+				position: relative;
+				font-size: 17.5vw;
 			}
 
 			.date{
 				font-family: 'Bahiana', cursive;
 				color: #ededed;
 				text-align: center;
-				font-size: 2.5em;
+				font-size: 2.5vw;
 			}
 			
 			body{
 				background: #212121;
 			}
 
+			.heading {
+				font-family: 'Bahiana', cursive;
+				color: #9e0000;
+				font-size: 2.5vw;
+				margin-left: 0.5em;
+				margin-bottom: 0.5em;
+				margin-top: 0.5em;
+			}
+
 			.author {
 			    font-family: 'Bahiana', cursive;
-			    position: relative;
+			    position: fixed;
 			    color: #9e0000;
-			    font-size: 2.5em;
-			    margin-top: 7.5em;
+			    font-size: 2.5vw;
+			    margin-top: 5.5em;
 			    margin-left: 0.5em;
 			}
 
 			span.glyphicon.glyphicon-menu-hamburger {
 			    color: #ededed;
-			    position: fixed;
-			    margin-left: 25px;
-			    margin-top: 25px;
-			    font-size: 35px;
+			    position: absolute;
+			    margin-left: 0.5em;
+			    margin-top: 0.5em;
+			    font-size: 3vw;
 			}
 
 			/* The side navigation menu */
@@ -161,8 +217,8 @@
 			    background-color: #111; /* Black*/
 			    overflow-x: hidden; /* Disable horizontal scroll */
 			    overflow-y: hidden;
-			    padding-top: 5em; /* Place content 60px from the top */
-			    transition: 5.25s; /* 0.5 second transition effect to slide in the sidenav */
+			    padding-top: 2.5em; /* Place content 60px from the top */
+			    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
 			}
 
 			/* The navigation menu links */
@@ -171,7 +227,6 @@
 			    font-family: 'Bahiana', cursive;
 			    text-decoration: none;
 			    font-size: 2.5em;
-			    margin-left: 0em;
 			    color: #818181;
 			    display: block;
 			    transition: 0.3s
