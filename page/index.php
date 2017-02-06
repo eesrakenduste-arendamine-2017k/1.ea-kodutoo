@@ -19,7 +19,7 @@
 		<button class="backgroundColorBlock" id="Sea"></button>
 		<button class="backgroundColorBlock" id="Blue"></button>
 		<button class="backgroundColorBlock" id="Purple"></button>
-		<button class="backgroundColorBlock" id="Cloudy"></button>
+		<button class="backgroundColorBlock" id="Semolina"></button>
 		<button class="backgroundColorBlock" id="White"></button>
 		<div class="heading">Text</div>
 		<button class="textColorBlock" id="White"></button>
@@ -31,8 +31,8 @@
 		<button class="btn-default" id="Bungee"><span class="glyphicon glyphicon-font"></span></button>
 		<button class="btn-default" id="Bahiana"><span class="glyphicon glyphicon-font"></span></button>
 		<button class="btn-default" id="Indie"><span class="glyphicon glyphicon-font"></span></button>
-		<button class="btn-default" id="Raleway"><span class="glyphicon glyphicon-font"></span></button>
 		<button class="btn-default" id="Montserrat"><span class="glyphicon glyphicon-font"></span></button>
+		<button class="btn-default" id="Pacifico"><span class="glyphicon glyphicon-font"></span></button>
 		<script>
 		//Background color picker
 		$("button.backgroundColorBlock").click(function() {
