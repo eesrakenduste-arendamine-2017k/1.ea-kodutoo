@@ -1,0 +1,14 @@
+body {
+    background-color:#b5b3b1;
+  }
+
+.clockStyle {
+    font-size: 63px;
+    font-family: Monospace;
+    text-align: center;
+    border: 6px solid #dbd81a;
+    margin: auto;
+    width: 80%;
+    color: #dbd81a;
+    margin-top: 20%;
+  }

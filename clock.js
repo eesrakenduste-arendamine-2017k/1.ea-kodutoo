@@ -2,7 +2,7 @@
 // aken laetud
 window.onload = function(){
 
-    var clockContainer = document.getElementById('clocks');
+    var clockContainer = document.getElementById('clock');
     console.log(clockContainer);
 
     // kohe kirjutame ka kellaaja
@@ -11,7 +11,6 @@ window.onload = function(){
     window.setInterval(function(){
         clockContainer.innerHTML = getCurrentDateTime();
     }, 1000);
-
 
 };
 
@@ -24,7 +23,7 @@ var getCurrentDateTime = function(){
     var dateDay = currentDate.getDate();
 
     var m = new Date();
-      var month = new Array();
+      var month = new Array(12);
       month[0] = "Jaanuar";
       month[1] = "Veebruar";
       month[2] = "Märts";
