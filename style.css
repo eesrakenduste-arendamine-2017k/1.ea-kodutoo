@@ -75,7 +75,11 @@
 	position: absolute;
 	bottom: 190px;
 	left: 690px;
-	
+}
+#font1:hover {
+	background-color: #FFFFFF;
+	color: #2196F3;
+	border-color: #2196F3;
 }
 #font2 {
 	font-family: "Impact";
@@ -91,9 +95,12 @@
 	box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
 	position: absolute;
 	bottom: 190px;
-	left: 520px;
-	
-	
+	left: 520px;	
+}
+#font2:hover {
+	background-color: #FFFFFF;
+	color: #2196F3;
+	border-color: #2196F3;
 }
 
 #font3{
@@ -111,6 +118,12 @@
 	position: absolute;
 	bottom: 190px;
 	left: 350px;
+}
+
+#font3:hover {
+	background-color: #FFFFFF;
+	color: #2196F3;
+	border-color: #2196F3;
 }
 
 #fontText {
@@ -135,6 +148,11 @@
 	bottom: 110px;
 	left: 608px;
 }
+#plus:hover {
+	background-color: #FFFFFF;
+	color: #2196F3;
+	border-color: #2196F3;
+}
 
 #minus {
 	font-family: "arial";
@@ -152,5 +170,10 @@
 	bottom: 110px;
 	left: 350px;
 	
+}
+#minus:hover {
+	background-color: #FFFFFF;
+	color: #2196F3;
+	border-color: #2196F3;
 }
 
