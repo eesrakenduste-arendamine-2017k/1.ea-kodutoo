@@ -1,5 +1,4 @@
 var pilt = 0;
-
 var pildikood = new Array("pilt1.jpg", "pilt2.jpg", "pilt3.jpg", "pilt4.jpg", "pilt5.jpg");
 
 function starting(){						 
@@ -84,18 +83,31 @@ function changeBack() {
 	document.getElementById("taust").style.backgroundImage = "url(" + pildikood[pilt] + ")";
 }
 
-var currentSize = 100;
+var currentSize = 80;
 
-function fontBigger() {
-	currentSize += 10;
-	document.getElementById("clockDisplay").style.fontSize = currentSize + "px";
-}
 
 function fontSmaller () {
-	currentSize -= 10;
+	if(currentSize <= 10){
+		alert("Kella suurus on liiga väike!");
+	}
+	else {
+	currentSize -= 7;
 	document.getElementById("clockDisplay").style.fontSize = currentSize + "px"; 
-
+	console.log(currentSize);
+	}
 }
+
+function fontBigger() {
+	if(currentSize >= 129){
+		alert("Kella suurus on liiga suur!");
+	} 
+	else {
+		currentSize += 7;
+		document.getElementById("clockDisplay").style.fontSize = currentSize + "px";
+		console.log(currentSize);
+	}	
+}
+
 
 
 

@@ -1,0 +1,5 @@
+Autor Mark Väljak
+
+kodutöö: kell
+kell näitab kuupäeva, kuud ja current kella
+kasutaja saab muuta kella suurust, fondi stiili ja tausta.
