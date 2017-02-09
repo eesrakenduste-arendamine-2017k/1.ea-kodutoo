@@ -1,0 +1,27 @@
+body {
+    background-color: #dddfd4
+;
+}
+
+div.content {
+    position: relative;
+    text-transform: uppercase;
+    text-align: center;
+    font-family: 'Lato', sans-serif;
+    margin: 20px;
+    background-color: #fae596
+;
+}
+
+div.clock{
+font-size: 10vh;
+}
+
+div.author{
+    position: relative;
+    font-size: 3vh;
+    background-color: #3fb0ac;
+    text-align: center;
+}
+
+
