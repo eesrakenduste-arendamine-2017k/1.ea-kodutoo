@@ -1,0 +1,91 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+
+
+<style>
+    .clock {
+        width: 100%;
+        font-family:Impact, Charcoal, sans-serif;
+    }#grad1{
+        background: linear-gradient(to bottom, maroon, black);
+        background-repeat: no-repeat;
+        height: 100%;
+        background-attachment: fixed;
+    }.btn-dark{
+        background-color: maroon;
+        font-weight: bold;
+        opacity: 0.6;
+    }.btn-dark:hover {
+        background-color: #3b0000 !important;
+    }
+</style>
+
+<script>
+
+</script>
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+		
+        <script src="clock.js" charset="utf-8"></script>
+        <script src="edit.js" charset="utf-8"></script>
+</head>
+<body id="grad1">
+
+        <center><div class="clock" id="clock"></div></center>
+
+<p id="bg"></p>
+<p id="ba"></p>
+<p id="bb"></p>
+
+            <center><button class="btn btn-dark fixed-bottom" onMouseOver="show('div1')" onMouseOut="hide('div1')" style="margin-bottom: 20px;height: 148px">M<br>E<br>N<br>Ü<br>Ü</button>
+                <div class="btn-group-vertical fixed-bottom" onMouseOver="show('div1')" onMouseOut="hide('div1')" style="visibility: hidden;width: 500px;margin-bottom: 20px;margin-left: 47px" id="div1">
+                        <div class="btn-group">
+                            <a style="float: left;height: 50px;width: 290%;color: black" class="btn btn-dark disabled">Tausta varv:</a>
+                            <button style="float: right;height: 50px" class="btn btn-dark" onMouseEnter="bgRed()" onclick="bgRed()">
+                                <img src="http://www.pptbackground.net/background/Red-Pattern-Powerpoint-Background-for-Powerpoint-Templates.jpg" style="width: 25px;height: 25px"></button>
+                            <button style="float: right;height: 50px" class="btn btn-dark" onMouseEnter="bgGray()" onclick="bgGray()">
+                                <img src="https://themarklee.com/wp-content/uploads/2013/11/Screen-Shot-2013-11-27-at-7.01.07-PM.png" style="width: 25px;height: 25px"></button>
+                            <button style="float: right;height: 50px" class="btn btn-dark" onMouseEnter="bgGreen()" onclick="bgGreen()">
+                                <img src="https://www.xmple.com/wallpaper/gradient-green-linear-black-1920x1080-c2-006400-000000-a-60-f-14.svg" style="width: 25px;height: 25px"></button>
+                            <button style="float: right;height: 50px" class="btn btn-dark" onMouseEnter="bgBlue()" onclick="bgBlue()">
+                                <img src="https://www.webdesign.org/img_articles/15485/Step1.png" style="width: 25px;height: 25px"></button>
+                            <button style="float: right;height: 50px" class="btn btn-dark" onMouseEnter="bgWhite()" onclick="bgWhite()">
+                                <img src="http://cdn.pcwallart.com/images/gradient-black-to-white-square-wallpaper-4.jpg" style="width: 25px;height: 25px"></button>
+                        </div>
+                        <div class="btn-group">
+                            <a style="float: right;height: 50px;width: 227%;color: black" class="btn btn-dark disabled">Numbrite varv:</a>
+                            <button style="float: right;height: 50px;color: maroon" class="btn btn-dark" onClick="colorRed()">123</button>
+                            <button style="float: right;height: 50px;color: black" class="btn btn-dark" onclick="colorBlack()">123</button>
+                            <button style="float: right;height: 50px;color: darkgreen" class="btn btn-dark" onclick="colorGreen()">123</button>
+                            <button style="float: right;height: 50px;color: dodgerblue" class="btn btn-dark" onclick="colorBlue()">123</button>
+                            <button style="float: right;height: 50px;color: white" class="btn btn-dark" onclick="colorWhite()">123</button>
+                        </div>
+                        <div class="btn-group">
+                            <a style="height: 50px;width: 289%;color: black" class="btn btn-dark disabled">Suurus:</a>
+                            <button style="height: 50px;font-size: x-small" class="btn btn-dark" onclick="fontSmallest()">01</button>
+                            <button style="height: 50px;font-size: small" class="btn btn-dark" onclick="fontSmaller()">23</button>
+                            <button style="height: 50px;font-size: medium" class="btn btn-dark" onclick="fontDefault()">45</button>
+                            <button style="height: 50px;font-size: large" class="btn btn-dark" onclick="fontBigger()">67</button>
+                            <button style="height: 50px;font-size: x-large" class="btn btn-dark" onclick="fontBiggest()">89</button>
+                        </div>
+            </div></center>
+
+
+</body>
+
+
+<text class="fixed-bottom">Autor: Alari Verev</text>
+</html>
+
+
+
+
