@@ -20,8 +20,13 @@
     <title>Kelloks KornFleiks</title>
 </head>
 <body onload="startTime()">
-<div id="clock">
-
+<div id="clouds">
+	<div class="cloud x1"></div>
+	<div class="cloud x2"></div>
+	<div class="cloud x3"></div>
+	<div class="cloud x4"></div>
+	<div class="cloud x5"></div>
 </div>
+    <div id="clock"></div>
 </body>
 </html>
