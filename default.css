@@ -8,7 +8,20 @@
     transform: translate(-50%, -50%);
     font-size: 200%;
     font-family: 'Audiowide', cursive;
-    color: white;
+    color: darkblue;
+}
+
+#AuthorName {
+	border-radius: 1em;
+    padding: 1em;
+	position: absolute;
+	bottom: 5%;
+	left: 50%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);
+	font-size: 125%;
+	color: darkblue;
+	font-family: 'Audiowide', cursive;
 }
 
 /*Lets start with the cloud formation rather*/

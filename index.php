@@ -28,5 +28,8 @@
 	<div class="cloud x5"></div>
 </div>
     <div id="clock"></div>
+<footer>
+    <p id="AuthorName">Hinrek Saar</p>
+</footer>
 </body>
 </html>
