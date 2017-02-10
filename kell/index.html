@@ -1,0 +1,32 @@
+<!Doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>Kell</title>
+		<link rel="stylesheet" href="style.css" />
+		<script type="text/javascript" src="scripts.js"></script>
+		
+	</head>
+	
+	<body id="taust" onLoad="renderTime();starting();">
+		<button id="display" onclick="display()";>Näita ainult kella</button>
+		<div id="clockDisplay"></div>
+		<section id="big">
+			<div id="small">
+				<h1 id="nimi" onclick="alert('Autor on Mark Väljak')">klicki, et näha autorit</h1>
+				<img src="tagasi.png" id="tagasi" onclick="changeBack()">
+				<img src="edasi.png" id="edasi" onclick="changeNew()">
+				<h1 id="zuum">Muuda teksti suurust:</h1>
+				<button id="plus" onclick="fontBigger()">zoom in</button>
+				<button id="minus" onclick="fontSmaller()">zoom out</button>
+				<button id="font1" onclick="changeFont()">Arial</button>
+				<button id="font2" onclick="changeFont2()">Impact</button>
+				<button id="font3" onclick="changeFont3()">Courier</button>
+				<h1 id="fontText">Muuda fonti:</h1>
+				
+			</div>
+		</section>
+	</body>
+
+</html>
