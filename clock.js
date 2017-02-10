@@ -1,4 +1,5 @@
 function checkTime(i) {
+    "use strict";
     if (i < 10) {
         i = "0" + i;
     }
@@ -6,6 +7,7 @@ function checkTime(i) {
 }
 
 function dayToName(day) {
+    "use strict";
     switch (day) {
         case 1:
             return "Esmaspäev";
@@ -28,6 +30,7 @@ function dayToName(day) {
 
 
 function startTime() {
+    "use strict";
     var today = new Date();
     var h = today.getHours();
     var m = today.getMinutes();
@@ -41,6 +44,6 @@ function startTime() {
     kp = checkTime(kp);
     m = checkTime(m);
     s = checkTime(s);
-    document.getElementById("clock").innerHTML = h + ":" + m + ":" + s + " Kuupäev: " + kp + "." + kuu + " Nädalapäev: " + dayToName(np);
+    document.getElementById("clock").innerHTML = h + ":" + m + ":" + s + " " + kp + "." + kuu + " " + dayToName(np);
     var t = setTimeout(startTime, 500);
 }

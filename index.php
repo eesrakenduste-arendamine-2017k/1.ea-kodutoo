@@ -10,6 +10,7 @@
 <!doctype html>
 <html lang="en">
 <head>
+    <link href="https://fonts.googleapis.com/css?family=Audiowide" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="default.css">
     <meta charset="UTF-8">
     <meta name="viewport"
