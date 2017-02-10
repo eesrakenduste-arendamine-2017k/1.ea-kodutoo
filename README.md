@@ -1,3 +1,16 @@
+## 1. kodutöö – Lauakell
+
+# Funktsioonid
+
+* Funktisoon 1
+* Funktisoon 2
+* Funktisoon 3
+* Funktisoon 4
+
+
+
+---------
+
 # 1. kodutöö – Lauakell
 
 Kujunda kellanäide vastavalt maitsele või kindlale teemale, mahutades kella täisekraanile, et saaks kasutada lauakella või ekraanisäästja asemel. Selleks, et see sobiks paljudele ekraanidele, kasuta kujunduse loomisel protsendilisi väärtusi (nt width: 100%; ) või võimalda kella suurust kasutajal muuta.
