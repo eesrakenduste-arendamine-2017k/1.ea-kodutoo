@@ -1,3 +1,15 @@
+function changeColor() {
+    "use strict";
+    var col = document.getElementById("changecolor");
+    col.style.backgroundColor = colors[Math.floor((Math.random()*19)+1)];
+}
+
+var colors = ["#b8b894", "#6666ff", "#b3e6cc",
+"#ffeee6", "#ff66a3", "#a6a6a6", "#cce6ff",
+"#e8e8e8", "#3333ff", "#6699cc", "#ff3333",
+"#ffff66", "#9fdfbf", "#ff471a", "#ffb84d",
+"#ff6633", "#bfff80", "#ff8080", "#e6ff99"];
+
 function checkTime(i) {
     "use strict";
     if (i < 10) {

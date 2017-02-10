@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" onclick="changeColor()">
 <head>
     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Nova+Mono" rel="stylesheet">
@@ -11,10 +11,11 @@
     <script src="clock.js" charset="utf-8"></script>
     <title>screensaver</title>
 </head>
-<body onload="startTime()">
+<body id="changecolor" onload="startTime()">
   <div class='fullscreenDiv'>
     <div id="clock"></div>
     <div id="dateAndDay"></div>
+
   </div>
 <footer>
 </footer>
