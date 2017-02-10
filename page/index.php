@@ -11,28 +11,28 @@
 	<div id="Sidebar" class="sidenav">
 	  	<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
 	  	<div class="heading">Background</div>
-	  	<button class="backgroundColorBlock" id="Black"></button>
-	  	<button class="backgroundColorBlock" id="Gray"></button>
-		<button class="backgroundColorBlock" id="Maroon"></button>
-		<button class="backgroundColorBlock" id="Khaki"></button>
-		<button class="backgroundColorBlock" id="Green"></button>
-		<button class="backgroundColorBlock" id="Sea"></button>
-		<button class="backgroundColorBlock" id="Blue"></button>
-		<button class="backgroundColorBlock" id="Purple"></button>
-		<button class="backgroundColorBlock" id="Semolina"></button>
-		<button class="backgroundColorBlock" id="White"></button>
+		  	<button class="backgroundColorBlock" id="Black"></button>
+		  	<button class="backgroundColorBlock" id="Gray"></button>
+			<button class="backgroundColorBlock" id="Maroon"></button>
+			<button class="backgroundColorBlock" id="Khaki"></button>
+			<button class="backgroundColorBlock" id="Green"></button>
+			<button class="backgroundColorBlock" id="Sea"></button>
+			<button class="backgroundColorBlock" id="Blue"></button>
+			<button class="backgroundColorBlock" id="Purple"></button>
+			<button class="backgroundColorBlock" id="Semolina"></button>
+			<button class="backgroundColorBlock" id="White"></button>
 		<div class="heading">Text</div>
-		<button class="textColorBlock" id="White"></button>
-		<button class="textColorBlock" id="Black"></button>
+			<button class="textColorBlock" id="White"></button>
+			<button class="textColorBlock" id="Black"></button>
 		<div class="heading">Shadow</div>
-		<button class="btn-shadow" id="ShadowYes"><span class="glyphicon glyphicon-ok"></span></button>
-		<button class="btn-shadow" id="ShadowNo"><span class="glyphicon glyphicon-remove"></span></button>
+			<button class="btn-shadow" id="ShadowYes"><span class="glyphicon glyphicon-ok"></span></button>
+			<button class="btn-shadow" id="ShadowNo"><span class="glyphicon glyphicon-remove"></span></button>
 		<div class="heading">Font</div>
-		<button class="btn-default" id="Bungee"><span class="glyphicon glyphicon-font"></span></button>
-		<button class="btn-default" id="Bahiana"><span class="glyphicon glyphicon-font"></span></button>
-		<button class="btn-default" id="Indie"><span class="glyphicon glyphicon-font"></span></button>
-		<button class="btn-default" id="Montserrat"><span class="glyphicon glyphicon-font"></span></button>
-		<button class="btn-default" id="Pacifico"><span class="glyphicon glyphicon-font"></span></button>
+			<button class="btn-default" id="Bungee"><span class="glyphicon glyphicon-font"></span></button>
+			<button class="btn-default" id="Bahiana"><span class="glyphicon glyphicon-font"></span></button>
+			<button class="btn-default" id="Indie"><span class="glyphicon glyphicon-font"></span></button>
+			<button class="btn-default" id="Montserrat"><span class="glyphicon glyphicon-font"></span></button>
+			<button class="btn-default" id="Pacifico"><span class="glyphicon glyphicon-font"></span></button>
 		<script>
 		//Background color picker
 		$("button.backgroundColorBlock").click(function() {

@@ -103,6 +103,7 @@ button.textColorBlock {
 	position: static;
 	font-size: 17vw;
 	text-shadow: 15px 15px 15px #000000;
+	user-select: none;
 }
 
 .date {
@@ -111,6 +112,7 @@ button.textColorBlock {
 	text-align: center;
 	position: relative;
 	font-size: 2vw;
+	user-select: none;
 }
 
 body {
@@ -120,10 +122,12 @@ body {
 .heading {
 	font-family: 'Bungee Inline', cursive;
 	color: #9e0000;
-	font-size: 2.5vw;
+	font-size: 1.5vw;
 	margin-left: 0.25em;
 	margin-bottom: 0.5em;
 	margin-top: 0.5em;
+	user-select: none;
+	cursor: pointer;
 }
 
 .author {
@@ -131,6 +135,7 @@ body {
     position: relative;
   	color: #9e0000;
   	font-size: 1vw;
+	user-select: none;
 }
 
 .heading:hover {
