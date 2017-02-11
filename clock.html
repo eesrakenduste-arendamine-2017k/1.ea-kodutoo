@@ -1,5 +1,6 @@
 <link href="https://fonts.googleapis.com/css?family=Barrio" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Bahiana|Bungee+Inline|Indie+Flower|Pacifico|Montserrat" rel="stylesheet">
 
 <style>
     .clock {
@@ -20,7 +21,19 @@
 		background-color:lime;
 	}.btn-dark:hover {
         background-color: gray !important;
-    }
+    }#Bungee {
+		font-family: 'Bungee Inline', cursive;
+	}#Montserrat {
+		font-family: 'Montserrat', sans-serif;
+	}#Indie {
+		font-family: 'Indie Flower', cursive;
+	}#Bahiana {
+		font-family: 'Bahiana', cursive;
+	}#Pacifico {
+		font-family: 'Pacifico', cursive;
+	}#Inconsolata {
+		font-family: 'Inconsolata', monospace;
+	}
 </style>
 
 <!DOCTYPE html>
@@ -46,7 +59,7 @@
 		<div class="panel panel-default">
 		  <div class="panel-heading">
 			<h4 class="panel-title">
-			  <a data-toggle="collapse" data-parent="#accordion" href="#nrcolor">Numbrite värv</a>
+			  <a data-toggle="collapse" data-parent="#accordion" href="#nrcolor">Värv</a>
 			</h4>
 		  </div>
 		  <div id="nrcolor" class="panel-collapse collapse">
@@ -62,32 +75,38 @@
 		<div class="panel panel-default">
 		  <div class="panel-heading">
 			<h4 class="panel-title">
-			  <a data-toggle="collapse" data-parent="#accordion" href="#nrsize">Kella suurus</a>
+			  <a data-toggle="collapse" data-parent="#accordion" href="#nrsize">Suurus</a>
 			</h4>
 		  </div>
 			<div id="nrsize" class="panel-collapse collapse">
 				<div class="btn-group">
-					<button style="height: 50px;font-size: x-small" class="btn btn-dark" onclick="fontSmallest()">01</button>
-					<button style="height: 50px;font-size: small" class="btn btn-dark" onclick="fontSmaller()">23</button>
-					<button style="height: 50px;font-size: medium" class="btn btn-dark" onclick="fontDefault()">45</button>
-					<button style="height: 50px;font-size: large" class="btn btn-dark" onclick="fontBigger()">67</button>
-					<button style="height: 50px;font-size: x-large" class="btn btn-dark" onclick="fontBiggest()">89</button>
+					<button style="height: 50px;font-size: x-small" class="btn btn-dark" onclick="fontSmallest()">Väikseim</button>
+					<button style="height: 50px;font-size: small" class="btn btn-dark" onclick="fontSmaller()">Väike</button>
+					<button style="height: 50px;font-size: medium" class="btn btn-dark" onclick="fontDefault()">Keskmine</button>
+					<button style="height: 50px;font-size: large" class="btn btn-dark" onclick="fontBigger()">Suur</button>
+					<button style="height: 50px;font-size: x-large" class="btn btn-dark" onclick="fontBiggest()">Suurim</button>
 				</div>
 			</div>
 		</div>
 		<div class="panel panel-default">
 		  <div class="panel-heading">
 			<h4 class="panel-title">
-			  <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">Collapsible Group 3</a>
+			  <a data-toggle="collapse" data-parent="#accordion" href="#font">Font</a>
 			</h4>
 		  </div>
-		  <div id="collapse3" class="panel-collapse collapse">
-			<div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-			sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+		  <div id="font" class="panel-collapse collapse">
+			<div class="btn-group">
+				<button class="btn btn-dark" id="Bungee" onclick="fontBungee()"><b>Aa<br>123</b></button>
+				<button class="btn btn-dark" id="Bahiana" onclick="fontBahiana()"><b>Aa<br>123</b></button>
+				<button class="btn btn-dark" id="Indie" onclick="fontIndie()"><b>Aa<br>123</b></button>
+				<button class="btn btn-dark" id="Montserrat" onclick="fontMontserrat()"><b>Aa<br>123</b></button>
+				<button class="btn btn-dark" id="Pacifico" onclick="fontPacifico()"><b>Aa<br>123</b></button>
+				<button class="btn btn-dark" id="Inconsolata" onclick="fontInconsolata()"><b>Aa<br>123</b></button>
+			</div>
 		  </div>
 		</div>
 	</div> 
 </div>
+
 </body>
 </html>

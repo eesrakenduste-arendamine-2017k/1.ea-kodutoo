@@ -28,3 +28,21 @@ function fontSmaller() {
 function fontSmallest() {
     document.getElementById("clock").style.fontSize = "1000%";
 };
+function fontBungee() {
+    document.getElementById("clock").style.fontFamily = "Bungee Inline, cursive";
+};
+function fontMontserrat() {
+    document.getElementById("clock").style.fontFamily = "Montserrat, sans-serif";
+};
+function fontIndie() {
+    document.getElementById("clock").style.fontFamily = "Indie Flower, cursive";
+};
+function fontBahiana() {
+    document.getElementById("clock").style.fontFamily = "Bahiana, cursive";
+};
+function fontPacifico() {
+    document.getElementById("clock").style.fontFamily = "Pacifico, cursive";
+};
+function fontInconsolata(){ 
+    document.getElementById("clock").style.fontFamily = "Inconsolata, monospace";
+};
