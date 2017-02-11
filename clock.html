@@ -1,0 +1,112 @@
+<link href="https://fonts.googleapis.com/css?family=Barrio" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Bahiana|Bungee+Inline|Indie+Flower|Pacifico|Montserrat" rel="stylesheet">
+
+<style>
+    .clock {
+        width: 100%;
+		font-family: 'Inconsolata', monospace;
+    }#grade{
+		background-color: hsla(120, 100%, 75%, 0.3);
+        background-repeat: no-repeat;
+        height: 100%;
+        background-attachment: fixed;
+	}#author{
+		font-family: "Barrio", cursive;
+	}.btn-dark{
+        background-color: lime;
+        font-weight: bold;
+        opacity: 100;
+    }.panel-collapse{
+		background-color:lime;
+	}.btn-dark:hover {
+        background-color: gray !important;
+    }#Bungee {
+		font-family: 'Bungee Inline', cursive;
+	}#Montserrat {
+		font-family: 'Montserrat', sans-serif;
+	}#Indie {
+		font-family: 'Indie Flower', cursive;
+	}#Bahiana {
+		font-family: 'Bahiana', cursive;
+	}#Pacifico {
+		font-family: 'Pacifico', cursive;
+	}#Inconsolata {
+		font-family: 'Inconsolata', monospace;
+	}
+</style>
+
+<!DOCTYPE html>
+<html lang="en">
+<text id="author" class="fixed-top">Autor: Johan Reili</text>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>KELL</title>
+	<script src="clock.js" charset="utf-8"></script>
+	<script src="functions.js" charset="utf-8"></script>
+</head>
+<body id="grade">
+    <center><div class="clock" id="clock"></div></center>
+<div class="container">
+  <h2>Muuda kella seadeid</h2>
+	<div class="panel-group" id="accordion">
+		<div class="panel panel-default">
+		  <div class="panel-heading">
+			<h4 class="panel-title">
+			  <a data-toggle="collapse" data-parent="#accordion" href="#nrcolor">Värv</a>
+			</h4>
+		  </div>
+		  <div id="nrcolor" class="panel-collapse collapse">
+			<div class="btn-group" >
+				<button style="float: left;height: 50px;color: red" class="btn btn-dark" onClick="colorRed()">PUNANE<br><b>123</b></button>
+				<button style="float: left;height: 50px;color: black" class="btn btn-dark" onclick="colorBlack()">MUST<br><b>123</b></button>
+				<button style="float: left;height: 50px;color: green" class="btn btn-dark" onclick="colorGreen()">ROHELINE<br><b>123</b></button>
+				<button style="float: left;height: 50px;color: blue" class="btn btn-dark" onclick="colorBlue()">SININE<br><b>123</b></button>
+				<button style="float: left;height: 50px;color: white" class="btn btn-dark" onclick="colorWhite()">VALGE<br><b>123</b></button>
+			</div>
+		  </div>
+		</div>
+		<div class="panel panel-default">
+		  <div class="panel-heading">
+			<h4 class="panel-title">
+			  <a data-toggle="collapse" data-parent="#accordion" href="#nrsize">Suurus</a>
+			</h4>
+		  </div>
+			<div id="nrsize" class="panel-collapse collapse">
+				<div class="btn-group">
+					<button style="height: 50px;font-size: x-small" class="btn btn-dark" onclick="fontSmallest()">Väikseim</button>
+					<button style="height: 50px;font-size: small" class="btn btn-dark" onclick="fontSmaller()">Väike</button>
+					<button style="height: 50px;font-size: medium" class="btn btn-dark" onclick="fontDefault()">Keskmine</button>
+					<button style="height: 50px;font-size: large" class="btn btn-dark" onclick="fontBigger()">Suur</button>
+					<button style="height: 50px;font-size: x-large" class="btn btn-dark" onclick="fontBiggest()">Suurim</button>
+				</div>
+			</div>
+		</div>
+		<div class="panel panel-default">
+		  <div class="panel-heading">
+			<h4 class="panel-title">
+			  <a data-toggle="collapse" data-parent="#accordion" href="#font">Font</a>
+			</h4>
+		  </div>
+		  <div id="font" class="panel-collapse collapse">
+			<div class="btn-group">
+				<button class="btn btn-dark" id="Bungee" onclick="fontBungee()"><b>Aa<br>123</b></button>
+				<button class="btn btn-dark" id="Bahiana" onclick="fontBahiana()"><b>Aa<br>123</b></button>
+				<button class="btn btn-dark" id="Indie" onclick="fontIndie()"><b>Aa<br>123</b></button>
+				<button class="btn btn-dark" id="Montserrat" onclick="fontMontserrat()"><b>Aa<br>123</b></button>
+				<button class="btn btn-dark" id="Pacifico" onclick="fontPacifico()"><b>Aa<br>123</b></button>
+				<button class="btn btn-dark" id="Inconsolata" onclick="fontInconsolata()"><b>Aa<br>123</b></button>
+			</div>
+		  </div>
+		</div>
+	</div> 
+</div>
+
+</body>
+</html>
