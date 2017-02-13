@@ -11,6 +11,7 @@
 <html lang="en">
 <head>
     <link href="https://fonts.googleapis.com/css?family=Audiowide" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Barrio|Caveat+Brush|Fjalla+One" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="default.css">
     <meta charset="UTF-8">
     <meta name="viewport"
@@ -32,7 +33,7 @@
 </div>
     <div id="clock" onclick="changeColor()" ></div>
 <footer>
-    <p id="AuthorName">Hinrek Saar</p>
+    <p id="AuthorName" onclick="changeFont()">Hinrek Saar</p>
 </footer>
 </body>
 </html>
