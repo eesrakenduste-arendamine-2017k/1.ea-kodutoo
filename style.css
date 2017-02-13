@@ -1,0 +1,16 @@
+body {
+    font-family: 'Arial';
+    font-size: 16vw;
+    text-align: center;
+}
+
+.day{
+	background-color: white;
+    color: black;
+	
+}
+
+.night{
+    background-color: black;
+    color: white;
+}

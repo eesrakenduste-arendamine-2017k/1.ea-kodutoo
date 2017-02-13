@@ -1,17 +1,23 @@
-// show clock
+ // show clock
 window.onload = function(){
 
-    var clockContainer = document.getElementById('clock');
-    console.log(clockContainer);
+    var clockDiv = document.getElementById('clock');
+	var daytimeContainer = document.getElementById('daytime');
+    
+	console.log(clockDiv);
 
     // let's write the timestamp
-    clockContainer.innerHTML = getCurrentDateTime();
+    clockDiv.innerHTML = getCurrentDateTime();
 
     window.setInterval(function(){
-        clockContainer.innerHTML = getCurrentDateTime();
-    }, 1000);
+         clockDiv.innerHTML = getCurrentDateTime();
 
-
+		if(getDayNight()){
+			clockDiv.className = 'day';
+		}else{
+			clockDiv.className = 'night';
+		}
+	}, 1000);
 };
 
 var getCurrentDateTime = function(){
@@ -32,4 +38,21 @@ function addZeroBefore(dateNumber) {
     }
 
     return dateNumber;
-}
+};
+
+ var getDayNight = function(){
+     var currentDate = new Date();
+
+     var hours = currentDate.getHours();
+	 console.log(hours)
+     var day = "";
+     if (hours >= 18 || hours <= 6){
+         var day = false;
+     } else {
+         var day = true;
+     }
+     return day;
+ };
+ 
+ //style properties
+ 
