@@ -16,10 +16,13 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
     <script src="clock.js" charset="utf-8"></script>
+    <script src="functions.js" charset="utf-8"></script>
+
     <title>Kelloks KornFleiks</title>
 </head>
-<body onload="startTime()">
+<body onload="startTime()" >
 <div id="clouds">
 	<div class="cloud x1"></div>
 	<div class="cloud x2"></div>
@@ -27,7 +30,7 @@
 	<div class="cloud x4"></div>
 	<div class="cloud x5"></div>
 </div>
-    <div id="clock"></div>
+    <div id="clock" onclick="changeColor()" ></div>
 <footer>
     <p id="AuthorName">Hinrek Saar</p>
 </footer>

@@ -44,6 +44,6 @@ function startTime() {
     kp = checkTime(kp);
     m = checkTime(m);
     s = checkTime(s);
-    document.getElementById("clock").innerHTML = h + ":" + m + ":" + s + " " + kp + "." + kuu + " " + dayToName(np);
+    document.getElementById("clock").innerHTML = "<center>" + h + ":" + m + ":" + s + " </center>" + kp + "." + kuu + " " + dayToName(np);
     var t = setTimeout(startTime, 500);
 }
