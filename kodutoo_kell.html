@@ -1,0 +1,138 @@
+<!DOCTYPE  html>
+<!--https://pixabay.com/
+-->
+<html>
+<head>
+    
+	<title>Kell</title>
+    
+	<script src="kodutoo_kell.js"></script>	
+	
+	<script>
+	function Change_Blue(){
+		document.body.style.backgroundImage = "url('jellyfish-1730018_1920.jpg')";
+		document.getElementById("HTMLtime").className = "styleBlue";
+		document.getElementById("HTMLweekday").className = " styleBlue";
+		document.getElementById("HTMLdate").className = " styleBlue";
+		document.getElementById("Name").className = " styleBlue";
+
+	}
+	function Change_Green(){
+		document.body.style.backgroundImage = "url('summer-still-life-779386_1920.jpg')";
+		document.getElementById("HTMLtime").className = "styleGreen";
+		document.getElementById("HTMLweekday").className = " styleGreen";
+		document.getElementById("HTMLdate").className = " styleGreen";
+		document.getElementById("Name").className = " styleGreen";
+
+		
+	}
+	function Change_Red(){
+		document.body.style.backgroundImage = "url('sunset-1072923_1920.jpg')";
+		document.getElementById("HTMLtime").className = "styleRed";
+		document.getElementById("HTMLweekday").className = " styleRed";
+		document.getElementById("HTMLdate").className = " styleRed";
+		document.getElementById("Name").className = " styleRed";
+
+	}
+	</script>	
+	
+	
+	<style>
+	
+	body {
+		background-image: url("summer-still-life-779386_1920.jpg");
+	}
+
+	#HTMLtime {
+		display: block;
+		font-family: 'Fasthand', serif;
+		text-align: center;
+		color: #66ff33;
+		text-shadow: 2px 2px #000000; 
+		font-size: 100px;
+	}
+	
+	#HTMLdate {
+		font-family: 'Fasthand', serif;
+		text-align: center;
+		color: #66ff33;
+		text-shadow: 2px 2px #000000; 
+		font-size: 100px;
+	}
+	
+	#HTMLweekday {
+		font-family: 'Fasthand', serif;
+		text-align: center;
+		color: #66ff33;
+		text-shadow: 2px 2px #000000; 
+		font-size: 100px;
+	}
+	
+	#Name {
+		font-family: 'Fasthand', serif;
+		text-align: center;
+		color: #66ff33;
+		text-shadow: 2px 2px #000000; 
+		font-size: 50px;
+		padding-top: 19%
+	}
+	
+	#button1{
+		width: 100px;
+		height: 40px;
+		background-color: #66ff33;
+	}
+	
+	#button2{
+		width: 100px;
+		height: 40px;
+		background-color: #3399ff;
+	}
+	
+	#button3{
+		width: 100px;
+		height: 40px;
+		background-color: #ff3300;
+	}
+	
+	#container{
+		text-align: center;
+	}
+	
+		.styleBlue {
+			color: #000080 !important;
+			font-family: 'NTR', sans-serif !important;
+		}
+		
+		.styleGreen {
+			color: #66ff33 !important;
+		}
+		
+		.styleRed {
+			color: #ff0000 !important;
+			font-family: 'VT323', monospace !important;
+		}
+	
+	</style>
+
+	
+</head>
+
+<body onload="Clock()">
+	
+	<div id="HTMLtime" class="HTMLtime"></div>
+	<div id="HTMLdate" class="HTMLdate"></div>
+	<div id="HTMLweekday" class="HTMLweekday"></div>
+	
+	<br><br><br>
+	
+	<div id="container">	
+		<button type="button color1" id="button1" onclick="Change_Green()">Stiil</button>
+		<button type="button color2" id="button2" onclick="Change_Blue()">Stiil</button>
+		<button type="button color3" id="button3" onclick="Change_Red()">Stiil</button>
+	</div>
+	
+	<div id="Name" class="Name">Mattias Blehner</div>
+	
+	</body>
+</html>
