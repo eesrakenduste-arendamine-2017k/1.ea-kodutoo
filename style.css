@@ -3,9 +3,9 @@ body {
 }
 
 #clock {
-    height: 100px;
+    /*height: 100px;*/
     width: 800px;
-   
+
     position: absolute;
     top: 0; left: 50%; bottom: 0; right: 0;
     padding-top: 70px;
@@ -16,5 +16,9 @@ body {
 	position: relative;
 	border-radius :20px;
 	margin-left:-400px;
-	
+
+}
+
+.btn {
+    color: #050;
 }
