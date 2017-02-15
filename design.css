@@ -1,14 +1,43 @@
 body {
-    background-color:#b5b3b1;
+    background-color:#2A2D34;
+    padding: 50px;
   }
 
 .clockStyle {
-    font-size: 63px;
+    font-size: 67px;
     font-family: Monospace;
     text-align: center;
-    border: 6px solid #dbd81a;
+    border: 6px solid #30C5FF;
     margin: auto;
-    width: 80%;
-    color: #dbd81a;
+    width: 100%;
     margin-top: 20%;
+    color:#30C5FF;
   }
+
+.clockStyleNew {
+    font-size: 67px;
+    font-family: Monospace;
+    text-align: center;
+    border: 6px solid #E5F993;
+    margin: auto;
+    width: 100%;
+    margin-top: 20%;
+    color: #E5F993;
+  }
+.button {
+
+  background-color: #686463;
+  border: none;
+  color: white;
+  padding: 15px 30px;
+  text-align: center;
+
+  font-size: 16px;
+  font-family: Monospace;
+  margin-top: 20px;
+
+}
+
+.nupud {
+  text-align: center;
+}

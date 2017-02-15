@@ -5,12 +5,26 @@ window.onload = function(){
     var clockContainer = document.getElementById('clock');
     console.log(clockContainer);
 
+    var fontColor = document.getElementById('font');
+    console.log(fontColor);
+
     // kohe kirjutame ka kellaaja
     clockContainer.innerHTML = getCurrentDateTime();
 
     window.setInterval(function(){
         clockContainer.innerHTML = getCurrentDateTime();
     }, 1000);
+
+    var colorChangeButton = document.getElementById("colorButton");
+      colorChangeButton.addEventListener('click', function(){
+          var clockDiv = document.getElementById('clock');
+          console.log(clockDiv);
+          if(clockDiv.className == "clockStyle"){
+              clockDiv.className = "clockStyleNew";
+          }else{
+              clockDiv.className = "clockStyle";
+          }
+      });
 
 };
 
@@ -50,7 +64,7 @@ var getCurrentDateTime = function(){
 
     var weekDay = weekday[d.getDay()];
 
-    var dateString = addZeroBefore(hours) + ':' + addZeroBefore(minutes) + ':' + addZeroBefore(seconds) + ' | ' +addZeroBefore(dateDay) + ' ' + dateMonth + ' | ' +weekDay ;
+    var dateString = addZeroBefore(hours) + ':' + addZeroBefore(minutes) + ':' + addZeroBefore(seconds) + ' | ' +addZeroBefore(dateDay) + '. ' + dateMonth + ' | ' +weekDay ;
 
 
     return dateString;
