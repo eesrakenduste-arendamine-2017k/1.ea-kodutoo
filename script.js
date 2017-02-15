@@ -3,9 +3,10 @@
 window.onload = function(){
 	
 	var clockContainer = document.getElementById('clock');
-	
+	var dateContainer = document.getElementByID('date');
 	clockContainer.innerHTML = getCurrentDateTime();
-	
+	dateContainer.innerHTML = getCurrentDate();
+    
 	window.setInterval(function(){
 		
 		clockContainer.innerHTML = getCurrentDateTime();
@@ -14,9 +15,19 @@ window.onload = function(){
 	);
 }
 
+var getCurrentDate = function() {
+    var today = new Date();
+    
+    var month = today.getMonth() + 1;
+    var day = today.getDate();
+    var weekday = today.getDay();
+    
+    var dateString = month +' ' +day + ' '+weekday;
+    
+    return dateString;
+}
 
-
-var getCurrentDateTime = function(){
+var getCurrentDateTime = function() {
 	var currentDate = new Date();
 	
 	var hours = currentDate.getHours();
