@@ -1,0 +1,30 @@
+<style>
+  #clockPlacement {
+    position: absolute;
+    top:50%;
+    left:50%;
+  }
+
+  #ghost {
+    width: 50px;
+    height: 70px;
+    background-color: red;
+    position: absolute;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-name: ghost;
+    animation-duration: 15s;
+  }
+
+  @keyframes ghost {
+    0% {left:50%; top:10%;}
+    12% {left: 30%; top: 30%;}
+    25% {left:10%; top: 50%;}
+    37% {left: 30%; top: 70%;}
+    50% {left: 50%; top: 90%;}
+    62% {left: 70%; top: 70%;}
+    75% {left: 90%; top: 50%;}
+    87% {left: 70%; top: 30%;}
+    100% {left: 50%; top: 10%;}
+  }
+</style>
