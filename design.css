@@ -1,0 +1,63 @@
+body {
+    background-color:#2A2D34;
+    padding: 50px;
+    background-image: url("city.jpg");
+  }
+.backGround1  {
+  background-image: url("city2.jpg");
+}
+
+.backGround2 {
+  background-image: url("city.jpg");
+}
+
+.clockStyle {
+    font-size: 67px;
+    font-family: Monospace;
+    text-shadow: 2px 2px #000000;
+    text-align: center;
+    border: 6px solid #30C5FF;
+    box-shadow: 2px 2px #000000;
+    margin: auto;
+    width: 100%;
+    margin-top: 20%;
+    color:#30C5FF;
+  }
+
+.clockStyleNew {
+    font-size: 67px;
+    font-family: Monospace;
+    text-align: center;
+    border: 6px solid #E5F993;
+    margin: auto;
+    width: 100%;
+    margin-top: 20%;
+    color: #E5F993;
+    text-shadow: 2px 2px #000000;
+    box-shadow: 2px 2px #000000;
+  }
+.button {
+
+  background-color: #686463;
+  border: none;
+  color: white;
+  padding: 15px 30px;
+  text-align: center;
+
+  font-size: 16px;
+  font-family: Monospace;
+  margin-top: 20px;
+
+}
+
+.nupud {
+  text-align: center;
+}
+
+.author {
+  text-align: center;
+  color: white;
+  text-shadow: 2px 2px #000000;
+  font-family: monospace;
+  font-size: 20px;
+}
