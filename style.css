@@ -1,0 +1,39 @@
+body {
+	font-family: Lato;
+	margin-top: 15%;
+	text-align: center;
+	color: white;
+	letter-spacing:15px;
+	-webkit-user-select: none;  /* Chrome all / Safari all */
+  -moz-user-select: none;     /* Firefox all */
+  -ms-user-select: none;      /* IE 10+ */
+  user-select: none;          /* Likely future */    
+
+}
+
+#clock {
+	font-size: 40px;
+	font-weight: 200;
+	padding:25px;
+	max-width:35%;
+	margin:0 auto;
+	box-shadow:inset 0px 0px 10px #F7CAC9;
+  }
+
+ #playpausebtn {
+	 max-width:25%;
+	 margin:0 auto;
+	 box-shadow:inset 0px 0px 10px #F7CAC9;
+	 padding:25px;
+	 font-size: 20px;
+	 display:block;
+	 text-transform: uppercase;
+	 cursor: pointer;
+  }
+
+.font1 {
+            font-family: Lato;
+        }
+.font2 {
+            font-family: Arial;
+        }
