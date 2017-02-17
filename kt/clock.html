@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Vlad's Clock</title>
+    <script src="clock.js"></script>
+    <script src="toastjs.js"></script>
+
+
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+</head>
+
+<body>
+    <div id="content">
+        <div id="clock"></div>
+        <div id="month"></div>
+        <div id="day"></div>
+        <div id="color">Change color:</div>
+        <button id="clockColor" onClick="changeClockColor()">Clock</button>
+        <button id="dateColor" onClick="changeDateColor()">Date</button>
+        <button id="dayColor" onClick="changeDayColor()">Day</button>
+
+        <button id="lngEst" onClick="changeLngEst()">EST</button>
+        <button id="lngEng" onClick="changeLngEng()">ENG</button>
+        <button id="lngRus" onClick="changeLngRus()">RUS</button>
+
+        <div id="mode">Mode:</div>
+        <input onclick="changeMode()" type="button" value="Day" id="dayMode"></input>
+
+        <div id="toastjs"></div>
+
+        <div id="name">Vlad Minajev</div>
+
+    </div>
+</body>
+
+</html>
