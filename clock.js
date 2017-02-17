@@ -1,4 +1,6 @@
 
+var system;
+
 // aken laetud
 window.onload = function(){
 
@@ -26,14 +28,35 @@ window.onload = function(){
           }
       });
 
+      var timeChangeButton = document.getElementById("timeButton");
+      timeChangeButton.addEventListener('click', function(){
+
+          if(system != "12"){
+            system = "12";
+          } else {
+            system = "24";
+          }
+          console.log(system);
+      });
+
+      var backGroundChangeButton = document.getElementById("backGroundButton");
+        backGroundChangeButton.addEventListener('click', function(){
+
+            if(document.body.className == "backGround1"){
+                document.body.className = "backGround2";
+            }else{
+                document.body.className = "backGround1";
+            }
+        });
 };
 
 var getCurrentDateTime = function(){
     var currentDate = new Date();
 
-    var hours = currentDate.getHours();
-    var minutes = currentDate.getMinutes();
-    var seconds = currentDate.getSeconds();
+      var hours = currentDate.getHours();
+      var minutes = currentDate.getMinutes();
+      var seconds = currentDate.getSeconds();
+
     var dateDay = currentDate.getDate();
 
     var m = new Date();
@@ -64,8 +87,13 @@ var getCurrentDateTime = function(){
 
     var weekDay = weekday[d.getDay()];
 
-    var dateString = addZeroBefore(hours) + ':' + addZeroBefore(minutes) + ':' + addZeroBefore(seconds) + ' | ' +addZeroBefore(dateDay) + '. ' + dateMonth + ' | ' +weekDay ;
+    var dateString;
 
+    if (system == "24"){
+    dateString = addZeroBefore(hours) + ':' + addZeroBefore(minutes) + ':' + addZeroBefore(seconds) + ' | ' +addZeroBefore(dateDay) + '. ' + dateMonth + ' | ' +weekDay ;
+  } else {
+    dateString = addZeroBefore(hourChanger(hours)) + ':' + addZeroBefore(minutes) + ' ' + amPm(hours) + ' | ' +addZeroBefore(dateDay) + '. ' + dateMonth + ' | ' +weekDay ;
+  }
 
     return dateString;
 };
@@ -76,4 +104,20 @@ function addZeroBefore(dateNumber) {
     }
 
     return dateNumber;
+}
+
+function hourChanger (hours) {
+  if (hours > 12){
+    hours = hours - 12;
+  }
+  return hours;
+}
+
+function amPm (hours){
+  if(hours > 12){
+    hours = "PM";
+  } else {
+    hours = "AM";
+  }
+  return hours;
 }
