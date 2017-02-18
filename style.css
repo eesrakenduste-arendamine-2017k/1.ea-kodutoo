@@ -1,0 +1,162 @@
+body {
+	overflow: hidden;
+	font-family: 'Lucida Console', monospace;		
+	color: #FDFDFD;			
+	background: black;
+}
+
+#date{
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	opacity: 1;
+
+	font-size: 5vmin;
+	/* bring your own prefixes */
+	transform: translate(-50%, -50%);
+
+	user-select:none;
+	display: inline;
+	white-space: nowrap;
+}
+
+#ilm{
+	position: fixed;
+	top: 60%;
+	left: 50%;
+	opacity: 1;
+
+	font-size: 2.5vmin;
+	/* bring your own prefixes */
+	transform: translate(-50%, -50%);
+
+	user-select:none;
+	display: inline;
+	white-space: nowrap;
+}
+
+#clock {
+	position: fixed;
+	top: 35%;
+	left: 50%;
+	/* bring your own prefixes */
+	transform: translate(-50%, -50%);
+	display:inline-block; 
+	color: #FDFDFD;
+	opacity: 1;
+	user-select:none;
+	font-size: 20vmin;
+	font-family: 'Lucida Console', monospace;
+	//-webkit-transition: font 1.0s ease; /* For Safari 3.1 to 6.0 */
+	//transition: opacity 1s ease
+	display: inline;
+	white-space: nowrap;
+	//background: -webkit-linear-gradient(#FFFFFF, #000000);
+	//-webkit-background-clip: text;
+	//-webkit-text-fill-color: transparent;
+	
+}
+
+
+#whoami {
+	position: fixed;
+	top: 95%;
+	left: 85%;
+	opacity: 1;
+	font-family: 'Lucida Console', monospace;
+	font-size: 1.5vmax;
+	/* bring your own prefixes */
+	transform: translate(-50%, -50%);
+	color: #FDFDFD;
+	user-select:none;
+	display: inline;
+	white-space: nowrap;
+	text-decoration: none;
+}
+
+#muuda {
+	position: fixed;
+	top: 95%;
+	left: 15%;
+	opacity: 1;
+	font-family: 'Lucida Console', monospace;
+	font-size: 1.5vmax;
+	/* bring your own prefixes */
+	transform: translate(-50%, -50%);
+	color: #FDFDFD;
+	user-select:none;
+	display: inline;
+	white-space: nowrap;
+	text-decoration: none;
+}	
+#muuda2 {
+	position: fixed;
+	top: 95%;
+	left: 50%;
+	opacity: 1;
+	font-family: 'Lucida Console', monospace;
+	font-size: 1.5vmax;
+	/* bring your own prefixes */
+	transform: translate(-50%, -50%);
+	color: #FDFDFD;
+	user-select:none;
+	display: inline;
+	white-space: nowrap;
+	text-decoration: none;
+}
+#muuda:hover {
+	cursor: pointer;
+	font-size: 1.65vmax;
+}
+#muuda2:hover {
+	cursor: pointer;
+	font-size: 1.65vmax;
+
+}	
+#whoami:hover {
+	cursor: pointer;
+	font-size: 1.65vmax;
+
+}			
+video#bgvid { 
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	min-width: 100%;
+	min-height: 100%;
+	width: auto;
+	height: auto;
+	z-index: -100;
+	-ms-transform: translateX(-50%) translateY(-50%);
+	-moz-transform: translateX(-50%) translateY(-50%);
+	-webkit-transform: translateX(-50%) translateY(-50%);
+	transform: translateX(-50%) translateY(-50%);
+	background-size: cover; 
+}
+
+#container {
+	filter: blur(7.5px) brightness(50%) invert(0%) opacity(60%) contrast(100%) sepia(1) hue-rotate(290deg) saturate(6);
+}
+
+
+
+#modal {
+  left: 50%;
+  margin: -250px 0 0 -32%;
+  opacity: 0;
+  position: absolute;
+  top: -50%;
+  visibility: hidden;
+  width: 65%;
+  box-shadow: 0 3px 7px rgba(0,0,0,.25);
+  box-sizing: border-box;
+  transition: all .4s ease-in-out;
+  -moz-transition: all .4s ease-in-out;
+  -webkit-transition: all .4s ease-in-out
+}
+
+#modal:target {
+  opacity: 1;
+  top: 50%;
+  visibility: visible
+}
