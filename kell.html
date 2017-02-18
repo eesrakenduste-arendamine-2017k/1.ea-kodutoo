@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kell</title>
+    <script src="kell.js" charset="utf-8"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <div id="mySidenav" class="sidenav">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <div class="dropdown">
+          <a class="dropbtn">Fonti suurus</a>
+          <div class="dropdown-content">  
+            <a style="cursor:pointer" onclick="fontbig()">Font+</a>
+            <a style="cursor:pointer" onclick="fontsmall()">Font-</a>
+          </div>
+      </div>
+      <div class="dropdown">    
+          <a class="dropbtn">Tekst üles/alla</a>
+          <div class="dropdown-content">  
+            <a style="cursor:pointer" onclick="clockup()">Üles</a>
+			      <a style="cursor:pointer" onclick="clockdown()">Alla</a>
+          </div>          
+      </div>
+      <div class="dropdown">    
+          <a class="dropbtn">Vari</a>
+          <div class="dropdown-content">  
+            <a style="cursor:pointer" onclick="addshadow()">Sisse</a>
+            <a style="cursor:pointer" onclick="offshadow()">Välja</a>
+          </div>          
+      </div>
+    </div>
+    <img id="author" src="1487397388_linkedin_circle_color.ico" style="width:3%;height:3%;">
+    <a id="author" href="https://www.linkedin.com/in/oscar-august-heinla-507109120/" target="_blank" style="text-decoration: none">Oscar August Heinla</a>
+    <br>
+    <span id='open' style="cursor:pointer" onclick="openNav()">Seaded</span>
+    <div id="main">
+      <div id="clock"></div>
+      <div id="date"></div>
+    </div>
+    <script>
+      function openNav() {document.getElementById("mySidenav").style.width = "250px";}
+      function closeNav() {document.getElementById("mySidenav").style.width = "0";}
+    </script>
+</body>
+</html>
