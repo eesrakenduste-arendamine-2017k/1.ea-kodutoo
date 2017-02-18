@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<title>
+sensuaalne ajanäit
+</title>
+<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<script src="clock.js" charset="utf-8"></script>
+	<script src="jquery.simpleWeather.js"></script>
+	<link rel="stylesheet" href="modal.css">
+	<link rel="stylesheet" href="style.css">
+</head>
+<body> 
+	<div id="container">
+		<video id="bgvid"  playsinline autoplay muted loop >
+		    <source src="bgvid.mp4" type="video/mp4">
+		</video>
+	</div>
+		<div id="clock"></div>
+		<div id="date"></div>
+		<div id="ilm"></div>
+		<a id="muuda">muuda tooni</a>
+		<a id="muuda2">jump_around.exec</a>
+		<a href="#spioon" id="whoami">kes ma olen?</a>
+		<div id="spioon" class='modal' role="dialog" aria-labelledby="Modal title" aria-describedby="Modal description">
+			<div class="modal-content" style="background: black; color: white">
+				Sina oled:
+				<br><br>
+				IP: <span id="ip"></span><br>
+				Riik: <span id="riik"></span><br>
+				Maakond: <span id="maakond"></span><br>
+				Linn: <span id="linn"></span><br>
+				Teenusepakkuja: <span id="teenusep"></span>
+				<br><br>
+				<br>
+				Mina olen Greg Nesselmann
+			</div>
+			<a href="#"><div class="overlay"></div></a>
+		</div>
+	<audio id="mp3" src="kept.mp3" ></audio>
+</body>
+<footer>
+</footer>
+</html>
