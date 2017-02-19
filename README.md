@@ -3,6 +3,7 @@ http://veebiprog.iziveeb.ee/1.ea-kodutoo/
 ## Lahendus
     Kellaajale vajutades muutub kella värv.
     Nime peale vajutades muutub nime font.
+    Play/Pause nuppu vajutades võimalik muusikat kuulata.
 
 
 # 1. kodutöö – Lauakell
