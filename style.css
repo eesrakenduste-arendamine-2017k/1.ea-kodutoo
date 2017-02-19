@@ -1,0 +1,82 @@
+body{
+  background: #001f3f
+}
+
+.clock{
+  font-family: 'Impact', cursive;
+  color: #edeaea;
+  text-align: center;
+  position: static;
+  font-size: 90px;
+  user-select: none;
+}
+.date{
+  font-family: 'Impact', cursive;
+  color: #edeaea;
+  text-align: center;
+  position: relative;
+  font-size: 50px;
+  user-select: none;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+li {
+    float: left;
+}
+
+li a, .dropbtn {
+    display: inline-block;
+    color: #edeaea;
+    font-family: 'Impact', cursive;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+	cursor: pointer;
+}
+
+li a:hover, .dropdown:hover .dropbtn {
+    background-color: #6d6a6a;
+}
+
+li.dropdown {
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+	background-color: #cccccc;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {background-color: #001f3f}
+
+.dropdown:hover .dropdown-content {
+	display: block;
+}
+
+#author{
+  font-family: 'Impact', cursive;
+  color: #edeaea;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  font-size: 20px;
+  user-select: none;
+}
