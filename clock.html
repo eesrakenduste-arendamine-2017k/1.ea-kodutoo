@@ -1,0 +1,127 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
+
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Digital Clock</title>
+    <script src="clock.js" charset="utf-8"></script>
+	<script src="function.js" charset="utf-8"></script>
+
+	
+	
+	<style>
+		
+		body {
+			background-image: url("background2.jpg");
+		}
+		
+		#clock {
+			
+			position: fixed;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			color: LightPink;
+			//text-shadow: 0 0 1px black;
+			opacity: 100;
+			font-size: 5vmax;
+			font-family: 'Verdana', monospace;
+			//transition: opacity 1s ease;
+			text-shadow: -5px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+			border-style: solid;
+			border-width: 10px;
+			border-color: DarkOrange;
+			padding: 10px;
+		
+		}.btn-dark{
+			background-color: white;
+			font-weigth: bold;
+			opacity: 100;
+		}.btn-dark:hover {
+			background-color: #DB6161 !important;
+		}
+	
+	
+	
+	
+	</style>
+	
+
+	
+ <font color="white">Autor: Kristjan Känd</font> 
+	
+	
+</head>
+<body>
+    
+	
+	<center><div class="clock" id="clock"></div></center>
+<div class="container">
+<center><div>	<h2> <font color="white">Customize your clock:</font></h2> </div></center>
+<div class="panel-group" id="accordion">
+		<div class="panel panel-default">
+		  <div class="panel-heading">
+			<h4 class="panel-title">
+			  <a data-toggle="collapse" data-parent="#accordion" href="#nrcolor">Värv</a>
+			</h4>
+		  </div>
+		  <div id="nrcolor" class="panel-collapse collapse">
+			<div class="btn-group" >
+				<button style="float: left;height: 50px;color: FireBrick" class="btn btn-dark" onClick="colorFireBrick()"><b>FireBrick</b></button>
+				<button style="float: left;height: 50px;color: DarkSlateGray" class="btn btn-dark" onclick="colorDarkSlateGray()"><b>DarkSlateGray</b></button>
+				<button style="float: left;height: 50px;color: GoldenRod" class="btn btn-dark" onclick="colorGoldenRod()"><b>GoldenRod</b></button>
+				<button style="float: left;height: 50px;color: MidnightBlue" class="btn btn-dark" onclick="colorMidnightBlue()"><b>MidnightBlue</b></button>
+				<button style="float: left;height: 50px;color: NavajoWhite" class="btn btn-dark" onclick="colorNavajoWhite()"><b>NavajoWhite</b></button>
+				<button style="float: left;height: 50px;color: Black" class="btn btn-dark" onclick="colorBlack()"><b>SimpleBlack</b></button>
+				
+			</div>
+		  </div>
+		</div>
+		<div class="panel panel-default">
+		  <div class="panel-heading">
+			<h4 class="panel-title">
+			  <a data-toggle="collapse" data-parent="#accordion" href="#font">Font</a>
+			</h4>
+		  </div>
+		  <div id="font" class="panel-collapse collapse">
+			<div class="btn-group">
+				<button class="btn btn-dark" id="Aldrich" onclick="fontAldrich()"><b>Aldrich</b></button>
+				<button class="btn btn-dark" id="Arbutus" onclick="fontArbutus()"><b>Arbutus</b></button>
+				<button class="btn btn-dark" id="Impact" onclick="fontImpact()"><b>Impact</b></button>
+				<button class="btn btn-dark" id="Tahoma" onclick="fontTahoma()"><b>Tahoma</b></button>
+				<button class="btn btn-dark" id="Verdana" onclick="fontVerdana()"><b>Verdana</b></button>
+				<button class="btn btn-dark" id="Oldenburg" onclick="fontOldenburg()"><b>Oldenburg</b></button>
+			</div>
+		  </div>
+		</div>
+		<div class="panel panel-default">
+		  <div class="panel-heading">
+			<h4 class="panel-title">
+			  <a data-toggle="collapse" data-parent="#accordion" href="#muusika">Muusika</a>
+			</h4>
+		  </div>
+		  <div id="muusika" class="panel-collapse collapse">
+			<div class="btn-group">
+				<button class="btn btn-dark" id="playaudio" ><b>PLAY</b></button>
+				<script src="function.js"></script>
+			</div> 
+	</div> 
+</div>
+	
+</body>
+</html>
