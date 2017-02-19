@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Clock</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+
+  <h1 id="clock">00:00:00.00</h1>
+  <p id="dateMonth">00.00.0000</p>
+
+  <h2 id = "author">Author is Kätlin Rebane.</h2>
+
+  Change clock size: <input type="number" id="sizeTime" placeholder="Eg. 160" onchange="clockSize()" /> <button class="clickable" onclick="clockSize()">Change</button> <br /><br />
+Change clock font:  <select id="selectFont" onchange="selectFont()">
+    <option value="1">Arial</option>
+    <option value="2">Times New Roman</option>
+    <option value="3">Helvetica</option>
+    <option value="4" selected="selected">Courier New</option>
+  </select><br /><br />
+
+  Change date font:  <select id="selectDateFont" onchange="selectDateFont()">
+      <option value="1">Arial</option>
+      <option value="2">Times New Roman</option>
+      <option value="3">Helvetica</option>
+      <option value="4" selected="selected">Courier New</option>
+    </select><br /><br />
+
+
+
+  <button id="backgroundColor" class="clickable" onclick='changeBackgroundColor()'>Click here to change color</button>
+
+  <script src="app.js"></script>
+</body>
+
+</html>
