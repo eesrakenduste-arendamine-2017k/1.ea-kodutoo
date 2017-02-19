@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Cormorant+Infant|Raleway:700|Roboto:900i" rel="stylesheet">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <ul>
+    <li class="dropdown">
+    <a href="javascript:void(0)" class="dropbtn">Font</a>
+    <div class="dropdown-content">
+      <a onclick="fontSmall()">Small</a>
+      <a onclick="fontNormal()">Normal</a>
+      <a onclick="fontLarge()">Large</a>
+    </div>
+  </li>
+    <li class="dropdown">
+      <a href="javascript:void(0)" class="dropbtn">Background</a>
+      <div class="dropdown-content">
+        <a onclick="backgroundGreen()">Frog</a>
+        <a onclick="backgroundNavy()">Navy</a>
+        <a onclick="backgroundBlack()">Black</a>
+        <a onclick="backgroundOrange()">Tangerine</a>
+        <a onclick="backgroundRed()">Red</a>
+      </div>
+    </li>
+    <li class="dropdown">
+      <a href="javascript:void(0)" class="dropbtn">Clock Color</a>
+      <div class="dropdown-content">
+        <a onclick="clockGreen()">Green</a>
+        <a onclick="clockBlue()">Blue</a>
+        <a onclick="clockBlack()">Black</a>
+        <a onclick="clockOrange()">Orange</a>
+        <a onclick="clockRed()">Red</a>
+        <a onclick="clockOrigin()">Origin</a>
+    <li class="dropdown">
+      <a href="javascript:void(0)" class="dropbtn">Date Color</a>
+      <div class="dropdown-content">
+        <a onclick="dateGreen()">Green</a>
+        <a onclick="dateBlue()">Blue</a>
+        <a onclick="dateBlack()">Black</a>
+        <a onclick="dateOrange()">Orange</a>
+        <a onclick="dateRed()">Red</a>
+        <a onclick="dateOrigin()">Origin</a>
+  </ul>
+
+    <script src="clock.js" charset="utf-8"></script>
+    <script src="change.js" charset="utf-8"></script>
+</head>
+<body>
+    <div id="clock" class="clock"></div>
+	  <div id="date" class="date"></div>
+</body>
+<text id="author" class="fixed-top">Autor: Jan Treiberg</text>
+</html>
