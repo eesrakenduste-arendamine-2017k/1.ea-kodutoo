@@ -1,4 +1,5 @@
 var currentColor = "darkblue";
+
 function changeColor() {
     "use strict";
     if (currentColor === "darkblue") {
@@ -26,4 +27,9 @@ function changeFont() {
         document.getElementById("AuthorName").style["font-family"] = "'Audiowide', cursive";
         currentFont = "'Audiowide', cursive";
     }
+}
+
+function togglePlay() {
+    "use strict";
+    return document.getElementById("myAudio").paused ? document.getElementById("myAudio").play() : document.getElementById("myAudio").pause();
 }

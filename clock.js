@@ -1,5 +1,3 @@
-var clockElement = document.getElementById("clock");
-
 function checkTime(i) {
     "use strict";
     if (i < 10) {

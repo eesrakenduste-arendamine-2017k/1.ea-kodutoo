@@ -32,8 +32,15 @@
 	<div class="cloud x5"></div>
 </div>
     <div id="clock" onclick="changeColor()" ></div>
-<footer>
-    <p id="AuthorName" onclick="changeFont()">Hinrek Saar</p>
-</footer>
+<div id="audio">
+    <audio id="myAudio" preload="auto">
+        <source src="sleemusic.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    <button class="btn" onClick="togglePlay()">Play/Pause</button>
+</div>
+    <footer>
+        <p id="AuthorName" onclick="changeFont()">Hinrek Saar</p>
+    </footer>
 </body>
 </html>
