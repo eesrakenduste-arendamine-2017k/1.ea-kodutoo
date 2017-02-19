@@ -1,3 +1,5 @@
+var clockElement = document.getElementById("clock");
+
 function checkTime(i) {
     "use strict";
     if (i < 10) {
@@ -8,24 +10,22 @@ function checkTime(i) {
 
 function dayToName(day) {
     "use strict";
-    switch (day) {
-        case 1:
+    switch (day) {case 1:
             return "Esmaspäev";
-        case 2:
+case 2:
             return "Teisipäev";
-        case 3:
+case 3:
             return "Kolmapäev";
-        case 4:
+case 4:
             return "Neljapäev";
-        case 5:
+case 5:
             return "Reede";
-        case 6:
+case 6:
             return "Laupäev";
-        case 7:
+case 0:
             return "Pühapäev";
-        default:
-            return 0;
-    }
+default:
+            return 0;}
 }
 
 
