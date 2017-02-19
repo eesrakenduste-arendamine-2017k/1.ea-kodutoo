@@ -1,0 +1,23 @@
+body {
+  font-family: 'Courier New';
+  margin-top: 200px;
+  text-align: center;
+  color: black;
+  background-color: pink;
+}
+
+#clock {
+  font-weight: 300;
+  font-size: 5.5vw;
+  width: 100vw;
+}
+
+.clickable {
+  cursor: pointer;
+}
+
+#author {
+  position: absolute;
+  bottom: 1px;
+  left: 1px;
+}
