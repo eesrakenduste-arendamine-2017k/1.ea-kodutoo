@@ -1,15 +1,47 @@
-<style>
   #clockPlacement {
     position: absolute;
-    top:50%;
-    left:50%;
+    top:0%;
+    left:100%;
+    font-weight: bold;
+    font-size: 400%;
+    color: white;
+    transform: translate(-100%, 0%);
+  }
+
+  #date {
+    position: absolute;
+    top:100%;
+    left:100%;
+    font-weight: bold;
+    font-size: 400%;
+    color: white;
+    transform: translate(-100%, -100%);
+  }
+
+  #name {
+    position: absolute;
+    top: 100%;
+    left: 0%;
+    font-weight: bold;
+    color: white;
+    transform: translate(0%, -100%);
+  }
+
+  body {
+    background-image: url("trainstation.jpg");
   }
 
   #ghost {
-    width: 50px;
-    height: 70px;
-    background-color: red;
+    background-image: url("g4014.png");
+    transform-origin: 5% 0;
+    width: 250px;
+    height: 175px;
+
     position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
     animation-timing-function: linear;
     animation-iteration-count: infinite;
     animation-name: ghost;
@@ -17,14 +49,13 @@
   }
 
   @keyframes ghost {
-    0% {left:50%; top:10%;}
-    12% {left: 30%; top: 30%;}
-    25% {left:10%; top: 50%;}
-    37% {left: 30%; top: 70%;}
-    50% {left: 50%; top: 90%;}
-    62% {left: 70%; top: 70%;}
-    75% {left: 90%; top: 50%;}
-    87% {left: 70%; top: 30%;}
-    100% {left: 50%; top: 10%;}
+    0% {transform: rotate(0deg);}
+    12% {transform: rotate(-45deg);}
+    25% {transform: rotate(-90deg);}
+    37% {transform: rotate(-135deg);}
+    50% {transform: rotate(-180deg);}
+    62% {transform: rotate(-225deg);}
+    75% {transform: rotate(-270deg);}
+    87% {transform: rotate(-315deg);}
+    100% {transform: rotate(-360deg);}
   }
-</style>
