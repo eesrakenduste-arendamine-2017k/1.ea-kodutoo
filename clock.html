@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script type="text/javascript" src="clock.js"></script> 
+<link rel="stylesheet" type="text/css" href="clock.css">
+<title>clock</title>
+</head>
+<body>
+<a href="javascript:void(0)" id="openNav">
+<img alt="Ava" src="ava.png" width="50" height="50">
+</a>
+<div class="menu" >
+<a href="javascript:void(0)" id="closebutton">
+<img alt="Sulge" src="sulge2.png" width="50" height="50">
+</a>
+<div class="components">
+<h>kella värv</h>
+<br>
+<select id="colorPicker" >
+  <option value="white">valge</option>
+  <option value="DarkRed">tumepunane</option>
+  <option value="gainsboro">hall</option>
+  <option value="navy">tumesinine</option>
+  <option value="GoldenRod">kuldne</option>
+  <option value="LightSeaGreen">mereroheline</option>
+</select>
+<br>
+<br>
+<h>kella suurus</h>
+<br>
+<input id="fontSlider" type="range" min="50" max="220" value="150"/>
+<br>
+<h>tausta heledus</h>
+<br>
+<input  id="opacitySlider"type="range" min="0" max="100" value="100"/>
+</div>
+</div>
+<div id="main">
+<div class="dateAndTime">
+<div id="clock" > kell </div>
+<div id="todaysDate" > kuupäev </div>
+<div id="day"  > nädalapäev </div>
+</div>
+<div id = "backgroundPic"></div>
+<div id="authorName">by Heleri Mändla </div>
+</div>
+</body>
+</html>

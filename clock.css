@@ -1,0 +1,110 @@
+html
+{
+  background-color:white;
+}
+body
+{
+  font-family:Andale Mono, "Lucida Console", Monaco, monospace;
+}
+
+.dateAndTime 
+{
+  color: white;
+  transition: margin-left .5s;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); 
+  text-align: center;
+  font-size:150px;
+}
+.dateAndTime #clock
+{
+  font-size:100%;
+  text-align:center;
+  
+}
+.dateAndTime #todaysDate
+{
+  font-size: 40% ; 
+}
+.dateAndTime #day 
+{
+  font-size:30%;
+}
+
+#authorName 
+{
+  position:fixed;
+  bottom:0;
+  left: 50%;
+  transform: translate(-50%, -50%); 
+  text-align:center;
+  color:white;
+  visibility:hidden;
+}
+
+#backgroundPic 
+{
+  position:absolute;
+  transition: margin-left .5s;
+  background-repeat:no-repeat;
+  background-size:cover;
+  opacity:1;
+  z-index:-100;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+
+}
+
+.menu
+{
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color:white;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.menu #closebutton
+{
+  position: absolute;
+  top: 0px;
+  padding:10px;
+  right:8px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+.menu .components
+{
+  padding: 8px 8px 8px 8px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+  white-space:nowrap;
+}
+#openNav
+{
+  float:left;
+  padding:10px;
+}
+#main
+{
+  margin-left:0px;
+}
+.menu a
+{
+  text-decoration:none;
+}
+
+
