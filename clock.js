@@ -9,8 +9,10 @@ var dX = 1;
 var dY = 1;
 
 
+
+
 myButton.addEventListener('click', function() {
-    clockContainer.style.fontFamily = myTextInput.value;
+    document.getElementById('body').style.fontFamily = myTextInput.value;
 });
 
 window.onload = function() {
@@ -30,6 +32,47 @@ window.onload = function() {
     footer.addEventListener("mouseover", mouseOver);
     footer.addEventListener("mouseout", mouseOut);
 };
+
+function fast() {
+
+    if (dX >= 0) {
+        dX = dX + 0.5;
+        console.log(dX);
+    } else if (dX < 0) {
+        console.log(dX);
+        dX = dX - 0.5;
+    }
+    if (dX >= 7) {
+        alert("Hold your horses");
+        dX = 7;
+    } else if (dX <= -7) {
+        alert("Hold your horses");
+        dX = -7;
+    }
+    //dY = dY + 0.2;
+}
+
+function slow() {
+    if (dX < 0) {
+        dX = dX + 0.5;
+        console.log(dX);
+    } else if (dX > 0) {
+        console.log(dX);
+        dX = dX - 0.5;
+    }
+    if (dX >= 7) {
+        alert("Hold your horses!");
+        dX = 7;
+    } else if (dX <= -7) {
+        alert("Hold your horses!");
+        dX = -7;
+    }
+    if (dX == 0) {
+        dX = 0.5;
+        alert("Move on!");
+    }
+}
+
 
 function displayWeekDay() {
     var d = new Date();
@@ -66,20 +109,24 @@ function getRandomColor() {
 
 var getCurrentDateTime = function() {
 
+
+
     if (x > dragonBorders.offsetWidth - 280) {
         dX = -dX;
-        clockContainer.style.color = getRandomColor();
+        console.log(dX);
+        footer.style.color = getRandomColor();
     } else if (x < 0) {
         dX = -dX;
-        clockContainer.style.color = getRandomColor();
+        footer.style.color = getRandomColor();
+        console.log(dX);
     }
 
     if (y > dragonBorders.offsetHeight - 80) {
         dY = -dY;
-        clockContainer.style.color = getRandomColor();
+        footer.style.color = getRandomColor();
     } else if (y < 0) {
         dY = -dY;
-        clockContainer.style.color = getRandomColor();
+        footer.style.color = getRandomColor();
     }
 
     x += dX;

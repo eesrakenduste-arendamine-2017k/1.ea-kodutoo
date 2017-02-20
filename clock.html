@@ -9,15 +9,25 @@
     <title>Document</title>
 </head>
 
-<body>
-    <div id="container">
-        <div class="fly" id="dragonfly"></div>
-        <input type="text" id="myTextInput" name="" value="">
-        <button id="myButton">Type font name</button>
+<body id="body">
+<div id="container">
+    <div class="fly" id="dragonfly"></div>
+    <select id="myTextInput">
+        <option value="digital-7">Default</option>
+        <option value="arial">Arial</option>
+        <option value="times new roman">Times New Roman</option>
+    </select>
+    <button id="myButton">Change font</button>
+    <div class="" style="height:3%">
     </div>
-
-    <div id="footer">Stanislav Majevski</div>
-    <script src="clock.js" charset="utf-8"></script>
+    <div>
+        <span>Change Speed</span>
+        <button onclick="fast()">+</button>
+        <button onclick="slow()">-</button>
+    </div>
+</div>
+<div id="footer">Stanislav Majevski</div>
+<script src="clock.js" charset="utf-8"></script>
 </body>
 
 </html>

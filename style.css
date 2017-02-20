@@ -13,6 +13,7 @@ body {
     background: #111;
     color: limegreen;
     font-size: 1.8em;
+    font-family: 'digital-7';
 }
 
 body {
@@ -42,16 +43,16 @@ body {
     bottom: 5%;
     left: 0px;
     text-align: center;
-    font-family: 'digital-7';
+    /*  font-family: 'digital-7';*/
 }
 
-input, button {
+select, button {
     padding: .65em 1em;
     border-radius: .3em;
     outline: 0;
 }
 
-input {
+select {
     border: 1px solid #dcdcdc;
     margin-right: 1em;
 }
@@ -62,7 +63,7 @@ button {
     border: solid 1px;
     border-color: rgba(0, 0, 0, .1);
     cursor: pointer;
-    font-family: 'digital-7';
+    /*    font-family: 'digital-7';*/
 }
 
 button+button {
