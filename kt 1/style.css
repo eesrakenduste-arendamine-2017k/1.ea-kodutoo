@@ -1,0 +1,108 @@
+#content {
+    width: 100%;
+    height: 100%;
+}
+
+#clock, #day, #month {
+    font-size: 10vh;
+    text-align: center;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -25vw;
+    width: 50vw;
+    height: 10vh;
+}
+
+#clock {
+    margin-top: -20vh;
+}
+
+#month {
+    margin-top: -10vh;
+}
+
+#name {
+    position: absolute;
+    top: 95%;
+    left: 50%;
+    /*width: 40vh;*/
+    /*height: 2vh;*/
+    color: white;
+    /*margin-top:vh;*/
+    margin-left: -8vh;
+    font-size: 3vh;
+    opacity: 0.4;
+}
+
+#clockColor, #dateColor, #dayColor, #color {
+    position: absolute;
+    left: 70%;
+    top: 44%;
+    font-size: 4vh;
+    color: white;
+    background-color: black;
+}
+
+#color {
+    margin-top: -18vh;
+    margin-left: -2vw;
+}
+
+#clockColor {
+    margin-top: -11vh;
+}
+
+#dateColor {}
+
+#dayColor {
+    margin-top: 11vh;
+}
+
+#lngEst, #lngRus, #lngEng {
+    position: absolute;
+    left: 48%;
+    top: 70%;
+    font-size: 3vh;
+    color: white;
+    background-color: black;
+}
+
+#lngEst {
+    margin-left: -10vh;
+}
+
+#lngRus {
+    margin-left: 10vh;
+}
+
+#lngEng {
+    margin-left: 0vw;
+}
+
+#dayMode, #mode{
+  position: absolute;
+  top:44%;
+  left:25%;
+  font-size: 4vh;
+  color: white;
+  background-color: black;
+  width:7vw;
+}
+
+#mode{
+  margin-top:-6vh;
+  margin-left: 2vh;
+}
+
+#toastjs{
+  position: absolute;
+  left:47.5%;
+  top:61%;
+  font-size:2vh;
+}
+
+body {
+    background-color: black;
+}
