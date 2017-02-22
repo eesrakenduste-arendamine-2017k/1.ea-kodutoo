@@ -24,10 +24,10 @@
     font-weight: bold;
     font-size: 400%;
     color: white;
-	top:0%;
-	left:0%;
+	top:100%;
+	left:100%;
 	position: absolute;
-	transform: translate(0%, 0%);
+	transform: translate(-100%, -200%);
 }
 
 #name{

@@ -2,16 +2,16 @@ window.onload = function() {
 
 	var clockContainer = document.getElementById("clock");
 	var dateContainer = document.getElementById("date");
-	//var dayContainer = document.getElementById("day");
+	var dayContainer = document.getElementById("day");
 	clockContainer.innerHTML = getCurrentTime();
 	dateContainer.innerHTML = getCurrentDate();
-	//dayContainer.innerHTML = getCurrentDay();
+	dayContainer.innerHTML = getCurrentDay();
 
 	window.setInterval(function(){
     	clockContainer.innerHTML = getCurrentTime();
 	}, 1000);
 
-	if (getCurrentDateTime()=="00:00:00"){
+	if (getCurrentTime()=="00:00:00"){
 		dateContainer.innerHTML = getCurrentDate();
 		//dateContainer.innerHTML = getCurrentDay();
 	}
@@ -27,12 +27,14 @@ var months = ["Jaanuar", "Veebruar", "Märts",
 	"Juuli", "August", "September",
 	"Oktoober", "November", "Detsember"];
 
-/*var days = ["Esmaspäev", "Teisipäev", "Kolmapäev",
+var days = ["Esmaspäev", "Teisipäev", "Kolmapäev",
 	"Neljapäev", "Reede", "Laupäev", "Pühapäev"]
-*/
-var currentDate = new Date();
 
-var getCurrentTime = function() {
+
+
+function getCurrentTime(){
+
+	var currentDate = new Date();
 
 	var hours = addZerobefore(currentDate.getHours());
 	var minutes = addZerobefore(currentDate.getMinutes());
@@ -43,7 +45,9 @@ var getCurrentTime = function() {
 	return dateString;
 };
 
-var getCurrentDate = function() {
+function getCurrentDate(){
+
+	var currentDate = new Date();
 
 	var month = currentDate.getMonth();
 	var year = currentDate.getYear()+1900;
@@ -51,15 +55,53 @@ var getCurrentDate = function() {
 
 	return day+" "+months[month]+" "+year;
 }
-/*
+
 var getCurrentDay = function() {
+
+	var currentDate = new Date();
+
 	var dayOfWeek = currentDate.getDay();
 
 	return days[dayOfWeek-1]
 }
-*/
-var changeBgColor = function(color) {
-	document.bgColor=color;
+
+var clockPos = "right";
+
+function changeClockPos(){
+	if(clockPos == "right"){
+		document.getElementById("clock").style["top"] = "0%";
+		document.getElementById("clock").style["left"] = "0%";
+		document.getElementById("clock").style["transform"] = "translate(0%, 0%)";
+		clockPos = "left";
+	} else if (clockPos == "left"){
+		document.getElementById("clock").style["top"] = "0%";
+		document.getElementById("clock").style["left"] = "100%";
+		document.getElementById("clock").style["transform"] = "translate(-100%, 0%)";
+		clockPos = "right";
+	}
+	return 0;
+}
+
+var textSize = "400%";
+
+function changeTextSize(){
+	if(textSize == "400%"){
+		document.getElementById("date").style["font-size"] = "600%";
+		document.getElementById("clock").style["font-size"] = "600%";
+		document.getElementById("day").style["font-size"] = "600%";
+		textSize = "600%";
+	}else if(textSize == "600%"){
+		document.getElementById("date").style["font-size"] = "100%";
+		document.getElementById("clock").style["font-size"] = "100%";
+		document.getElementById("day").style["font-size"] = "100%";
+		textSize = "100%";
+	}else if(textSize == "100%"){
+		document.getElementById("date").style["font-size"] = "400%";
+		document.getElementById("clock").style["font-size"] = "400%";
+		document.getElementById("day").style["font-size"] = "400%";
+		textSize = "400%";
+	}
+	return 0;
 }
 
 function addZerobefore(number) {
