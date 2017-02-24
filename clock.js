@@ -19,6 +19,11 @@ window.onload = function() {
 		}
 	}, 1000);
 
+	timezoneContainer.addEventListener("click", function(){
+		dateContainer.innerHTML = getCurrentDate();
+		dayContainer.innerHTML = getCurrentDay();
+	});
+
 };
 
 var textSize = "400%";
