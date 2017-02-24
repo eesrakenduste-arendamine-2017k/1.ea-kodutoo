@@ -96,11 +96,12 @@ document.body.addEventListener('click', function(e){
 });
 
 document.addEventListener('keypress', function(e){
-    console.log(parseFloat(window.getComputedStyle(document.getElementById("container"), null).getPropertyValue("width")));
-    if (event.keyCode == 43){
+    // keyCode = CHROME/IE
+    // charCode = FIREFOX
+    if (e.keyCode == 43 || e.charCode == 43){
         fontSizeDate += 1;
         fontSizeClock += 3;
-    } else if (event.keyCode == 45){
+    } else if (e.keyCode == 45 || e.charCode == 45){
         fontSizeDate -= 1;
         fontSizeClock -= 3;
     }
