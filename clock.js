@@ -136,7 +136,7 @@ function checkPosVsNeg(number) {
 
 function addZerobefore(number) {
 	if(number < 10 && number > -10) {
-		number = "0" + number;
+		number = "0" + parseInt(number);
 	}
 	return number;
 }
