@@ -1,0 +1,96 @@
+.Background1{
+  background-image: url("Nightcore2.jpg");
+}
+
+.Background2{
+  background-image: url("Nightcore3.jpg");
+}
+
+.dateAndtime{
+  color: white;
+  font-family: cursive;
+  transition: margin-left .5s;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-size:150px;
+}
+
+.dateAndtime #clock{
+  text-align: center;
+  font-size: 80%;
+}
+
+.dateAndtime #date{
+  font-size: 40%;
+}
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #FFFFFF;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 15px;
+  color: #818181;
+  display: block;
+  transition: 0.3s
+}
+
+#openNav{
+  float: left;
+  padding: 10px;
+}
+
+.sidenav h1{
+  padding: 8px 8px 8px 32px;
+  font-size: 25px;
+  display: block;
+  color: black;
+  font-family: cursive;
+  white-space: nowrap;
+}
+
+.sidenav a:hover, .offcanvas a:focus{
+  color: #f1f1f1;
+  cursor: pointer;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+#main {
+  transition: margin-left .5s;
+  padding: 16px;
+}
+
+.sidenav audio{
+  padding: 8px 8px 8px 16px;
+  display: block;
+}
+
+#name{
+  position: absolute;
+  font-family: cursive;
+  top: 100%;
+  left: 0%;
+  color: white;
+  transform: translate(0%, -100%);
+}
