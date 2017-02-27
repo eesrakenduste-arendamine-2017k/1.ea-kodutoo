@@ -1,0 +1,76 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+
+<style>
+	body { 
+	  background: url(background.jpg) no-repeat center center fixed; 
+	  -webkit-background-size: cover;
+	  -webkit-font-smoothing: antialiased;
+	  -moz-background-size: cover;
+	  -o-background-size: cover;
+	  background-size: cover;
+	  font-size: 100%;
+	  color: white;
+	  text-align: center;
+	  font-family: ‘Palatino Linotype’, ‘Book Antiqua’, Palatino, serif;
+	  text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
+	}	
+	
+	.clock {
+		font-size: 115px;
+	}
+</style>
+
+
+
+<!DOCTYPE html>
+
+<style>
+	.nupp {position: absolute;
+			right: 0;
+			bottom: 0;
+			}
+	
+	.nimi {position: absolute;
+			right: 0;
+			top: 0;
+			}
+	
+</style>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Kell</title>
+    <script src="clock.js" charset="utf-8"></script>
+</head>
+<body>
+    <div class="clock" id="clock"></div>
+</body>
+</html>
+
+<div id="nupud" class="fixed-bottom" style="float: right; visibility: hidden" >
+	<div id="nupp" class="btn-group-vertical" style="float: right; margin-bottom: 10px">
+	<button onClick="textbigger()" style="height: 50px; width: 150px; float: right"  type="button">Tekst suuremaks</button>
+	<button onClick="textmedium()" style="height: 50px; width: 150px; float: right"  type="button">Tekst keskmiseks</button>
+	<button onClick="textsmaller()" style="height: 50px; width: 150px; float: right"  type="button">Tekst väiksemaks</button>
+	<button onClick="textToRed()" style="height: 50px; width: 150px; float: right; background-color: red"  type="button">Tekst punaseks</button>
+	<button onClick="textToGreen()" style="height: 50px; width: 150px; float: right; background-color: green"  type="button">Tekst roheliseks</button>
+	<button onClick="textToWhite()" style="height: 50px; width: 150px; float: right; background-color: white"  type="button">Tekst valgeks</button>
+	<button onClick="textToBlack()" style="height: 50px; width: 150px; float: right; background-color: black; color: white"  type="button">Tekst mustaks</button>
+	<button onClick="background1()" style="height: 50px; width: 150px; float: right"  type="button"><img src="car.jpg" style="width: 100%; height: 100%"></button>
+	<button onClick="background2()" style="height: 50px; width: 150px; float: right"  type="button"><img src="white.jpg" style="width: 100%; height: 100%"></button>
+	<button onClick="background3()" style="height: 50px; width: 150px; float: right"  type="button"><img src="background.jpg" style="width: 100%; height: 100%"></button>
+	</div>
+</div>
+
+<button type="button" style="float: right" class="nupp">Nupud</button>
+
+<b class="nimi">Rasmus Aaviste</b>
+
+
