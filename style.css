@@ -1,0 +1,60 @@
+body {
+    background-color: #80d4ea;
+}
+button{border-radius:10px;
+background-color:#BE81F7;
+color:white;}
+#clock {
+    
+	margin-top:10%;
+    position: absolute;
+    top: 0; left: 50%; bottom: 0; right: 0;
+    padding-top: 70px;
+    font-family: courier, monospace;
+    text-align: center;
+    color: white;
+    width:25.37%; 
+    height:21.88% 
+	position: relative;
+	border-radius: 50px;
+	margin-left:-400px;
+
+}
+#button1{
+    position:absolute;
+    bottom: 5%;
+    right:25%;
+}
+
+#button2{
+    position:absolute;
+    bottom: 5%;
+    right:30%;
+}
+
+#button3{
+    position:absolute;
+    bottom: 5%;
+    right:35%;
+}
+
+#button4{
+    position:absolute;
+    bottom: 5%;
+    right:40%;
+}
+#clickme{
+	
+    position:absolute;
+    bottom: 5%;
+    right:20%;
+}
+#bottom-bar {
+    bottom: 0;
+    left: 0;
+    position: fixed;
+    right: 0;
+    text-align: center;
+}
+
+p{color:white;}
