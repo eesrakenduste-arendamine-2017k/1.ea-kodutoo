@@ -1,0 +1,65 @@
+#time{
+	white-space: nowrap;
+    font-weight: bold;
+    font-size: 400%;
+    color: white;
+	top:0%;
+	left:100%;
+	position: absolute;
+	transform: translate(-200%, 0%);
+}
+
+#clock{
+    font-weight: bold;
+    color: white;
+	transform: translate(0%, 0%);
+	position: relative;
+}
+
+#timezone{
+    font-weight: bold;
+    color: white;
+	transform: translate(100%, -200%);
+	position: relative;
+}
+
+#toTimezone{
+    font-weight: bold;
+    color: white;
+	transform: translate(89%, -100%);
+	position: relative;
+}
+
+#date{
+	white-space: nowrap;
+    font-weight: bold;
+    font-size: 400%;
+    color: white;
+	top:100%;
+    left:100%;
+	position: absolute;
+	transform: translate(-100%, -100%);
+}
+
+#day{
+    font-weight: bold;
+    font-size: 400%;
+    color: white;
+	top:100%;
+	left:100%;
+	position: absolute;
+	transform: translate(-100%, -200%);
+}
+
+#name{
+    position: absolute;
+    top: 100%;
+    left: 0%;
+    font-weight: bold;
+    color: white;
+	transform: translate(0%, -100%);
+}
+
+body{
+	background-image: url("trainstation.jpg");
+}
