@@ -13,19 +13,24 @@ window.onload = function() {
         }, 1000
 
     );
+	
+		document.getElementById('clock').style.height= "20%";
+       document.getElementById('clock').style.width= '20%';
+	   document.getElementById('clock').style.fontSize= "50px";
+       document.getElementById('clock').style.fontSize= '50px';
 }
 
 var getCurrentDate = function() {
 
     var d = new Date();
     var weekday = new Array(7);
-    weekday[0] = "Sunday";
-    weekday[1] = "Monday";
-    weekday[2] = "Tuesday";
-    weekday[3] = "Wednesday";
-    weekday[4] = "Thursday";
-    weekday[5] = "Friday";
-    weekday[6] = "Saturday";
+    weekday[0] = "Pühapäev";
+    weekday[1] = "Esmaspäev";
+    weekday[2] = "Teisipäev";
+    weekday[3] = "Kolmapäev";
+    weekday[4] = "Neljapäev";
+    weekday[5] = "Reede";
+    weekday[6] = "Laupäev";
 
     var n = weekday[d.getDay()];
     var month = d.getMonth() + 1;
@@ -95,3 +100,26 @@ function moving_Image() {
   
 
 }
+
+
+
+function show_update_profile2()
+   {
+	   document.getElementById('clock').style.height= "20%";
+       document.getElementById('clock').style.width= '20%';
+	   document.getElementById('clock').style.fontSize= "50px";
+       document.getElementById('clock').style.fontSize= '50px';
+	   
+   }
+   
+function show_update_profile()
+   {	document.getElementById('clock').style.height= "50%";
+       document.getElementById('clock').style.width= '50%';
+	   document.getElementById('clock').style.fontSize= "100px";
+       document.getElementById('clock').style.fontSize= '100px';
+   }
+
+   function chBackcolor(color) {
+   document.body.style.background = color;
+}
+
