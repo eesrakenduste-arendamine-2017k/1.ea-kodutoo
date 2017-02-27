@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Clock</title>
+  <link href="https://fonts.googleapis.com/css?family=Josefin+Slab" rel="stylesheet">
+  <script data-require="jquery@*" data-semver="2.2.0" src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+
+      <link rel="stylesheet" href="css/style.css">
+
+      <style>
+      p {  font-size: 40px;}
+
+      </style>
+
+</head>
+
+<body>
+
+  <h2 id="knapp" onclick="myFunctionknapp()">Background</h2>
+
+  <h2> Change author size: <input type="number" id="sizeAuthor" onchange="AuthorSize()" />
+  <button id="button" onclick="AuthorSize()">Change</button> <br /><br /></h2>
+
+  <h1 id="greeting" onclick="myFunctiongreeting()"></h1>
+  <div id="wrapper">
+			<div id="clock">
+				  <ul class="clock-digits">
+					  <li>12</li>
+					  <li>3</li>
+					  <li>6</li>
+					  <li>9</li>
+				  </ul>
+				  <div class="arrow hours"></div>
+				  <div class="arrow minutes"></div>
+				  <div class="arrow seconds"></div>
+			</div>
+</div>
+<p id = "dmy" onclick="myFunctiondmy()" class="dmy">
+  <span id="d" onclick="myFunction()"></span>
+  <span id="m" onclick="myFunction()"></span>
+  <span id="y" onclick="myFunction()"></span>
+</p>
+
+<h2 id="name" onclick="myFunctionname()"> Author is Kärol-Milaine Jürgenson</h2>
+
+  <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+  <script src="js/index.js"></script>
+
+</body>
+</html>

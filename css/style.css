@@ -1,0 +1,205 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300);
+body {
+  margin: 0;
+  background: #fcc;
+  font-family: 'Josefin Slab', serif;
+  color: white;
+}
+
+::-webkit-selection {
+  background: rgba(149, 165, 166, 0.8);
+  color: #fff;
+}
+
+::-moz-selection {
+  background: rgba(149, 165, 166, 0.8);
+  color: #fff;
+}
+
+::-o-selection {
+  background: rgba(149, 165, 166, 0.8);
+  color: #fff;
+}
+
+::selection {
+  background: rgba(149, 165, 166, 0.8);
+  color: #fff;
+}
+
+#wrapper {
+  width: 100%;
+}
+
+// tausta muutmine, vajutades nupule
+
+#knapp {
+    height:50px;
+    width:70px;
+    background-repeat:no-repeat;
+    background-size:contain;
+    position:absolute;
+    top:90vh;
+    right:3vw;
+    cursor: pointer;
+}
+
+
+body.bg-0 {
+    background: #fcc;
+}
+
+body.bg-1 {
+    background-color: #99ccff;
+}
+
+body.bg-2 {
+    background-color: #b3b3ff;
+}
+
+body.bg-3 {
+    background-color: #b3b3cc;
+}
+#greeting{
+    width: 100%;
+    font-weight: 100;
+    font-size: 100px;
+    text-align: center;
+    font-family: 'Josefin Slab', serif;
+    color: white;
+    cursor: pointer;
+}
+
+
+html {
+
+    background-size:cover;
+    text-align: center;
+    font-size: 10px;
+}
+
+
+#clock {
+  position: relative;
+  margin: 50px auto;
+  width: 21.875rem;
+  height: 21.875rem;
+  border: 10px solid #353241;
+  background: #ecf0f1;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%;
+}
+#clock::after {
+  content: '';
+  position: absolute;
+  top: 10.3125rem;
+  left: 10.3125rem;
+  width: 1.25rem;
+  height: 1.25rem;
+  z-index: 15;
+  background: #95a5a6;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%;
+}
+
+.arrow {
+  position: absolute;
+  -webkit-transform-origin: 50% 100%;
+  -moz-transform-origin: 50% 100%;
+  -o-transform-origin: 50% 100%;
+  -ms-transform-origin: 50% 100%;
+  transform-origin: 50% 100%;
+}
+
+.minutes {
+  width: .5rem;
+  height: 6.25rem;
+  top: 4.6875rem;
+  left: 10.6875rem;
+  background: #353241;
+  z-index: 12;
+  -moz-border-radius: .4rem;
+  -webkit-border-radius: .4rem;
+  -o-border-radius: .4rem;
+  border-radius: .4rem;
+}
+
+.seconds {
+  width: .1875rem;
+  height: 6.25rem;
+  top: 4.6875rem;
+  left: 10.84375rem;
+  background: #D79691;
+  z-index: 13;
+  -moz-border-radius: .6rem;
+  -webkit-border-radius: .6rem;
+  -o-border-radius: .6rem;
+  border-radius: .6rem;
+}
+
+.hours {
+  width: .5rem;
+  height: 4.375rem;
+  top: 6.5625rem;
+  left: 10.6875rem;
+  background: #D9D0C7;
+  z-index: 14;
+  -moz-border-radius: .6rem;
+  -webkit-border-radius: .6rem;
+  -o-border-radius: .6rem;
+  border-radius: .6rem;
+}
+
+.clock-digits {
+  list-style-type: none;
+}
+.clock-digits li {
+  position: absolute;
+  color: #95a5a6;
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-size: 3em;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-shadow: 1px 1px 1px #ecf0f1;
+  -moz-text-shadow: 1px 1px 1px #ecf0f1;
+  -o-text-shadow: 1px 1px 1px #ecf0f1;
+  -ms-text-shadow: 1px 1px 1px #ecf0f1;
+  text-shadow: 1px 1px 1px #ecf0f1;
+}
+.clock-digits li:first-child {
+  top: 0;
+  left: 43.513513513513513513513513513514%;
+}
+.clock-digits li:nth-child(2) {
+  top: 40.513513513513513513513513513514%;
+  right: 4%;
+}
+.clock-digits li:nth-child(3) {
+  bottom: 0;
+  left: 46.756756756756756756756756756757%;
+}
+.clock-digits li:last-child {
+  left: 4%;
+  top: 40.513513513513513513513513513514%;
+}
+
+//kuupäev
+#dmy {
+  width: 100%;
+  font-weight: 100;
+  font-size: 60px;
+  text-align: center;
+  font-family: 'Josefin Slab', serif;
+  color: white;
+  cursor: pointer;
+}
+
+// autori nime asetsus
+#name {
+  position: absolute;
+  bottom: 1px;
+  left: 1px;
+  cursor: pointer;
+}
