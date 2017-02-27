@@ -32,8 +32,8 @@ var months = ["Jaanuar", "Veebruar", "Märts",
 	"Aprill", "Mai", "Juuni",
 	"Juuli", "August", "September",
 	"Oktoober", "November", "Detsember"];
-var days = ["Esmaspäev", "Teisipäev", "Kolmapäev",
-	"Neljapäev", "Reede", "Laupäev", "Pühapäev"];
+var days = ["Pühapäev", "Esmaspäev", "Teisipäev", "Kolmapäev",
+	"Neljapäev", "Reede", "Laupäev"];
 var gmtTimezone = getTimezoneOffset();
 
 function askTimezone() {
@@ -58,7 +58,7 @@ function getDate(offset) {
 function getCurrentDay() {
 	var currentDate = getDate(gmtTimezone);
 	var dayOfWeek = currentDate.getUTCDay();
-	return days[dayOfWeek-1];
+	return days[dayOfWeek];
 }
 
 function getCurrentDate(){
