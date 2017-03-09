@@ -1,11 +1,9 @@
 // aken laetud
 window.onload = function(){
-	document.getElementById("clock").style.fontSize ="50px";
 
     var clockContainer = document.getElementById('clock'); /*To access an HTML element*/
     console.log(clockContainer); /*For debugging purposes, you can use the console.log() method to display data.*/
 
-    // kohe kirjutame ka kellaaja
     clockContainer.innerHTML = getCurrentDateTime();
 
     window.setInterval(function(){ /*The setInterval() method calls a function or evaluates an expression at specified intervals (in milliseconds).*/
@@ -24,7 +22,7 @@ window.onload = function(){
 	var date = currentDate.getDate();
     var month = currentDate.getMonth()+1;
     var day = currentDate.getDay();
-	
+
 	if (day == "1"){
  		day = "Mo";
  	}
@@ -46,7 +44,7 @@ window.onload = function(){
  	if (day == "0"){
  		day = "Su";
  	}
- 
+
 
     var dateString = addZeroBefore(hours) + ':' + addZeroBefore(minutes) + ':' + addZeroBefore(seconds) + "<br>" +  addZeroBefore(date) + '.' + addZeroBefore(month) + '.' + day;
 
@@ -59,4 +57,5 @@ function addZeroBefore(dateNumber) {
     }
 
     return dateNumber;
+
 }

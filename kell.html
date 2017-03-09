@@ -7,6 +7,8 @@
 	.clock {
         width: 100%;
 			font-family: 'Poiret One', cursive;
+			font-size: 50px;
+			color: black;
     }#bckgr{
  		background-color: hsla(20, 100%, 60%, 0.5);
         background-repeat: no-repeat;
@@ -29,12 +31,13 @@
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 <title>Kirke kell</title>
 
-<script src="kell.js" charset="utf-8">
-</script>
+<script src="kell.js" charset="utf-8"></script>
+<script src="functions.js" charset="utf-8"></script>
+
 </head>
-<body id="bckgr">
-<center><div class="clock" id="clock"></div></center>
-<center><text id="author">kirke gross</text></center>
+<body id="bckgr" onclick="changeback()">
+<center><div class="clock" id="clock" onclick="changeColor()"></div></center>
+<center><text id="author" onclick="changeFont()">kirke gross</text></center>
 <div id="clock"></div>
 </body>
 </html>
