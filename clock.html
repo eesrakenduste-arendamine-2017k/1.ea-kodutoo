@@ -3,30 +3,83 @@
 	<head>
 		<title>Proov</title>
 		<meta charset = "UTF-8">
+		<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Questrial">
 		<style>
 			body {
-				background-color: lightblue;
+				background-image: url("tweed.png");
+				background-color: #FFF;
+				height: 100%;
+				
 			}
 			
 			div {
-				font-size: 20px;
-				font-family: "Lucida Console";
+				
+				font-family: Questrial;
 			}
 			
-			.first {
-				color: white;
+			.panel {
+				margin: auto;
+				width: 80%;
+				text-align: center;
 			}
-			.second {
-				color: black;
+			
+			.button {
+				border: none;
+				background-color: Transparent;
+				outline: none;
+				padding: 10px 20px;
+				text-align: center;
+				font-family: Questrial;
+				font-size: 25px;
+				cursor: pointer;
+				transition-duration: 0.4s;
+				border-radius: 3px;
+			}
+			
+			.buttonMove {
+				color: #D2D6DB;
+			}
+			
+			.buttonMove:hover {
+				color: #E3AE57;
+			}
+			
+			.clock {
+				position: relative;
+				width: 20%;
+				height: 30%;
+				cursor: pointer;
+				color: #D2D6DB;
+			}
+			
+			#clockTime {
+				font-size: 380%;
+			}
+			
+			#clockDate {
+				font-size: 130%;
 			}
 		</style>
 	
 	</head>
 	
 	<body>
-	
-		<div id="clock" align="center" style="position: relative; left: 100px; top: 50px; width: 30%; height: 30%;
-			padding: 5px 0; right: 0px;"></div>
+		<div id="panel" class="panel">
+			<button id="author1" class="button buttonMove">Author</button>
+			<button id="author2" class="button buttonMove" style="display: none;">Karl-Erik Borkmann</button>
+			
+			<button id="movement1" class="button buttonMove">Move Clock</button>
+			<button id="movement2" class="button buttonMove" style="display: none;">Stop Clock</button>
+			
+			<button id="language1" class="button buttonMove">Est</button>
+			<button id="language2" class="button buttonMove" style="display: none;">Eng</button>
+		</div>
+		
+		<div id="clock" class="clock" align="center" style="left: 100px; top: 50px;">
+			<div id="clockTime" class="clockTime"></div>
+			<div id="clockDate" class="clockDate"></div>
+		</div>
+		
 		<div id="clicks"></div>
 		
 		<script src="clock.js"></script> 

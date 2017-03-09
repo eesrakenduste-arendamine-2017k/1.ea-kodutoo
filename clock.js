@@ -1,22 +1,69 @@
 
-
 var clockContainer = document.getElementById("clock");
+var clockTime = document.getElementById("clockTime");
+var clockDate = document.getElementById("clockDate");
 var clicksContainer = document.getElementById("clicks");
+var buttonMovement = document.getElementById("movement1");
+var buttonStopMovement = document.getElementById("movement2");
+var langEst = document.getElementById("language1");
+var langEng = document.getElementById("language2");
 	
 window.onload = function() {
-	clockContainer.innerHTML = getCurrentDateTime();
+	clockTime.innerHTML = getCurrentTime();
+	clockDate.innerHTML = getCurrentDate();
 };
 
-	window.setInterval(function() {
-		clockContainer.innerHTML = getCurrentDateTime();
-	}, 1000)
+var langEstTimer;
+var langEngTimer;
+var defaultTimer;
 
-var getCurrentDateTime = function() {
+defaultTimer = window.setInterval(function() {
+	clockTime.innerHTML = getCurrentTime();
+	clockDate.innerHTML = getCurrentDate();
+}, 100);
+
+langEst.onclick = function() {
+	langEst.style.display = "none";
+	langEng.style.display = "inline";
+	clearInterval(defaultTimer);
+	clearInterval(langEngTimer);
+	langEstTimer = window.setInterval(function() {
+		clockTime.innerHTML = getCurrentTime();
+		clockDate.innerHTML = getCurrentDateEst();
+	}, 100);
+	buttonMovement.innerHTML = "Liiguta kella";
+	buttonStopMovement.innerHTML = "Peata kell";
+	authorPlaceholder.innerHTML = "Autor";
+};
+
+langEng.onclick = function() {
+	langEst.style.display = "inline";
+	langEng.style.display = "none";
+	clearInterval(langEstTimer);
+	langEngTimer = window.setInterval(function() {
+		clockTime.innerHTML = getCurrentTime();
+		clockDate.innerHTML = getCurrentDate();
+	}, 100);
+	buttonMovement.innerHTML = "Move Clock";
+	buttonStopMovement.innerHTML = "Stop Clock";
+	authorPlaceholder.innerHTML = "Author";
+};
+	
+
+var getCurrentTime = function() {
 	var currentDate = new Date();
 	
 	var hours = currentDate.getHours();
 	var minutes = currentDate.getMinutes();
 	var seconds = currentDate.getSeconds();
+	
+	var timeString = addZero(hours) + ":" + addZero(minutes) + ":" + addZero(seconds);
+	
+	return timeString;
+}
+
+var getCurrentDate = function() {
+	var currentDate = new Date();
 	
 	var days = currentDate.getDate();
 	var month = currentDate.getMonth() + 1;
@@ -24,14 +71,35 @@ var getCurrentDateTime = function() {
 	
 	var weekDay = currentDate.getDay();
 	
-	var dateString = addZero(hours) + ":" + addZero(minutes) + ":" + addZero(seconds)
-	+ ", " + addZero(days) + "." + addZero(month) + "." + year + ", " + getWeekDay(weekDay);
+	var dateString = addZero(days) + "/" + addZero(month) + "/" + year + ", " + getWeekDay(weekDay);
 	
 	return dateString;
 }
 
+var getCurrentDateEst = function() {
+	var currentDate = new Date();
+	
+	var days = currentDate.getDate();
+	var month = currentDate.getMonth() + 1;
+	var year = currentDate.getFullYear();
+	
+	var weekDay = currentDate.getDay();
+	
+	var dateString = addZero(days) + "." + addZero(month) + "." + year + ", " + getWeekDayEst(weekDay);
+	
+	return dateString;
+}
+
+
+
 function getWeekDay(number) {
 	var weekDays = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+	
+	return weekDays[number];
+}
+
+function getWeekDayEst(number) {
+	var weekDays = ["Pühapäev", "Esmaspäev", "Teisipäev", "Kolmapäev", "Neljapäev", "Reede", "Laupäev"];
 	
 	return weekDays[number];
 }
@@ -44,13 +112,11 @@ function addZero(number) {
 }
 
 var clicks = 0;
-clicksContainer.innerHTML = clicks;
 
 clockContainer.onclick = function() {
-	var colors = ["black", "white", "yellow", "red", "blue"];
+	var colors = ["#D2D6DB", "#E3AE57", "#F1684E", "#4EB1BA", "black"];
 	clicks++;
 	remainders = clicks % colors.length;
-	clicksContainer.innerHTML = remainders;
 	
 	clockContainer.style.color = colors[remainders];
 	
@@ -96,7 +162,7 @@ function moveClock() {
 	clockContainer.style.left = left + "px";
 	clockContainer.style.top = up + "px";
 	
-	// borderid
+	// borderid (pikslitega.. paremaid lahendusi ei hammustanud läbi)
 	
 	var leftpx = clockContainer.style.left;
 	var leftPx = parseInt(leftpx.slice(0, -2));
@@ -109,7 +175,7 @@ function moveClock() {
 		left += amount;
 		clockContainer.style.left = left + "px";
 	}
-	if(leftPx > 930) {
+	if(leftPx > 1050) {
 		left -= amount;
 		clockContainer.style.left = left + "px";
 	}
@@ -117,7 +183,7 @@ function moveClock() {
 		up += amount;
 		clockContainer.style.top = up + "px";
 	}
-	if(upPx > 550) {
+	if(upPx > 450) {
 		up -= amount;
 		clockContainer.style.top = up + "px";
 	}
@@ -147,6 +213,7 @@ function moveLeft() {
 			clockContainer.style.left = left + "px";
 		}
 	}
+
 }
 
 function moveRight() {
@@ -160,7 +227,7 @@ function moveRight() {
 	
 	for(var i = 0; i < times; i++) {
 		
-		if(leftPx > 930) {
+		if(leftPx > 1050) {
 			left -= amount;
 			clockContainer.style.left = left + "px";
 		} else {
@@ -202,7 +269,7 @@ function moveDown() {
 	
 	for(var i = 0; i < times; i++) {
 		
-		if(upPx > 550) {
+		if(upPx > 450) {
 			up -= amount;
 			clockContainer.style.top = up + "px";
 		} else {
@@ -226,12 +293,45 @@ function automaticClockMove() {
 	if(direction == 3) {
 		moveDown();
 	}
-	
 }
 
-clicksContainer.onclick = function() {
-	setInterval(automaticClockMove, 2000);
+var movingClock;
+
+buttonMovement.onclick = function() {
+	buttonMovement.style.display = "none";
+	buttonStopMovement.style.display = "inline";
+	movingClock = setInterval(automaticClockMove, 2000);
 };
+
+buttonStopMovement.onclick = function() {
+	buttonMovement.style.display = "inline";
+	buttonStopMovement.style.display = "none";
+	clearInterval(movingClock);
+};
+
+
+// autori nimi
+
+var authorPlaceholder = document.getElementById("author1");
+var authorName = document.getElementById("author2");
+
+authorPlaceholder.onclick = function() {
+	authorPlaceholder.style.display = "none";
+	authorName.style.display = "inline";
+};
+
+authorName.onclick = function() {
+	authorPlaceholder.style.display = "inline";
+	authorName.style.display = "none";
+};
+
+
+// keele muutmine
+
+
+
+
+
 
 
 
