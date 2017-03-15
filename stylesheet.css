@@ -1,0 +1,62 @@
+body, html {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+
+@font-face {
+  font-family: myFirstFont;
+  src: url(fonts/!sketchytimes.ttf);
+}
+
+@font-face {
+  font-family: myFirstBoldFont;
+  src: url(fonts/!SketchyTimes-b.ttf);
+}
+
+body {
+  background: url(backgrounds/28.png);
+}
+
+#container{
+  width: 100%;
+  font-family: Domine;
+}
+
+#clock {
+  margin-left: 25%;
+  margin-top: 10%;
+  width: 50%;
+  text-align: center;
+  border-radius: 15px;
+}
+
+#upperMenu {
+  height: 2em;
+}
+
+#time {
+  font-size: 5em;
+  color: white;
+}
+
+#date {
+  font-size: 2em;
+  color: white;
+}
+
+#lowerMenu {
+  height: 2em;
+}
+
+#author {
+  position: absolute;
+  bottom: 25px;
+  right: 25px;
+  padding: 5px 15px 5px 15px;
+  border-radius: 15px;
+  font-size: 2em;
+  text-align: center;
+  color: grey;
+}
