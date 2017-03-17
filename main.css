@@ -1,0 +1,98 @@
+* {
+    box-sizing: border-box;
+}
+
+html, body
+{
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: 'Anonymous Pro', monospace;
+    font-size: 1.6em;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position-y: 50%;
+}
+
+.wrapper{
+    height: 100%;
+    width: 100%;
+    margin: 0;  
+}
+
+.nav {
+    height: 15%;
+    justify-content: center;
+
+}
+
+.Grid {
+  display: flex;
+  flex-flow: row; 
+  flex-wrap: wrap;
+}
+
+.flexContainer{
+ display: -webkit-flex;
+    display: flex;
+    height: 50%;
+    flex-flow: row; 
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+
+.flexContainer--height{
+   display: -webkit-flex;
+    display: flex;
+    flex-flow: row; 
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+
+.klots{    
+    padding: 2vh;
+    min-width: 50.1%;
+}
+
+.searchBox{
+  width: 50%;
+}
+
+.change--css--yellow{
+  font-family: 'Anonymous Pro', monospace;
+  color: yellow; 
+}
+
+input[type="text"] {
+  display: block;
+  margin: 0;
+  padding: 10px;
+  width: 100%;
+  align-content: center;
+  font-family: 'Anonymous Pro', monospace;
+  font-size: 18px;
+  appearance: none;
+  box-shadow: none;
+  border-radius: none;
+  background: rgba(255,255,255,0.5);
+  border-top: 0px;
+  border-left: 0px;
+  border-bottom: solid 2px;
+  border-right: 0px;
+}
+input[type="text"]:focus {
+  outline: none;
+}
+
+#taust {
+  
+   cursor:pointer;
+}
+
