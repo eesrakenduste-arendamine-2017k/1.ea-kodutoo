@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Clock Screensaver</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <a href="#" id="toolsToggle" class="toolsToggle">Tools</a>
+    <div id="tools" class="tools">
+      <p>Theme:</p>
+      <a href="#" class="button dark theme" data-theme="dark">Dark</a>
+      <a href="#" class="button dark theme" data-theme="light">Light</a>
+      <p>Position:</p>
+      <a href="#" class="button dark position" data-position="left">Left</a>
+      <a href="#" class="button dark position" data-position="right">Right</a>
+      <p><a href="#" class="close toolsToggle">x</a></p>
+    </div>
+    <div class="wrap">
+        <div class="text" data-text=""></div>
+    </div>
+    <span class="clock dark"></span>
+    <div id="background"></div>
+</body>
+<script src="scripts.js"></script>
+
+</html>
