@@ -1,0 +1,281 @@
+/*
+Colors
+Beige = #FFEFD3
+Yellow = #FFFEE4
+Light Blue = #D0ECEA
+Blue = #9FD6D2
+Brown = #8B7A5E
+*/
+
+html,
+body {
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+body {
+    padding-top: 3em;
+}
+
+h1,
+h2 {
+    margin-bottom: 3rem;
+    font-family: sans-serif;
+    color: #666;
+}
+
+h2 {
+    margin-top: 2em;
+}
+.clock{
+    position: absolute;
+    right: 50px;
+    bottom: 50px;
+    font-family: monaco, consolas, "courier new", monospace;
+    font-size: 4.5rem;
+    line-height: 1.375;
+    border: 2px solid #8B7A5E;
+    padding: 5px;
+    border-radius: 10px;
+}
+.clock.left {
+    position: absolute;
+    right: initial;
+    left:50px;
+    bottom: 50px;
+    font-family: monaco, consolas, "courier new", monospace;
+    font-size: 4.5rem;
+    line-height: 1.375;
+    border: 2px solid #8B7A5E;
+    padding: 5px;
+    border-radius: 10px;
+}
+.clock.right {
+    position: absolute;
+    right: 50px;
+    bottom: 50px;
+    font-family: monaco, consolas, "courier new", monospace;
+    font-size: 4.5rem;
+    line-height: 1.375;
+    border: 2px solid #8B7A5E;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.clock:before,
+.clock:after {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    content: ':';
+    z-index: 2;
+    line-height: 1.15;
+    color: #8B7A5E;
+    padding: 5px;
+}
+
+.clock:before {
+    left: 2.325em;
+}
+
+.clock:after {
+    right: 2.325em;
+}
+
+.clock span {
+    position: relative;
+    display: inline-block;
+    padding: 0 .25em;
+    margin: 0 .06125em;
+    z-index: 1;
+    -webkit-transform: perspective(750);
+    -moz-transform: perspective(750);
+    -ms-transform: perspective(750);
+    transform: perspective(750);
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+}
+
+.clock span:first-child {
+    margin-left: 0;
+}
+
+.clock span:last-child {
+    margin-right: 0;
+}
+
+.clock span:nth-child(2),
+.clock span:nth-child(4) {
+    margin-right: .3em;
+}
+
+.clock span:nth-child(3),
+.clock span:nth-child(5) {
+    margin-left: .3em;
+}
+.clock.light span:before,
+.clock.light span:after {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    color: #8B7A5E;
+    background:#FFEFD3;
+    border-radius: .125em;
+    outline: 1px solid transparent;
+    /* fix jagged edges in ff */
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-transition: -webkit-transform .75s, opacity .75s;
+    -moz-transition: -moz-transform .75s, opacity .75s;
+    -ms-transition: -ms-transform .75s, opacity .75s;
+    transition: transform .75s, opacity .75s;
+}
+.clock.dark span:before,
+.clock.dark span:after {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    color: #FFEFD3;
+    background: #8B7A5E;
+    border-radius: .125em;
+    outline: 1px solid transparent;
+    /* fix jagged edges in ff */
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-transition: -webkit-transform .75s, opacity .75s;
+    -moz-transition: -moz-transform .75s, opacity .75s;
+    -ms-transition: -ms-transform .75s, opacity .75s;
+    transition: transform .75s, opacity .75s;
+}
+
+.clock span:before {
+    opacity: 1;
+    z-index: 1;
+    content: attr(data-old);
+    -webkit-transform-origin: 0 0;
+    -moz-transform-origin: 0 0;
+    -ms-transform-origin: 0 0;
+    transform-origin: 0 0;
+    -webkit-transform: translate3d(0, 0, 0) rotateX(0);
+    -moz-transform: translate3d(0, 0, 0) rotateX(0);
+    -ms-transform: translate3d(0, 0, 0) rotateX(0);
+    transform: translate3d(0, 0, 0) rotateX(0);
+}
+
+.clock span:after {
+    opacity: 0;
+    z-index: 2;
+    content: attr(data-now);
+    -webkit-transform-origin: 0 100%;
+    -moz-transform-origin: 0 100%;
+    -ms-transform-origin: 0 100%;
+    transform-origin: 0 100%;
+    -webkit-transform: translate3d(0, -102.5%, 0) rotateX(90deg);
+    -moz-transform: translate3d(0, -102.5%, 0) rotateX(90deg);
+    -ms-transform: translate3d(0, -102.5%, 0) rotateX(90deg);
+    transform: translate3d(0, -102.5%, 0) rotateX(90deg);
+}
+
+.clock .flip:before {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 102.5%, 0) rotateX(-90deg);
+    -moz-transform: translate3d(0, 102.5%, 0) rotateX(-90deg);
+    -ms-transform: translate3d(0, 102.5%, 0) rotateX(-90deg);
+    transform: translate3d(0, 102.5%, 0) rotateX(-90deg);
+}
+
+.clock .flip:after {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0) rotateX(0);
+    -moz-transform: translate3d(0, 0, 0) rotateX(0);
+    -ms-transform: translate3d(0, 0, 0) rotateX(0);
+    transform: translate3d(0, 0, 0) rotateX(0);
+}
+
+#background {
+    width: 100%;
+    height: 800px;
+    padding: 0px;
+    margin: 0px;
+}
+
+a {
+    color: #222;
+}
+#toolsToggle{
+  position:absolute;
+  right:50px;
+  top:15px;
+  font-family: Arial;
+  color:#8B7A5E;
+  font-size: 20px;
+  padding: 10px 20px 10px 20px;
+  border: solid #8B7A5E 2px;
+  text-decoration: none;
+}
+.tools{
+  position:absolute;
+  right:50px;
+  top:50px;
+  display:none;
+}
+.close{
+  text-decoration: none;
+  font-size:32px;
+  font-family: sans-serif;
+}
+.button{
+  border-radius:4px;
+}
+.button.light {
+  font-family: Arial;
+  color:#8B7A5E;
+  font-size: 20px;
+  padding: 10px 20px 10px 20px;
+  border: solid #8B7A5E 2px;
+  text-decoration: none;
+}
+.button.dark {
+  font-family: Arial;
+  color:#FFEFD3;
+  font-size: 20px;
+  padding: 10px 20px 10px 20px;
+  border: solid #8B7A5E 2px;
+  text-decoration: none;
+  background: #8B7A5E;
+}
+
+.button.light:hover {
+  background: #8B7A5E;
+  color:#FFEFD3;
+  text-decoration: none;
+}
+.button.dark:hover {
+  background: transparent;
+  color:#8B7A5E;
+  text-decoration: none;
+}
+.wrap {
+    width: 50%;
+    margin-left: 50px;
+    text-align: left;
+}
+
+.text {
+    font-family: Courier New, Courier, monospace;
+    font-size: 22px;
+    font-weight: bold;
+    margin-top: 10px;
+    text-align: left;
+}
