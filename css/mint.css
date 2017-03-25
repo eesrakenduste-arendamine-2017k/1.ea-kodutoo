@@ -1,0 +1,23 @@
+/*Mint theme*/
+body{
+margin: 0px;
+padding: 0px;
+background-color: #B4DBC0;
+}
+
+.content{
+  color: #414141;
+  text-shadow: 10px 10px 10px #6E7376;
+}
+
+.logos{
+  fill: #414141;
+  box-shadow: 0px 0px 20px #6E7376;
+
+}
+.colorSelector{
+color: #B4DBC0;
+background:#414141;
+text-shadow: 10px 10px 10px #6E7376;
+box-shadow: 0px 10px 20px #6E7376;
+}
