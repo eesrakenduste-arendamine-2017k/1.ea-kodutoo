@@ -1,0 +1,23 @@
+/*Dark theme*/
+body{
+  margin: 0px;
+  padding: 0px;
+background-color: #0F1626;
+}
+
+.content{
+color: #8EAEBD;
+text-shadow: 10px 10px 10px #34415D;
+}
+
+.logos{
+  fill: #8EAEBD;
+  box-shadow: 0px 0px 20px #34415D;
+}
+
+.colorSelector{
+color: #0F1626;
+background: #8EAEBD;
+text-shadow: 10px 10px 10px #34415D;
+box-shadow: 0px 10px 20px #34415D;
+}

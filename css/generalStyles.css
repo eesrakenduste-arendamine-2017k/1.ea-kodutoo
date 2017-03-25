@@ -1,0 +1,52 @@
+/*General styles*/
+body {
+font-family: "Helvetica";
+margin: 0px;
+padding: 0px;
+
+}
+
+.logos{
+padding: 6px;
+width: 4%;
+height: 4%;
+max-width: 4%;
+min-width: 40px;
+border-radius: 100%;
+animation: rotateLogo 1s ease-in-out 2s;
+}
+
+.content{
+  text-align: center;
+  position: absolute;
+  margin:auto auto;
+  width: 100%;
+  top: 16%;
+
+}
+
+a{
+  text-decoration: none;
+}
+
+.myName{
+font-size: 2.5vmax;
+margin:10px;
+animation: showHide 2.5s ease-in-out 3.5;
+}
+
+.clock {
+font-size: 5vmax;
+}
+
+.colorSelector {
+font-size: 12px;
+margin: 10px;
+}
+
+@keyframes showHide
+{
+  	0%{ opacity: 0;}
+  	50%{opacity: 1;}
+    100%{opacity: 0;}
+}

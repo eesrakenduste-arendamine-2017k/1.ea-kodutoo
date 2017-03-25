@@ -1,0 +1,23 @@
+/*Powder theme*/
+body{
+  margin: 0px;
+  padding: 0px;
+background-color: #66B9BF;
+}
+
+.content{
+color: #EFEFEF;
+text-shadow: 10px 10px 10px #07889B;
+}
+
+.logos{
+fill: #EFEFEF;
+box-shadow: 0px 0px 20px #07889B;
+}
+
+.colorSelector{
+color: #66B9BF;
+background:#EFEFEF;
+text-shadow: 10px 10px 10px #07889B;
+box-shadow: 0px 10px 20px #07889B;
+}
