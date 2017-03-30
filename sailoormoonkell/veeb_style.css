@@ -1,0 +1,176 @@
+body {
+  background: url('trasformation.mp4');
+  background-size: cover;
+}
+
+.bgvideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -9999;
+}
+
+table, th, td {
+    border: 0px;
+    border-collapse: collapse;
+}
+th, td {
+    padding: 1%;
+    text-align: left;    
+}
+
+table.table1, table.table1 td, table.table1 th {
+		border: 20px solid black;
+		text-align: center;
+	}
+
+.photo {
+    display: inline-block; 
+    position: relative;
+}
+
+.photo:hover::after {
+    content: attr(data-title);
+    position: absolute;
+    left: 0; right: 0; bottom: 1px;
+    z-index: 3;
+    background: rgba(200, 192, 192, 0.8);
+    color: white; /* teksti varv */
+    text-align: center;
+    font-family: Copperplate, Copperplate Gothic Light, fantasy;
+    font-size: 16px; /*teksti suurus*/
+    padding: 5px 10px;
+    border: 2px solid gold;
+	border-radius: 30px;
+}
+
+.photo2 {
+    display: inline-block; /* Строчно-блочный элемент */
+    position: relative; /* Относительное позиционирование */
+}
+
+.photo2:hover::after {
+    content: attr(data-title);
+    position: fixed;
+    left: 340px;
+	bottom:20px; 
+    z-index: 1;
+    background: rgba(200, 192, 192, 0.8);
+    font-family: Copperplate, Copperplate Gothic Light, fantasy;
+	color: white; /* teksti varv */
+    font-size: 16px;
+    padding: 5px 10px;
+    border: 2px solid gold; 
+	border-radius: 30px;
+}
+
+a.rollovercrystal {
+    background: url(icons/ico_crystal.png);
+    display: block;
+    width: 200px;
+    height: 200px;
+}
+
+a.rollovercrystal:hover {
+    background: url(icons/ico_crystal2.png);
+}
+
+a.rolloverjupiter {
+    background: url(icons/ico_jupiter.png);
+    display: block;
+    width: 200px;
+    height: 200px;
+}
+
+a.rolloverjupiter:hover {
+    background: url(icons/ico_jupiter2.png);
+}
+
+a.rollovermars {
+    background: url(icons/ico_mars.png);
+    display: block;
+    width: 200px;
+    height: 200px;
+}
+
+a.rollovermars:hover {
+    background: url(icons/ico_mars2.png);
+}
+
+a.rollovermercury {
+    background: url(icons/ico_mercury.png);
+    display: block;
+    width: 200px;
+    height: 200px;
+}
+
+a.rollovermercury:hover {
+    background: url(icons/ico_mercury2.png);
+}
+
+a.rollovervenus {
+    background: url(icons/ico_venus.png);
+    display: block;
+    width: 200px;
+    height: 200px;
+}
+
+a.rollovervenus:hover {
+    background: url(icons/ico_venus2.png);
+}
+
+img.circlesailor{
+    margin: auto;
+	position: fixed;
+	left: -1%;
+	width:600px;
+}
+
+.image { 
+   position: fixed;
+   width: 100%;
+}
+
+a.rolloverabout {
+    position: fixed;
+	background: url(button_about.png);
+	background-repeat: no-repeat;
+    display: block;
+    width: 100%;
+    height:  100%;
+	left: 380px;
+	top: 700px;
+}
+
+a.rolloverabout:hover {
+    background: url(button_about2.png);
+	background-repeat: no-repeat;
+}
+
+
+h2 { 
+	margin: auto;
+	position:fixed;
+	font-size: 22px;
+	font-family: Copperplate, Copperplate Gothic Light, fantasy;
+	top: 570px;
+	left:165px;
+	color:white;
+	line-height:60px;
+	text-align:center;
+	text-shadow:-1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+audio::-internal-media-controls-download-button {
+    display:none;
+}
+
+audio{
+	width:150px;
+	border: 2px solid gold;
+}
+

@@ -1,0 +1,34 @@
+.timePlace
+{
+	text-align: right;
+}
+
+.ekraan
+{
+	width: 800px;
+	height: 400px;
+	background-color: #FFFFFF;
+	position: relative;
+	overflow: hidden;
+}
+
+.kell
+{
+	width: 800px;
+	height: 800px;
+	position: relative;
+	overflow: hidden;
+}
+
+.clock
+{
+	left: 220px;
+	top: 110px;
+	transform-origin: center 140px
+	;
+}
+
+.ekraan *, .kell *
+{
+	position: absolute;
+}
