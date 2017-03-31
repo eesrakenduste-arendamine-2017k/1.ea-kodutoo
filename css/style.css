@@ -1,27 +1,83 @@
 body {
-    background-color: #dddfd4
-;
+    background-color: black;
+    margin: 0;
+    padding: 0;
+    font-family: 'VT323', monospace;
 }
 
 div.content {
-    position: relative;
+    position: absolute;
     text-transform: uppercase;
     text-align: center;
-    font-family: 'Lato', sans-serif;
-    margin: 20px;
-    background-color: #fae596
-;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment:fixed;
+    height: 100vh;
+    width: 100%;
+    z-index: 7;
 }
 
 div.clock{
-font-size: 10vh;
+    position: absolute;
+    z-index: 9;
+    font-size: 10vh;
+    text-align: center;
+    display: block;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: rgba(1, 1,1, 0.15);
+    color: white;
+    padding: 20px;
+    transition: 300ms;
+}
+
+.clock:hover {
+    background-color: black;
 }
 
 div.author{
     position: relative;
-    font-size: 3vh;
-    background-color: #3fb0ac;
+    font-size: 5vh;
     text-align: center;
 }
 
+div.form{
+}
+
+button {
+    background-color: rgba(255, 255,255, 0.3);
+    border: none;
+    color: black;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    font-family: 'VT323', monospace;
+}
+
+.clock:hover button,
+.clock:hover input,
+input:focus,
+input:focus+button {
+    background-color: white;
+}
+
+textarea, input, button {
+    outline: none;
+}
+
+
+input {
+    background-color: rgba(255, 255,255, 0.3);
+    border: none;
+    color: black;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    font-family: 'VT323', monospace;
+}
 
