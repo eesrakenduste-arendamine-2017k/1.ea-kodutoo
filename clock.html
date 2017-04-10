@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+		#clock{
+			position: fixed;
+			top: 40%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			font-size:400%;
+		}
+		#day{
+			position: fixed;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			font-size:400%;
+		}
+		#date{
+			position: fixed;
+			top: 60%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			font-size:400%;
+		}
+		#colorPicker{
+			position:fixed;
+			top: 72%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+		}
+		#slider1{
+			position:fixed;
+			top: 75%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+		}
+		#slider2{
+			position:fixed;
+			top: 77%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+		}
+		#autor{
+			position: fixed;
+			margin:0;
+			top: 90%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			font-size:400%;
+		}
+    </style>
+<script src="clock.js" charset="utf-8"></script>
+</head>
+<div id="clock"></div>
+<div id="day"></div>
+<div id="date"></div>
+<div id="slider1">
+	<input type="range" id="speedSlider" onchange="pulseSpeed()" min="1" max="5" step="1" value="5"><br>
+</div>
+
+<div id="slider2">
+	<input type="range" id="sizeSlider" onchange="pulseSize()" min="0.70" max="1.2" step="0.10" value="0.50"><br>
+</div>
+<div >
+	<input id="colorPicker" name="color" type="color">
+</div>
+
+<p id="autor">Uku Põder</p>
+
+
+
+</body>
+</html>
