@@ -1,0 +1,23 @@
+#clock, #clock2, #clock3, #clock4, #clock5 {
+  display:inline-block;
+  padding: 10%;
+  /*margin-left:5.5%;
+  margin-top: 22%;*/
+  font-size: 4em;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#clock2{
+  background-color: blue;
+}
+
+body {
+  background-color: black;
+}
+div{
+  background-color:;
+}
+
+p{
+
+}
