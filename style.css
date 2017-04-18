@@ -1,0 +1,19 @@
+body {
+    font-family: 'Times New Roman';
+    font-size: 16vw;
+    text-align: center;
+    background-image: url("");
+    /*background-size: 100% 50%;
+    background-repeat: repeat-y;*/
+}
+
+.day{
+	background-color: white;
+    color: black;
+
+}
+
+.night{
+    background-color: black;
+    color: white;
+}
