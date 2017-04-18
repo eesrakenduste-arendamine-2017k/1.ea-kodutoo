@@ -63,7 +63,7 @@ window.onload = function(){
             //console.log('Keegi vajutas Enter klahvi');
         }
     });
-    //addAuthor("Tõnu Trubetsky");
+    addAuthor("Tõnu Trubetsky");
 
     /*
     window.addEventListener('mousemove', function(){
@@ -337,7 +337,7 @@ function addZeroBefore(dateNumber) {
     return dateNumber;
 }
 
-/*function addAuthor(name){
+function addAuthor(name){
 
     firstname = document.createElement('span');
     firstname.innerHTML = name.split(" ")[0];
@@ -350,9 +350,10 @@ function addZeroBefore(dateNumber) {
     space.innerHTML=" ";
     p.appendChild(space);
     p.appendChild(lastName);
+    p.style.color = "white";
 
     document.body.appendChild(p);
-}*/
+}
 
 /*
 for(var i = 0; i < links.length; i++){

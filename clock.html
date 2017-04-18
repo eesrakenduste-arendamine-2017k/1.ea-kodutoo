@@ -4,31 +4,38 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <script defer src="clock.js" charset="utf-8"></script>
-  <title>Document</title>
+  <title>6 Clocks and Beethoven</title>
 
 </head>
 <link rel="stylesheet" type="text/css" href="clock.css">
 <body>
+    <h1></h1>
     <p></p>
-    <button id="tallinnBtn" type="button" class="button">Tallinn</button>
-    <button id="londonBtn" type="button" class="button">London</button>
-    <button id="newyorkBtn" type="button" class="button">New York</button>
-    <button id="moscowBtn" type="button" class="button">Moscow</button>
-    <button id="tokyoBtn" type="button" class="button">Tokyo</button>
-    <button id="sydneyBtn" type="button" class="button">Sydney</button>
 
+    <div id="buttons">
+      <button id="tallinnBtn" type="button" class="button">Tallinn</button>
+      <button id="londonBtn" type="button" class="button">London</button>
+      <button id="newyorkBtn" type="button" class="button">New York</button>
+      <button id="moscowBtn" type="button" class="button">Moscow</button>
+      <button id="tokyoBtn" type="button" class="button">Tokyo</button>
+      <button id="sydneyBtn" type="button" class="button">Sydney</button>
 
-    <button id="music" type="button" name="playMusic" class="button" onclick="playMusic()">Play Music</button>
-    <button id="music" type="button" name="stopMusic" class="button" onclick="stopMusic()">Pause</button><br>
+      <button id="music" type="button" name="playMusic" class="button" onclick="playMusic()">Play Music</button>
+      <button id="music" type="button" name="stopMusic" class="button" onclick="stopMusic()">Pause</button><br>
+    </div>
+
     <div id="song" class="scroll-left"><p>Beethoven - Symphony No.5</p></div><br>
     <audio id="audio" src="Symphony No 5 - Beethoven [CLASSICAL  DARK ] free & no copyright.mp3" ></audio>
 
-    <div id="clock" >Tallinn</div>
-    <div id="clock2" >Tokyo</div>
-    <div id="clock3" >Moscow</div>
-    <div id="clock4" >New York</div>
-    <div id="clock5" >London</div>
-    <div id="clock6" >Sydney</div>
+    <div id="clocks">
+      <div id="clock" >Tallinn</div>
+      <div id="clock6" >Sydney</div>
+      <div id="clock2" >Tokyo</div>
+      <div id="clock3" >Moscow</div>
+      <div id="clock4" >New York</div>
+      <div id="clock5" >London</div>
+    </div>
+
 
 
 
