@@ -9,5 +9,5 @@
 
 ---------
 
-## Projekt asub aadressil : http://greeny.cs.tlu.ee/~nikopeos/eesrakendused/1.ea-kodutoo/
+## Projekt asub aadressil : http://www.tlu.ee/~case112/eesrakendused/1.ea-kodutoo/
 
