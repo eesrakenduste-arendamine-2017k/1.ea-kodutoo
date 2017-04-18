@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en" onclick="changeColor()">
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nova+Mono" rel="stylesheet">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="clock.js" charset="utf-8"></script>
+    <title>screensaver</title>
+</head>
+<body id="changecolor" onload="startTime()">
+  <div class='fullscreenDiv'>
+    <div id="clock"></div>
+    <div id="dateAndDay"></div>
+
+
+
+  </div>
+<footer>
+  <div class="font-size"><p>Font size:</p><output for="fader" id="fontsize">50</output></div>
+  <input class="none" type="range" min="0" max="100" value="0" id="fader" step="1" >
+  <text id="v-28" class="changeMe" y="0.8em" fill="white" stroke="black" stroke-width="0" transform="translate(35,20.5) ">
+    This is the text you want to change the font size</text>
+</footer>
+</body>
+</html>

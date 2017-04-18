@@ -69,3 +69,7 @@ function startTime() {
     document.getElementById("dateAndDay").innerHTML = dt + "." + month + " " + dayToName(wd);
     var t = setTimeout(startTime, 500);
 }
+
+$("#fader").on("input",function () {
+            $('#v-28').css("font-size", $(this).val() + "px");
+    });

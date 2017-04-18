@@ -17,7 +17,7 @@
     left: 50%;
     margin-right: -50%;
     transform: translate(-50%, -50%);
-    font-size: 700%;
+    font-size: 20px;
     font-family: 'Nova Mono', monospace;
     color: black;
 }
@@ -33,4 +33,11 @@
     font-size: 500%;
     font-family: 'Lato', monospace;
     color: #434447;
+}
+
+
+#sss {
+    padding:20px;
+    background:#eee;
+    font-size:12px
 }
