@@ -1,16 +1,44 @@
-#clock, #clock2, #clock3, #clock4, #clock5 {
+#clock, #clock2, #clock3, #clock4, #clock5, #clock6 {
   display:inline-block;
-  padding: 10%;
+  padding: 100px;
   /*margin-left:5.5%;
   margin-top: 22%;*/
-  font-size: 4em;
+  margin:0 auto;
+  font-size: 2em;
+  text-transform: uppercase;
+  font-weight: bold;
   font-family: Arial, Helvetica, sans-serif;
 }
 
-#clock2{
-  background-color: blue;
+.button {
+    margin-bottom: 20%;
+    background-color: black;
+    border: none;
+    color: white;
+    float:;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
 }
-
+.button:hover {
+  border: 2px solid;
+  border-color: white;
+}
+.button:active {
+  background-color: red;
+  border: 2px solid;
+  border-color: black;
+}
+#clock2{
+  background-color: ;
+}
+#music {
+  background-color: red;
+}
 body {
   background-color: black;
 }
@@ -21,3 +49,54 @@ div{
 p{
 
 }
+
+.scroll-left {
+ height: 50px;
+ overflow: hidden;
+ width: ;
+ position: relative;
+ background: red;
+ color: white;
+ border: 0px solid white;
+ font-size: 1em;
+ text-transform: ;
+ font-weight: ;
+ font-family: Arial, Helvetica, sans-serif;
+
+}
+.scroll-left p {
+ position: absolute;
+ width: 100%;
+ height: 100%;
+ margin: 0;
+ line-height: 50px;
+ text-align: center;
+ /* Starting position */
+ -moz-transform:translateX(100%);
+ -webkit-transform:translateX(100%);
+ transform:translateX(100%);
+ /* Apply animation to this element */
+ -moz-animation: scroll-left 5s linear infinite;
+ -webkit-animation: scroll-left 5s linear infinite;
+ animation: scroll-left 15s linear infinite;
+}
+/* Move it (define the animation) */
+@-moz-keyframes scroll-left {
+ 0%   { -moz-transform: translateX(100%); }
+ 100% { -moz-transform: translateX(-100%); }
+}
+@-webkit-keyframes scroll-left {
+ 0%   { -webkit-transform: translateX(100%); }
+ 100% { -webkit-transform: translateX(-100%); }
+}
+@keyframes scroll-left {
+ 0%   {
+ -moz-transform: translateX(100%); /* Browser bug fix */
+ -webkit-transform: translateX(100%); /* Browser bug fix */
+ transform: translateX(100%);
+ }
+ 100% {
+ -moz-transform: translateX(-100%); /* Browser bug fix */
+ -webkit-transform: translateX(-100%); /* Browser bug fix */
+ transform: translateX(-100%);
+ }
