@@ -144,7 +144,7 @@ function stopMusic(){
 
 var getCurrentDateTime = function(){
     var currentDate = new Date();
-    console.log(currentDate);
+    //console.log(currentDate);
     var hours = currentDate.getHours();
     var minutes = currentDate.getMinutes();
     var seconds = currentDate.getSeconds();
@@ -166,8 +166,7 @@ var getCurrentDateTime = function(){
     var day = currentDate.getDate();
     var today = weekday[currentDate.getDay()];
     var thisMonth = month[currentDate.getDay()+1];
-    console.log(today);
-    console.log(thisMonth);
+
     var dateString = "Tallinn " + addZeroBefore(hours) + ':' + addZeroBefore(minutes) + ':' + addZeroBefore(seconds) + " " + today + " " + day + " "+ thisMonth;
 
     return dateString;
@@ -176,13 +175,16 @@ var getCurrentDateTime = function(){
 var londonTime = function(){
     var currentDate = new Date();
     var hours = currentDate.getHours()-2;
+    var day = currentDate.getDate();
     if (hours<0){
       hours = hours + 24;
-      today = -1;
+      day = day -1;
+
     }
+    console.log(day);
     var minutes = currentDate.getMinutes();
     var seconds = currentDate.getSeconds();
-    var day = currentDate.getDate();
+
 
     var londonBtn = document.getElementById("londonBtn");
     londonBtn.addEventListener('click', function(){
@@ -206,16 +208,17 @@ var londonTime = function(){
 
 var newyorkTime = function(){
     var currentDate = new Date();
-
+    var day = currentDate.getDate();
     var hours = currentDate.getHours()-7;
+
     if (hours<0){
       hours = hours + 24;
-      today = -1;
+      day = day-1;
       //console.log(hours);
     }
     var minutes = currentDate.getMinutes();
     var seconds = currentDate.getSeconds();
-    var day = currentDate.getDate();
+
     var today = weekday[currentDate.getDay()];
     var newyorkBtn = document.getElementById("newyorkBtn");
     newyorkBtn.addEventListener('click', function(){
@@ -239,15 +242,19 @@ var newyorkTime = function(){
 var tokyoTime = function(){
     var currentDate = new Date();
     var hours = currentDate.getHours()+6;
+    var today = weekday[currentDate.getDay()];
+    var day = currentDate.getDate();
+
     if(hours>23){
       hours = hours - 24;
-      today = +1;
+      day = day + 1;
       //console.log(hours);
     }
+
     var minutes = currentDate.getMinutes();
     var seconds = currentDate.getSeconds();
-    var day = currentDate.getDate();
-    var today = weekday[currentDate.getDay()];
+
+
 
     var tokyoBtn = document.getElementById("tokyoBtn");
     tokyoBtn.addEventListener('click', function(){
@@ -302,11 +309,12 @@ var sydneyTime = function(){
     var hours = currentDate.getHours()+7;
     var minutes = currentDate.getMinutes();
     var seconds = currentDate.getSeconds();
+    var day = currentDate.getDate();
     if(hours>23){
       hours = hours - 24;
-      today = +1;
-      //console.log(hours);
+      day = day + 1;
     }
+    console.log(day);
     var sydneyBtn = document.getElementById("sydneyBtn");
     sydneyBtn.addEventListener('click', function(){
       sydneyBtn.style.backgroundColor = "White";
@@ -321,7 +329,7 @@ var sydneyTime = function(){
     var clockRGB2 = "rgb("+Math.round(Math.random()*127)+","+Math.round(Math.random()*127)+","+Math.round(Math.random()*127)+")";
     clockContainer6.style.backgroundColor = clockRGB;
     clockContainer6.style.color = clockRGB2;
-    var day = currentDate.getDate();
+
     var today = weekday[currentDate.getDay()];
     var thisMonth = month[currentDate.getDay()+1];
     var dateString = "Sydney " + addZeroBefore(hours) + ':' + addZeroBefore(minutes) + ':' + addZeroBefore(seconds) + " " + today + " " + day + " "+ thisMonth;
