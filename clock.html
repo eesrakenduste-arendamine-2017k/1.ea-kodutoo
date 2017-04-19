@@ -1,0 +1,71 @@
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=VT323" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script type="text/javascript" src="js/date_time.js"></script>
+    <script type="text/javascript" src="js/jscolor.js"></script>
+
+
+
+
+
+    <script>
+        function run(interval, frames) {
+            var int = 1;
+
+            function func() {
+                document.body.id = "b"+int;
+                int++;
+                if(int === frames) { int = 1; }
+            }
+
+            var swap = window.setInterval(func, interval);
+        }
+
+        run(1000, 10); //milliseconds, frames
+
+    </script>
+</head>
+<body onload=XX()>
+<div id="box">
+<div class="clock">
+
+    <span id="date_time"></span>
+    <script type="text/javascript">window.onload = date_time('date_time');
+    function setTextColor(picker) {
+        document.getElementsByClassName('clock')[0].style.color = '#' + picker.toString()
+        document.getElementsByTagName('button')[0].style.backgroundColor = '#' + picker.toString()
+        document.getElementsByTagName('input')[0].style.backgroundColor = '#' + picker.toString()
+
+
+    }
+
+    </script>
+
+        <div class="author">
+            <p>Henry Savi</p>
+
+        </div>
+
+        <div class="form">
+            <input type="text" id="firstname" name="firstname">
+            <button type="button" onclick=XX()>Otsi</button>
+            <button class="jscolor {valueElement:'chosen-value', onFineChange:'setTextColor(this)'}">
+                Vali teksti värv</button>
+        </div>
+
+</div>
+
+</div>
+
+
+<div class="content" id="test"></div>
+
+<script>
+    XX();
+</script>
+</body>
+</html>
