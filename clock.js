@@ -165,7 +165,7 @@ var getCurrentDateTime = function(){
     clockContainer.style.color = clockRGB2;
     var day = currentDate.getDate();
     var today = weekday[currentDate.getDay()];
-    var thisMonth = month[currentDate.getDay()+1];
+    var thisMonth = month[currentDate.getMonth()];
 
     var dateString = "Tallinn " + addZeroBefore(hours) + ':' + addZeroBefore(minutes) + ':' + addZeroBefore(seconds) + " " + today + " " + day + " "+ thisMonth;
 
@@ -200,9 +200,10 @@ var londonTime = function(){
     clockContainer5.style.backgroundColor = clockRGB;
     clockContainer5.style.color = clockRGB2;
     var today = weekday[currentDate.getDay()];
-    var thisMonth = month[currentDate.getDay()+1];
+    var thisMonth = month[currentDate.getMonth()];
     var dateString = "London " + addZeroBefore(hours) + ':' + addZeroBefore(minutes) + ':' + addZeroBefore(seconds) + " " + today + " " + day + " "+ thisMonth;
-
+    console.log(thisMonth);
+    console.log(today);
     return dateString;
 };
 
@@ -233,7 +234,7 @@ var newyorkTime = function(){
     var clockRGB2 = "rgb("+Math.round(Math.random()*127)+","+Math.round(Math.random()*127)+","+Math.round(Math.random()*127)+")";
     clockContainer4.style.backgroundColor = clockRGB;
     clockContainer4.style.color = clockRGB2;
-    var thisMonth = month[currentDate.getDay()+1];
+    var thisMonth = month[currentDate.getMonth()];
     var dateString = "New York " + addZeroBefore(hours) + ':' + addZeroBefore(minutes) + ':' + addZeroBefore(seconds) + " " + today + " " + day + " "+ thisMonth;
 
     return dateString;
@@ -269,7 +270,7 @@ var tokyoTime = function(){
     var clockRGB2 = "rgb("+Math.round(Math.random()*127)+","+Math.round(Math.random()*127)+","+Math.round(Math.random()*127)+")";
     clockContainer2.style.backgroundColor = clockRGB;
     clockContainer2.style.color = clockRGB2;
-    var thisMonth = month[currentDate.getDay()+1];
+    var thisMonth = month[currentDate.getMonth()];
     var dateString = "Tokyo " + addZeroBefore(hours) + ':' + addZeroBefore(minutes) + ':' + addZeroBefore(seconds) + " " + today + " " + day + " "+ thisMonth;
 
     return dateString;
@@ -297,7 +298,7 @@ var moscowTime = function(){
     var clockRGB2 = "rgb("+Math.round(Math.random()*127)+","+Math.round(Math.random()*127)+","+Math.round(Math.random()*127)+")";
     clockContainer3.style.backgroundColor = clockRGB;
     clockContainer3.style.color = clockRGB2;
-    var thisMonth = month[currentDate.getDay()+1];
+    var thisMonth = month[currentDate.getMonth()];
     var dateString = "Moscow " + addZeroBefore(hours) + ':' + addZeroBefore(minutes) + ':' + addZeroBefore(seconds) + " " + today + " " + day + " "+ thisMonth;
 
     return dateString;
@@ -331,7 +332,7 @@ var sydneyTime = function(){
     clockContainer6.style.color = clockRGB2;
 
     var today = weekday[currentDate.getDay()];
-    var thisMonth = month[currentDate.getDay()+1];
+    var thisMonth = month[currentDate.getMonth()];
     var dateString = "Sydney " + addZeroBefore(hours) + ':' + addZeroBefore(minutes) + ':' + addZeroBefore(seconds) + " " + today + " " + day + " "+ thisMonth;
 
     return dateString;
