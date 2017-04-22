@@ -55,7 +55,7 @@ window.onload = function () {
         })();
 
 
-        // Print out the time and date data.
+        // Print out the time.
         setInterval(function () {
             showTime();
         }, 1000);

@@ -1,0 +1,8 @@
+#clock-display {
+    font-size: 100px;
+    font-weight: bold;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
