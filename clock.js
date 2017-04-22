@@ -32,7 +32,7 @@ window.onload = function () {
         };
 
 
-        // Displays time.
+        // Function to display time.
         var showTime = function () {
             // Time variables
             var date = new Date();
@@ -44,7 +44,7 @@ window.onload = function () {
         };
 
 
-        // Displays date once.
+        // Displays date once - automatically triggered.
         (function () {
             var date = new Date();
             var month_day = date.getDate();
@@ -55,14 +55,31 @@ window.onload = function () {
         })();
 
 
-        // Print out the time.
+        // Uses the time-display function every second to display... the time.
         setInterval(function () {
             showTime();
         }, 1000);
 
     }
 
+    function Background() {
+        var background_images = ["102511.jpg", "thumb-192-223587.jpg", "wp1853050.jpg"];
+        var counter = 0;
+
+        window.addEventListener("keypress", function (e) {
+            if (e.keyCode == 32) {
+                document.body.style.backgroundImage = background_images[counter];
+                counter++;
+                if (counter == background_images.length) {
+                    counter = 0;
+                }
+            }
+
+        })
+
+    }
 
     var clock = new Clock();
+    var background = new Background();
 };
 

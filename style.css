@@ -1,3 +1,9 @@
+body {
+    width: auto;
+    background-image: url('Backgrounds/102511.jpg');
+    background-size: cover;
+}
+
 #clock-display {
     font-size: 100px;
     font-weight: bold;
@@ -6,3 +12,5 @@
     -ms-user-select: none;
     user-select: none;
 }
+
+
