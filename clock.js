@@ -89,11 +89,9 @@ window.onload = function () {
 	}
 
 
-
     var clock = new Clock();
     var background = new Background();
 	var cena = new JohnCena();
-
 
 };
 

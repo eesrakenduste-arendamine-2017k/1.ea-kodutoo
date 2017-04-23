@@ -2,18 +2,21 @@ html {
     height: 100%;
 }
 
-body {
 
-    background: url('Backgrounds/wp1853050.jpg');
-    background: url('Backgrounds/thumb-1920-112487.jpg');
+body {
     background: url('Backgrounds/102511.jpg');
     background-repeat: no-repeat !important;;
     background-size: cover !important;;
 }
 
+
 #clock-display {
     font-size: 100px;
     font-weight: bold;
+    cursor: default;
+
+    /*Limits the paragraph to its content.*/
+    display: inline-block;
 
     /*Disables selecting text.*/
     -webkit-user-select: none;
@@ -30,18 +33,18 @@ body {
     left: 0;
     padding: 1rem;
     text-align: center;
-    opacity: 0.740;
+    opacity: 0.7;
 }
 
 #author {
     font-size: 15px;
-    font-weight: bold;
+    font-weight: bolder;
+    cursor: pointer;
+    color: black;
 
     /*Disables selecting text.*/
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-
-    cursor: pointer;
 }
