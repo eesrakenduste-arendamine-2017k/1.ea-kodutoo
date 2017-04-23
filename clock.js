@@ -63,12 +63,14 @@ window.onload = function () {
     }
 
     function Background() {
-        var background_images = ["thumb-1920-112487.jpg", "wp1853050.jpg", "102511.jpg"];
+		var background_images = ["thumb-1920-112487.jpg", "102511.jpg", "wp1853050.jpg"];
         var counter = 0;
 
+
         window.addEventListener("keypress", function (e) {
+			// 32 is the Space key.
             if (e.keyCode == 32) {
-                document.body.style.backgroundImage = "url(Backgrounds/" + background_images[counter] + ")";
+				document.body.style.background = "url(Backgrounds/" + background_images[counter] + ")";
                 counter++;
                 if (counter == background_images.length) {
                     counter = 0;
@@ -79,7 +81,16 @@ window.onload = function () {
 
     }
 
+	function JohnCena() {
+		var audio = new Audio('Sounds/jcena.mp4');
+		document.getElementById("author").addEventListener("click", function() {
+			audio.play();
+		});
+	}
+
+
     var clock = new Clock();
     var background = new Background();
+	var cena = new JohnCena();
 };
 

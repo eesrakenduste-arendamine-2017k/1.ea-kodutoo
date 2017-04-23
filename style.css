@@ -1,7 +1,14 @@
+html {
+    height: 100%;
+}
+
 body {
-    width: auto;
-    background-image: url('Backgrounds/102511.jpg');
-    background-size: cover;
+
+    background: url('Backgrounds/wp1853050.jpg');
+    background: url('Backgrounds/thumb-1920-112487.jpg');
+    background: url('Backgrounds/102511.jpg');
+    background-repeat: no-repeat !important;;
+    background-size: cover !important;;
 }
 
 #clock-display {
