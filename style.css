@@ -2,17 +2,15 @@ html {
     height: 100%;
 }
 
-
 body {
     background: url('Backgrounds/102511.jpg');
     background-repeat: no-repeat !important;;
     background-size: cover !important;;
 }
 
-
 #clock-display {
-    font-size: 100px;
     font-weight: bold;
+    font-size: 30px;
     cursor: default;
 
     /*Limits the paragraph to its content.*/
@@ -26,8 +24,8 @@ body {
 }
 
 #footer {
-    background-color: #2e322d;
     position: absolute;
+    background-color: #2e322d;
     right: 0;
     bottom: 0;
     left: 0;
@@ -40,11 +38,22 @@ body {
     font-size: 15px;
     font-weight: bolder;
     cursor: pointer;
-    color: black;
+    color: black !important;
 
     /*Disables selecting text.*/
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+}
+
+.jumbotron {
+    opacity: 0.5;
+    margin-left: 30%;
+    margin-right: 30%;
+    text-align: center;
+}
+
+#jumbo1 {
+    margin-top: 15%;
 }
