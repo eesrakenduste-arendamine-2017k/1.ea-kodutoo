@@ -1,0 +1,59 @@
+html {
+    height: 100%;
+}
+
+body {
+    background: url('Backgrounds/102511.jpg');
+    background-repeat: no-repeat !important;;
+    background-size: cover !important;;
+}
+
+#clock-display {
+    font-weight: bold;
+    font-size: 30px;
+    cursor: default;
+
+    /*Limits the paragraph to its content.*/
+    display: inline-block;
+
+    /*Disables selecting text.*/
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+#footer {
+    position: absolute;
+    background-color: #2e322d;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 1rem;
+    text-align: center;
+    opacity: 0.7;
+}
+
+#author {
+    font-size: 15px;
+    font-weight: bolder;
+    cursor: pointer;
+    color: black !important;
+
+    /*Disables selecting text.*/
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.jumbotron {
+    opacity: 0.5;
+    margin-left: 30%;
+    margin-right: 30%;
+    text-align: center;
+}
+
+#jumbo1 {
+    margin-top: 15%;
+}
