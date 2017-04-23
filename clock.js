@@ -63,12 +63,12 @@ window.onload = function () {
     }
 
     function Background() {
-        var background_images = ["102511.jpg", "thumb-192-223587.jpg", "wp1853050.jpg"];
+        var background_images = ["thumb-1920-112487.jpg", "wp1853050.jpg", "102511.jpg"];
         var counter = 0;
 
         window.addEventListener("keypress", function (e) {
             if (e.keyCode == 32) {
-                document.body.style.backgroundImage = background_images[counter];
+                document.body.style.backgroundImage = "url(Backgrounds/" + background_images[counter] + ")";
                 counter++;
                 if (counter == background_images.length) {
                     counter = 0;
