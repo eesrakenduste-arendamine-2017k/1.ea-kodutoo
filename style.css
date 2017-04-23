@@ -14,10 +14,34 @@ body {
 #clock-display {
     font-size: 100px;
     font-weight: bold;
+
+    /*Disables selecting text.*/
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
 }
 
+#footer {
+    background-color: #2e322d;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 1rem;
+    text-align: center;
+    opacity: 0.740;
+}
 
+#author {
+    font-size: 15px;
+    font-weight: bold;
+
+    /*Disables selecting text.*/
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+    cursor: pointer;
+}
