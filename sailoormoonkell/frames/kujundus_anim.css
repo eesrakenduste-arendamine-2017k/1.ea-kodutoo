@@ -1,0 +1,26 @@
+.timePlace
+{
+	text-align: right;
+}
+
+.clock
+{
+	left: 39%;
+	top: 28%;
+	width:6%;
+	transform-origin: center 87%;
+}
+
+.kell
+{
+	width: 100%;
+	height: 100%;
+	position: relative;
+	overflow: hidden;
+}
+
+
+.ekraan *, .kell *
+{
+	position: absolute;
+}
