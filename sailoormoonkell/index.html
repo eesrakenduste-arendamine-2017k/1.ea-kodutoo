@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+
+<html lang="et">
+<head>
+
+	<meta charset="utf-8">
+	<title>Kell</title>
+	<link rel="stylesheet" type="text/css" href="veeb_style.css">
+	<script type="text/javascript" src="sailor_clocks.js" defer></script>
+	<base target="_self">
+
+</head>
+
+<body>
+
+
+<script type="text/javascript">
+	function showTime(){
+		var dat = new Date();
+		var H = '' + dat.getHours();
+		H = H.length<2 ? '0' + H:H;
+		var M = '' + dat.getMinutes();
+		M = M.length<2 ? '0' + M:M;
+		var S = '' + dat.getSeconds();
+		S =S.length<2 ? '0' + S:S;
+		var clock = "Time "+ H + ":" + M + ":" + S;
+		document.getElementById("time_div").innerHTML=clock;
+		setTimeout(showTime,1000);
+	}
+
+	function showDate(){
+		var d = new Date();
+		var day=new Array("");
+		var month=new Array("");
+		document.write(" Today is " +d.getDate()+"/"+[d.getMonth() + 1]+"/"+d.getFullYear());
+	}	
+</script>
+
+
+<!--BACKGROUN VIDEO-->
+<video autoplay loop muted class="bgvideo" id="bgvideo">
+	
+	<source src="sailor.mp4" type="video/mp4"></source>
+
+</video>
+
+
+<!--LEFT SIDE-->
+<div class="image" >
+	
+	<img class="circlesailor" src="image/sailormoon_team4.png" alt="sailormoon team">
+	
+	<a href="frames/1welcome_page.html" class="rolloverabout" onclick target="circleframe"></a>
+
+		<h2>
+		
+			Welcome, warrior! 
+			<br>
+			
+				<script language="javascript" type="text/javascript">showDate();</script>
+				<div id="time_div"></div>
+				<script type="text/javascript">showTime();</script>	
+					
+			<audio controls autoplay loop>
+			<source src="music/sailor_song.mp3" type="audio/mpeg">
+			Your browser does not support the audio element.
+			</audio>
+				
+		</h2>
+	
+	</img>
+</div>
+
+
+<!--RIGHT SIDE-->
+<table style="float: right;">
+	<tr>
+		<td>
+		<div class="photo" data-title="SAILOR CRYSTAL">
+		<a href="frames/1clocks_crystal.html"  target="circleframe" onclick class="rollovercrystal"> </a>
+
+		</div>
+		</td>
+	</tr>
+	<tr>
+		<td>
+		<div class="photo" data-title="SAILOR JUPITER">
+		<a href="frames/1clocks_jupiter.html" target="circleframe" onclick class="rolloverjupiter"> </a>
+		</div>
+		</td>
+	</tr>
+    <tr>
+		<td>
+		<div class="photo" data-title="SAILOR MARS">
+		<a href="frames/1clocks_mars.html" onclick target="circleframe" class="rollovermars"> </a>
+		</div>
+		</td>
+  	</tr>
+    <tr>
+   		<td>
+		<div class="photo" data-title="SAILOR MERCURY">
+		<a href="frames/1clocks_mercury.html"  onclick target="circleframe" class="rollovermercury"> </a>
+		</div>
+		</td>
+  	</tr>
+	<tr>
+       	<td>
+		<div class="photo" data-title="SAILOR VENUS">
+		<a href="frames/1clocks_venus.html"  onclick target="circleframe" class="rollovervenus"> </a>
+		</div>
+		</td>
+	</tr>
+</table>
+
+<!--MIDDLE FRAME FOR CLOCKS-->
+	<iframe src="frames/1welcome_page.html" style="position:fixed; left:40%; top:15%;border:0;" scrolling="no" 
+	width="43%" height="70%" src="" name="circleframe">
+	</iframe>
+
+
+</body>
+</html>

@@ -1,0 +1,8 @@
+	<section>
+	  <div id="kell" class="kell">
+		<img src="sihverplaat_2.png" alt="kella numbrilaud">
+		<img id="hourH" src="clock_hour_hand2.png" alt="kella tunniosuti" class="clock hour">
+		<img id="minuteH" src="clock_minute_hand2.png" alt="kella minutiosuti" class="clock minute">
+		<img id="secondH" src="clock_second_hand2.png" alt="kella sekundiosuti" class="clock second">
+	  </div>  	
+	</section>
