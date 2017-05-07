@@ -1,0 +1,135 @@
+body {
+	background: linear-gradient(226deg, #ff8c8c, #fb8dda, #c98df3, #7adafe, #8bfeb0, #fdf48f);
+	background-size: 1200% 1200%;
+	-webkit-animation: AnimationName 11s ease infinite;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: center; 
+}
+
+/*Mute button*/
+#mute {
+	position:absolute;
+	top:0;
+	right:0;
+	color: white;
+	text-shadow:2px 2px 3px #666666;
+	text-decoration:none;
+	font-weight:700;
+	font-size:12px;
+	line-height:32px;
+	padding:0 15px;
+	font-family:"Inconsolata";
+}
+
+#timedate {
+	text-align: center;
+    height: 300px;
+    width: 1100px;
+    margin: auto;
+    position: absolute;
+    top: 0; left: 0; bottom: 0; right: 0;
+    padding-top: 70px;
+	text-shadow:2px 2px 3px #666666;
+    font-family: 'Inconsolata';font-size: 22px;
+    text-align: center;
+    color: white; 
+    font-size: 100px;
+}
+
+
+@-webkit-keyframes AnimationName {
+    0%{background-position:0% 24%}
+    50%{background-position:100% 77%}
+    100%{background-position:0% 24%}
+}
+@-moz-keyframes AnimationName {
+    0%{background-position:0% 24%}
+    50%{background-position:100% 77%}
+    100%{background-position:0% 24%}
+}
+@keyframes AnimationName { 
+    0%{background-position:0% 24%}
+    50%{background-position:100% 77%}
+    100%{background-position:0% 24%}
+}
+
+/*Dropdown menu*/
+#primary_nav_wrap ul {
+	list-style:none;
+	position:relative;
+	float:left;
+	margin:0;
+	padding:0;
+}
+
+#primary_nav_wrap ul a {
+	display:block;
+	color: white;
+	text-shadow:2px 2px 3px #666666;
+	text-decoration:none;
+	font-weight:700;
+	font-size:12px;
+	line-height:32px;
+	padding:0 15px;
+	font-family:"Inconsolata";
+}
+
+#primary_nav_wrap ul li {
+	position:relative;
+	float:left;
+	margin:0;
+	padding:0;
+}
+
+#primary_nav_wrap ul li.current-menu-item {
+	background:#f2f2f2;
+}
+
+#primary_nav_wrap ul li:hover {
+	background:#f2f2f2;
+}
+
+#primary_nav_wrap ul ul {
+	display:none;
+	position:absolute;
+	top:100%;
+	left:0;
+	background:#f2f2f2;
+	padding:0;
+}
+
+#primary_nav_wrap ul ul li {
+	float:none;
+	width:200px;
+}
+
+#primary_nav_wrap ul ul a {
+	line-height:120%;
+	padding:10px 15px;
+}
+
+#primary_nav_wrap ul ul ul {
+	top:0;
+	left:100%;
+}
+
+#primary_nav_wrap ul li:hover > ul {
+	display:block;
+}
+
+/*Name*/
+#name {
+	position: absolute;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+	color: white;
+	text-shadow:2px 2px 3px #666666;
+	text-decoration:none;
+	font-weight:700;
+	font-size:12px;
+	padding:0 15px;
+	font-family:"Inconsolata";
+}
+
