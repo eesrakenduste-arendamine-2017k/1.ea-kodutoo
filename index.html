@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>
+TIK TAK 
+</title>
+
+<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="clock.js" charset="utf-8"></script>
+	<script>
+	//Siit edasi tulevad kella värvi muutmise funktsioonid
+	function colorGreen() {
+    document.getElementById('clock').style.color = 'green';
+	};
+	function colorBlue() {
+    document.getElementById('clock').style.color = 'blue';
+	};
+	function colorRed() {
+    document.getElementById('clock').style.color = 'red';
+	};
+	function colorWhite() {
+    document.getElementById('clock').style.color = 'white';
+	};
+	</script>
+	<script>
+	function changeImage() {
+		document.body.style.backgroundImage = "url('http://interfacelift.com/wallpaper/D076b107/01356_crepuscule_1680x1050.jpg')";
+	}
+	</script>
+	<script>
+	function musicOn() {
+		document.getElementById("mp3").play();}
+	
+	function musicOff() {
+		document.getElementById("mp3").pause();}
+	</script>
+	<script>	
+	function changeClockSize() {
+        document.getElementById('clock').style.font = "15vmax 'Merriweather', monospace";
+    }
+	
+	function changeClockSize1() {
+        document.getElementById('clock').style.font = "12.5vmax 'Merriweather', monospace";
+    }
+	
+	function changeClockSize2() {
+        document.getElementById('clock').style.font = "7.5vmax 'Merriweather', monospace";
+    }
+	
+	function changeClockSize3() {
+        document.getElementById('clock').style.font = "10vmax 'Merriweather', monospace";
+    }
+	</script>
+	<script>
+	function changeImage() {
+		document.body.style.background="#f3f3f3 url('taust4.jpg') no-repeat right top";
+	}
+	
+		function changeImage1() {
+		document.body.style.background="#f3f3f3 url('taust2.jpg') no-repeat right top";
+	}
+	
+		function changeImage2() {
+		document.body.style.background="#f3f3f3 url('taust3.jpg') no-repeat right top";
+	}
+	
+		function changeImage3() {
+		document.body.style.background="#f3f3f3 url('taust1.jpg') no-repeat right top";
+	}
+	</script>
+	<style> 
+		body {
+			background: black;
+			background-image: url("taust1");
+		}
+		
+		
+		#clock {
+			
+			position: fixed;
+			top: 40%;
+			left: 50%;
+			/* bring your own prefixes */
+			transform: translate(-50%, -50%);
+			color: white;
+			//text-shadow: 0 0 1px black;
+			opacity: 1;
+			font: 10vmax 'Merriweather', monospace;
+			//-webkit-transition: font 1.0s ease; /* For Safari 3.1 to 6.0 */
+			//transition: opacity 1s ease;
+			
+		}		
+		
+		#date {
+			
+			position: fixed;
+			top: 70%;
+			left: 50%;
+			/* bring your own prefixes */
+			transform: translate(-50%, -50%);
+			color: white;
+			//text-shadow: 0 0 1px black;
+			opacity: 1;
+			font: 3.5vmax 'Merriweather', monospace;
+
+			//-webkit-transition: font 1.0s ease; /* For Safari 3.1 to 6.0 */
+			//transition: opacity 1s ease;
+			
+		}	
+
+		/* Dropdown Button */
+		.dropbtn {
+		background-color: Transparent;
+		color: white;
+		padding: 12px;
+		font-size: 12px;
+		border: none;
+		cursor: pointer;
+		min-width: 160px
+		}
+
+		/* Dropdown button on hover & focus */
+		.dropbtn:hover, .dropbtn:focus {
+		background-color: #3399ff;
+		}
+
+		/* The container <div> - needed to position the dropdown content */
+		.dropdown {
+		position: relative;
+		display: inline-block;
+		}
+
+		/* Dropdown Content (Hidden by Default) */
+		.dropdown-content {
+		display: none;
+		position: absolute;
+		background-color: #f9f9f9;
+		min-width: 160px;
+		box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+		z-index: 1;
+		}
+
+		/* Links inside the dropdown */
+		.dropdown-content a {
+		color: black;
+		padding: 12px 16px;
+		text-decoration: none;
+		display: block;
+		}
+
+		/* Change color of dropdown links on hover */
+		.dropdown-content a:hover {background-color: #f1f1f1}
+
+		/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+		.show {display:block;}
+		
+		
+		
+		
+
+		
+	}
+	</style>
+</head>
+<body> 
+
+<div class="dropdown">
+  <button onclick="myFunction()" class="dropbtn">Vaheta tausta</button>
+  <div id="myDropdown" class="dropdown-content">
+    <a href="#" onClick="changeImage()">Taust 1</a>
+    <a href="#" onClick="changeImage1()">Taust 2</a>
+    <a href="#" onClick="changeImage2()">Taust 3</a>
+	<a href="#" onClick="changeImage3()">Esialgne</a>
+  </div>
+</div>
+
+<div class="dropdown">
+  <button onclick="myFunction1()" class="dropbtn">Muuda kella suurust</button>
+  <div id="myDropdown1" class="dropdown-content">
+    <a href="#" onClick="changeClockSize()">Suurus 1</a>
+    <a href="#" onClick="changeClockSize1()">Suurus 2</a>
+    <a href="#" onClick="changeClockSize2()">Suurus 3</a>
+	    <a href="#" onClick="changeClockSize3()">Esialgne</a>
+  </div>
+</div>
+
+<div class="dropdown">
+  <button onclick="myFunction2()" class="dropbtn">Muuda kella värvi</button>
+  <div id="myDropdown2" class="dropdown-content">
+    <a style= "color: green" onClick="colorGreen()" href="#">Värv 1</a>
+    <a style= "color: blue" onClick="colorBlue()" href="#">Värv 2</a>
+    <a style= "color: red" onClick="colorRed()" href="#">Värv 3</a>
+    <a onClick="colorWhite()" href="#">Esialgne</a>
+  </div>
+</div>
+
+<div class="dropdown">
+  <button onclick="myFunction3()" class="dropbtn">Muusika</button>
+  <div id="myDropdown3" class="dropdown-content">
+    <a style= "color: green" onClick="musicOn()" href="#">Alusta</a>
+    <a style= "color: red" onClick="musicOff()" href="#">Lõpeta</a>
+	<audio id="mp3" src="Hans Zimmer - Time (Inception).mp3" ></audio>
+  </div>
+</div>
+
+<div class="dropdown">
+  <button onclick="myFunction4()" class="dropbtn">Autor</button>
+  <div id="myDropdown4" class="dropdown-content">
+    <a style= "color: black" href="#">Henri Vajak</a>
+  </div>
+</div>
+
+<center>
+<div id="clock"></div>
+<div id="date"></div>
+</center>
+
+
+</body>
+<footer>
+	
+</footer>
+</html>
+
