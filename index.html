@@ -1,0 +1,302 @@
+<style>
+body {
+background: url("background.jpg");
+}
+		
+#clock {
+			
+position: fixed;
+top: 10%;
+left: 50%;
+/* bring your own prefixes */
+transform: translate(-50%, -50%);
+color: red;
+//text-shadow: 0 0 1px black;
+opacity: 1;
+font: 10vmax 'Merriweather', monospace;
+//-webkit-transition: font 1.0s ease; /* For Safari 3.1 to 6.0 */
+//transition: opacity 1s ease;
+}		
+
+#date {
+			
+position: fixed;
+top: 50%;
+left: 50%;
+/* bring your own prefixes */
+transform: translate(-50%, -50%);
+color: red;
+//text-shadow: 0 0 1px black;
+opacity: 1;
+font: 5vmax 'Merriweather', monospace;
+text-align: center;
+//-webkit-transition: font 1.0s ease; /* For Safari 3.1 to 6.0 */
+//transition: opacity 1s ease;
+}	
+#nupp3 {
+	position: fixed;
+	top: 95%;
+	left: 85%;
+	opacity: 1;
+	font-family: 'Lucida Console', monospace;
+	font-size: 2.5vmax;
+	/* bring your own prefixes */
+	transform: translate(-50%, -50%);
+	color: yellow;
+	user-select:none;
+	display: inline;
+	white-space: nowrap;
+	text-decoration: none;
+}
+#nupp30 {
+	position: fixed;
+	top: 90%;
+	left: 85%;
+	opacity: 1;
+	font-family: 'Lucida Console', monospace;
+	font-size: 2.5vmax;
+	/* bring your own prefixes */
+	transform: translate(-50%, -50%);
+	color: yellow;
+	user-select:none;
+	display: inline;
+	white-space: nowrap;
+	text-decoration: none;
+}
+
+#nupp1 {
+	position: fixed;
+	top: 90%;
+	left: 15%;
+	opacity: 1;
+	font-family: 'Lucida Console', monospace;
+	font-size: 2.5vmax;
+	/* bring your own prefixes */
+	transform: translate(-50%, -50%);
+	color: yellow;
+	user-select:none;
+	display: inline;
+	white-space: nowrap;
+	text-decoration: none;
+}	
+#nupp10 {
+	position: fixed;
+	top: 95%;
+	left: 15%;
+	opacity: 1;
+	font-family: 'Lucida Console', monospace;
+	font-size: 2.5vmax;
+	/* bring your own prefixes */
+	transform: translate(-50%, -50%);
+	color: yellow;
+	user-select:none;
+	display: inline;
+	white-space: nowrap;
+	text-decoration: none;
+}	
+#nupp2 {
+	position: fixed;
+	top: 95%;
+	left: 50%;
+	opacity: 1;
+	font-family: 'Lucida Console', monospace;
+	font-size: 2.5vmax;
+	/* bring your own prefixes */
+	transform: translate(-50%, -50%);
+	color: yellow;
+	user-select:none;
+	display: inline;
+	white-space: nowrap;
+	text-decoration: none;
+}
+#nupp20 {
+	position: fixed;
+	top: 90%;
+	left: 50%;
+	opacity: 1;
+	font-family: 'Lucida Console', monospace;
+	font-size: 2.5vmax;
+	/* bring your own prefixes */
+	transform: translate(-50%, -50%);
+	color: yellow;
+	user-select:none;
+	display: inline;
+	white-space: nowrap;
+	text-decoration: none;
+}
+#nupp1:hover {
+	cursor: pointer;
+	font-size: 1.65vmax;
+}
+#nupp2:hover {
+	cursor: pointer;
+	font-size: 1.65vmax;
+
+}	
+#nupp20:hover {
+	cursor: pointer;
+	font-size: 1.65vmax;
+
+}
+#nupp3:hover {
+	cursor: pointer;
+	font-size: 1.65vmax;
+
+}	
+#nupp30:hover {
+	cursor: pointer;
+	font-size: 1.65vmax;
+
+}	
+#nupp10:hover {
+	cursor: pointer;
+	font-size: 1.65vmax;
+
+}		
+</style>
+<title>
+Lauakell - Tanel Maasalu
+</title>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="clock.js" charset="utf-8">
+	</script>
+<script>
+function musicOn() {
+	document.getElementById("mp3").play();}
+
+function musicOff() {
+	document.getElementById("mp3").pause();}
+</script>
+<script>
+	var color = 1;
+	var colors = [
+		"red", "yellow", "green", "blue", "black", "red"
+	];
+
+	var ran = Math.round(Math.random()*6);
+
+	
+
+function changeClockColor(){	
+		switch(color) {
+		case 1:
+			document.getElementById('clock').style.color = colors[1];
+			color=2;
+			break;
+		case 2:
+			document.getElementById('clock').style.color = colors[2];
+			color=3;
+			break;
+		case 3:
+			document.getElementById('clock').style.color = colors[3];
+			color=4;
+			break;
+		case 4:
+			document.getElementById('clock').style.color = colors[4];
+			color=5;
+			break;			
+		case 5:
+			document.getElementById('clock').style.color = colors[0];
+			color=1;
+			break;
+		}
+	}
+	function changeDateColor(){	
+		switch(color) {
+		case 1:
+			document.getElementById('date').style.color = colors[1];
+			color=2;
+			break;
+		case 2:
+			document.getElementById('date').style.color = colors[2];
+			color=3;
+			break;
+		case 3:
+			document.getElementById('date').style.color = colors[3];
+			color=4;
+			break;
+		case 4:
+			document.getElementById('date').style.color = colors[4];
+			color=5;
+			break;			
+		case 5:
+			document.getElementById('date').style.color = colors[0];
+			color=1;
+			break;
+		}
+	}
+</script>
+<script>
+	var font = 1;
+	var fonts = ["2.5vmax 'Merriweather', monospace", "5vmax 'Merriweather', monospace", "7.5vmax 'Merriweather', monospace",
+	"10vmax 'Merriweather', monospace"	];
+
+	var ran = Math.round(Math.random()*4);
+
+function changeDateSize(){	
+		switch(font) {
+		case 1:
+			document.getElementById('date').style.font = fonts[1];
+			font=2;
+			break;
+		case 2:
+			document.getElementById('date').style.font = fonts[2];
+			font=3;
+			break;
+		case 3:
+			document.getElementById('date').style.font = fonts[3];
+			font=4;
+			break;
+		case 4:
+			document.getElementById('date').style.font = fonts[4];
+			font=5;
+			break;
+		case 5:
+			document.getElementById('date').style.font = fonts[0];
+			font=1;
+			break;
+			}
+		}
+function changeClockSize(){	
+		switch(font) {
+		case 1:
+			document.getElementById('clock').style.font = fonts[1];
+			font=2;
+			break;
+		case 2:
+			document.getElementById('clock').style.font = fonts[2];
+			font=3;
+			break;
+		case 3:
+			document.getElementById('clock').style.font = fonts[3];
+			font=4;
+			break;
+		case 4:
+			document.getElementById('clock').style.font = fonts[4];
+			font=5;
+			break;
+		case 5:
+			document.getElementById('clock').style.font = fonts[0];
+			font=1;
+			break;
+			}
+		}
+</script>
+</head>
+<body>
+    <div id="clock"></div>
+	<div id="date"></div>
+	<div id="nupp1" onClick="musicOn()">Muusika</div>
+	<div id="nupp10" onClick="musicOff()">Muusika kinni</div>
+	<div id="nupp2" onClick="changeClockColor()">Kella varv</div>
+	<div id="nupp20" onClick="changeDateColor()">Kuupaeva varv</div>
+	<div id="nupp3" onClick="changeClockSize()">Kella suurus</div>
+	<div id="nupp30" onClick="changeDateSize()">Kuupäeva suurus</div>
+	<audio id="mp3" src="Background-music.mp3" ></audio>
+</body>
+</html>
