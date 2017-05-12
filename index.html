@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Overpass:100,400|Lato:100" rel="stylesheet">
+  <link rel="stylesheet" href="clock.css">
+  <script src="clock.js"></script>
+  <script src="particles.js"></script>
+  <title>Clock</title>
+</head>
+
+<body onload="startUp()">
+  <canvas id="mainCanvas" class="canvas"></canvas>
+  <p class="fps" id="fps"></p>
+  <div class="flex-main" id="blurarea">
+    <div class="clock">
+      <p id="time" class="clock-face float"></p>
+      <p id="date" class="date float">not that purdy</p>
+    </div>
+  </div>
+  <div class="bottom" id="guide_menu">
+    <p class="material-icons guides" id="guide_text" onclick="toggleMenu()">keyboard_arrow_up</p>
+    <p class="menuhidden" id="menu_warning">Menu is not available right now.</p>
+    <div id="menu_contents">
+      <div>
+          <div class=" align-center" id="mainmenu">
+            <h1 class="menu">JSClock</h1>
+            <a class="menu" onclick="menu('options')">Options</a>
+            <a class="menu" onclick="menu('about')">About</a>
+          </div>
+          <div id="options">
+            <h1 class="menu"><a class="material-icons material-menu" onclick="menu('main')">arrow_back</a>Options</h1>
+            <a class="menu" onclick="changeOption('bg.time')">Dynamically change background<p class="menu" id="option_bg">def</p></a>
+            <a class="menu" onclick="changeOption('bg.particles')">Show particles<p class="menu" id="option_particles">def</p></a>
+            <a class="menu" onclick="changeOption('fg.color')">Dark text color<p class="menu" id="option_textc">def</p></a>
+          </div>
+          <div id="about">
+            <h1 class="menu"><a class="material-icons material-menu" onclick="menu('main')">arrow_back</a>About</h1>
+            <h1 class="menu noborder">JSClock 1.0</h1>
+            <p class="menu">Last updated: 21.04.17<br>Mihkel Põder<br>Written in JavaScript & HTML</p>
+          </div>
+          <div id="timezones">
+            <h1 class="menu"><a class="material-icons material-menu" onclick="menu('main')">arrow_back</a>Time zones</h1>
+          </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>

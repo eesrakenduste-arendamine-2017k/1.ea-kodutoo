@@ -1,0 +1,271 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@keyframes backtransition {
+  from {
+    background: rgb(0, 0, 0);
+  }
+  to {
+    background: rgb(79, 20, 130);
+  }
+}
+
+@keyframes floatUp {
+  from {
+    top: 75px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes bottomFloat {
+  from {
+    height: 0;
+  }
+  to {
+    height: 10%;
+  }
+}
+
+body {
+  background: black;
+  transition: background 2s;
+  overflow: hidden;
+}
+
+.main {
+  height: 90%;
+  width: 100%;
+}
+
+.bottom {
+  animation: bottomFloat 1s backwards;
+  animation-delay: 1.5s;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(255, 255, 255, 0.25);
+  height: 10%;
+  width: 100%;
+  transition: height .5s, background .5s;
+}
+
+.bottom:hover {
+  background: rgba(255, 255, 255, 0.5);
+  height: 15%;
+}
+
+.clock {}
+
+.float {
+  animation: floatUp 1.5s backwards;
+  position: relative;
+}
+
+.clock-face {
+  animation-delay: .25s;
+  text-align: center;
+  font-family: "Lato", sans-serif;
+  font-size: 144px;
+  font-size: 11vw;
+  font-weight: 100;
+  color: snow;
+  opacity: 1;
+  transition: opacity .5s;
+}
+
+.date {
+  animation-delay: .4s;
+  text-align: center;
+  font-family: "Overpass", sans-serif;
+  font-size: 48px;
+  font-size: 4vw;
+  font-weight: 100;
+  color: snow;
+  opacity: 1;
+  transition: opacity .5s;
+}
+
+.flex-main {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.guides {
+  width: 100%;
+  font-size: 64px;
+  color: white;
+  text-align: center;
+}
+
+#menu_contents {
+  display: none;
+  overflow-y: auto;
+}
+
+.sidemargin {
+  margin-left: 64px;
+}
+
+h1.menu {
+  margin: 12px;
+  font-size: 64px;
+  font-size: 4vw;
+  font-family: "Overpass", sans-serif;
+  font-weight: 200;
+  color: rgb(60, 60, 60);
+  border-bottom: 1px solid rgb(60, 60, 60);
+}
+
+.borderl {
+  border-left: 2px solid rgb(100, 100, 100);
+}
+
+.borderr {
+  border-right: 2px solid rgb(100, 100, 100);
+}
+
+.material-menu {
+  display: inline;
+  text-decoration: none;
+  color: rgb(100, 100, 100);
+  font-size: 48px;
+  font-size: 3vw;
+  margin: 12px;
+  transition: color 0.25s;
+}
+
+.material-menu:hover {
+  color: rgb(60, 60, 60);
+}
+
+p.menu {
+  display: block;
+  text-decoration: none;
+  color: rgb(100, 100, 100);
+  font-family: "Overpass", sans-serif;
+  font-weight: 200;
+  font-size: 48px;
+  font-size: 2vw;
+  text-align: right;
+  float: right;
+  margin: 6px;
+}
+
+a.menu {
+  display: block;
+  text-decoration: none;
+  color: rgb(100, 100, 100);
+  font-family: "Overpass", sans-serif;
+  font-weight: 200;
+  font-size: 64px;
+  font-size: 2vw;
+  margin: 12px;
+  border-bottom: 2px solid rgba(100, 100, 100, 0);
+  transition: border-bottom 0.25s;
+}
+
+a.menu:hover {
+  border-bottom: 2px solid rgba(100, 100, 100, 1);
+}
+
+
+.row {}
+
+.row::after {
+  clear: both;
+  display: table;
+  content: "";
+}
+
+.c-25 {
+  float: left;
+  width: 25%;
+}
+
+.c-75 {
+  float: left;
+  width: 75%;
+}
+
+.align-right {
+  text-align: right;
+}
+
+.fullsize {
+  width: 100%;
+  height: 100%;
+}
+
+.menuhidden {
+  text-align: center;
+  font-family: "Overpass", sans-serif;
+  font-size: 18px;
+  font-size: 2vw;
+  font-weight: 100;
+  color: black;
+  opacity: 1;
+  transition: opacity .75s;
+  width: 100%;
+}
+
+@media only screen and (max-width: 900px) {
+  .clock-face {
+    font-size: 18vw;
+
+  }
+  .date {
+    font-size: 8vw;
+  }
+
+  a.menu, p.menu {
+    font-size: 8vw;
+  }
+
+  h1.menu {
+    font-size: 10vw;
+  }
+
+  .material-menu {
+    font-size: 6vw;
+  }
+}
+
+.noborder {
+  border: 0;
+}
+
+.canvas {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.fps {
+  position: fixed;
+  top: 0;
+  left: 0;
+  color: white;
+  font-family: sans-serif;
+}
