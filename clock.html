@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Time</title>
+    <link rel="stylesheet" href="clock.css">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lato:300">
+    <script src="https://use.fontawesome.com/764994da1c.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+<body onload="setCanvas()" onresize="setCanvas()">
+
+    <div id="canvasblock">
+        <canvas id="canvas" style="background-color:#333"></canvas>
+    </div>
+
+    <div class="switchcontainer">
+		<div class="switch white">
+		<form name="switch" method="post" action="">
+			<input type="radio" name="switch" id="switch-off" value="radio" onClick="changeMode('dark')" checked>
+			<input type="radio" name="switch" id="switch-on" value="radio" onClick="changeMode('light')">
+			<label for="switch-off"><i class="fa fa-moon-o" aria-hidden="true"></i></label>
+			<label for="switch-on"><i class="fa fa-sun-o" aria-hidden="true"></i></label>
+			<span class="toggle"></span>
+			</form>
+		</div>
+	</div>
+			<input id="textsize" type="range" min="10" max="50"/>
+			<label id="txtsz" for="textsize">Text size</label>
+			<button id="mute" type="button">Mute</button>
+
+	<p id="date"></p>
+	
+	<audio loop id="tick" onloadeddata="var audioPlayer = this; setTimeout(function() { audioPlayer.play(); }, 1000)">
+		<source src="tock.wav" type="audio/wav" />
+	</audio>
+	
+	
+
+    <script>
+
+
+		setInterval(setCanvas, 1000);
+        function setCanvas(){
+
+            //canvas + calcs
+            var canvas = document.getElementById("canvas");
+            var ctx = canvas.getContext("2d");
+            ctx.canvas.width  = window.innerWidth;
+            ctx.canvas.height = window.innerHeight;
+            var radius = canvas.height / 3;
+            var radiusy = canvas.width / 3;
+            ctx.translate(window.innerWidth/2, window.innerHeight/2-150);
+            radius = radius * 0.9
+
+			
+			
+
+            //draw white circle
+            ctx.arc(0, 0, radius, 0 , 2*Math.PI);
+            ctx.fillStyle = "white";
+            ctx.fill();
+
+            //draw middle dot
+            ctx.beginPath();
+            ctx.arc(0, 0, radius*0.02, 0, 2*Math.PI);
+            ctx.fillStyle = '#000';
+            ctx.fill();
+
+            //draw numbers
+            var ang;
+            var num;
+            ctx.font = radius*0.15 + "px arial";
+            ctx.textBaseline="middle";
+            ctx.textAlign="center";
+            for(num= 1; num < 13; num++){
+                ang = num * Math.PI / 6;
+                ctx.rotate(ang);
+                ctx.translate(0, -radius*0.9);
+                ctx.rotate(-ang);
+                ctx.fillText(num.toString(), 0, 0);
+                ctx.rotate(ang);
+                ctx.translate(0, radius*0.9);
+                ctx.rotate(-ang);
+            }
+            drawTime(ctx, radius);
+        }
+        function drawTime(ctx, radius){
+            //draw hands
+            var now = new Date();
+            var hour = now.getHours();
+            var minute = now.getMinutes();
+            var second = now.getSeconds();
+
+            //hour
+            hour=hour%12;
+            hour=(hour*Math.PI/6)+(minute*Math.PI/(6*60))+(second*Math.PI/(360*60));
+            drawHand(ctx, hour, radius*0.45, radius*0.05);
+            //minute
+            minute=(minute*Math.PI/30)+(second*Math.PI/(30*60));
+            drawHand(ctx, minute, radius*0.8, radius*0.035);
+            // second
+            second=(second*Math.PI/30);
+            drawRedHand(ctx, second, radius*0.9, radius*0.02);
+
+            //draw middle dot
+            ctx.beginPath();
+            ctx.arc(0, 0, radius*0.04, 0, 2*Math.PI);
+            ctx.fillStyle = 'red';
+            ctx.fill();
+
+        }
+
+        function drawHand(ctx, pos, length, width) {
+            ctx.beginPath();
+            ctx.lineWidth = width;
+            ctx.lineCap = "square";
+            ctx.moveTo(0,0);
+            ctx.rotate(pos);
+            ctx.lineTo(0, -length);
+            ctx.stroke();
+            ctx.rotate(-pos);
+        }
+        function drawRedHand(ctx, pos, length, width){
+            ctx.beginPath();
+            ctx.lineWidth = width;
+            ctx.lineCap = "square";
+            ctx.moveTo(0,0);
+            ctx.rotate(pos);
+            ctx.lineTo(0, -length);
+            ctx.strokeStyle = "red";
+            ctx.stroke();
+            ctx.rotate(-pos);
+        }
+
+
+			function changeMode(value){
+				var color = document.getElementById("canvas").style.backgroundColor;
+				var textColor = document.getElementById("date").style.color;
+				
+				switch(value){
+					case 'light':
+						color = "#EEE";
+						textColor = "#333"
+					break;
+					case 'dark':
+						color = "#333";
+						textColor = "#c5c5c5"
+					break;
+				}
+				document.getElementById("canvas").style.backgroundColor = color;
+				document.getElementById("date").style.color = textColor;
+				document.getElementById("footer").style.color = textColor;
+			}
+			
+			
+
+			
+			function setDate() {
+
+			var now = new Date(), // current date
+				months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+				days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+				minutes = ('0'+now.getMinutes()).slice(-2);
+				time = now.getHours() + ':' + minutes;
+
+				day = days[now.getDay()];
+				
+				date = 	[now.getDate(), 
+						months[now.getMonth()],
+						now.getFullYear()].join(' ');
+			
+			document.getElementById("date").innerHTML = [day, date, time].join(' - ');
+			setTimeout(setDate, 1000);
+			}
+			
+			setDate();
+			
+			
+			$('#textsize').on('change', function () {
+				var v = $(this).val();
+				$('#date').css('font-size', v + 'px')
+				$('span').html(v);
+			});
+			
+
+			var audio = document.getElementById('tick');
+			document.getElementById("tick").volume = 0.3;
+			document.getElementById('mute').addEventListener('click', function (e){
+			e = e || window.event;
+			audio.muted = !audio.muted;
+			e.preventDefault();}, 
+			false);
+
+			
+    </script>
+	<div id="footer">Janno Pärtna</div>
+</body>
+</html>
