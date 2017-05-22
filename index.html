@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Kodutoo 1</title>
+  
+      <link rel="stylesheet" href="css/style.css">
+  
+</head>
+<body>
+
+<h4>Ian Mario Naska</h4>
+
+<div class="tab">
+  <button class="tablinks" onclick="openCity(event, 'first')">Esimene kell</button>
+  <button class="tablinks" onclick="openCity(event, 'second')">Teine kell</button>
+  <button class="tablinks" onclick="openCity(event, 'third')">Kolmas kell</button>
+</div>
+
+<div id="first" class="tabcontent">
+	<div class="clock-wrap">
+	  <div class="clock">
+		<div class="clock__date">
+		</div>
+		<div class="clock__time">
+		</div>
+	  </div>
+	</div>
+	<div class="clock-toogle">
+	  <div class="clock-toogle__toogle"></div>
+	</div>
+	<script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
+	<script src="js/index.js"></script>
+</div>
+
+<div id="second" class="tabcontent">
+	<canvas id="canvas" width="400" height="400"
+	style="background-color:#333">
+	</canvas>
+  <script src="js2/javascript.js"></script>
+</div>
+
+<div id="third" class="tabcontent">
+
+<script src="js3/javascript.js"></script>
+
+<div id="txt"></div>
+</div>
+
+<script>
+function openCity(evt, cityName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(cityName).style.display = "block";
+    evt.currentTarget.className += " active";
+}
+</script>
+</body>
+</html>
