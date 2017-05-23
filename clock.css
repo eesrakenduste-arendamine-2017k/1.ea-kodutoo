@@ -1,0 +1,77 @@
+body{
+  background: url("background/clockback2.gif") ;
+  background-repeat:no-repeat;
+  background-size:cover;
+  font-family:Times New Roman;
+}
+
+h:hover{
+	color:#e6cab3;
+}
+
+.dateAndTime 
+{
+  color: white;
+  transition: margin-left .5s;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); 
+  text-align: center;
+  font-size:150px;
+}
+.dateAndTime #Clock
+{
+  font-size:100%;
+  text-align:center;
+  
+}
+.dateAndTime #Date
+{
+  font-size: 40% ; 
+}
+.dateAndTime #Day 
+{
+  font-size:30%;
+}
+
+/*küljemenüü*/
+.menu{
+  height: 100%;
+  width: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color:#8e7360;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+/*menüü komponendid*/
+.menu .components{
+  padding: 8px 8px 8px 32px;
+  font-size: 25px;
+  color: black;
+  white-space:nowrap;
+}
+/*sulgemine*/
+.menu #closebutton{
+  position: absolute;
+  top: 0px;
+  right:25px;
+  font-size: 36px;
+  margin-left: 50px;
+  padding-top: 15px;
+}
+
+#Name 
+{
+  position:fixed;
+  bottom:0;
+  left: 50%;
+  transform: translate(-50%, -50%); 
+  text-align:center;
+  color:white;
+  visibility:hidden;
+}

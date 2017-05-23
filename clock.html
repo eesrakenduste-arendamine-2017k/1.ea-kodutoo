@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<script type="text/javascript" src="clock.js"></script> 
+		<link rel="stylesheet" type="text/css" href="clock.css">
+		<title>Desktop clock</title>
+	</head>
+	<body>
+		<a href="javascript:void(0)" id="openNav">
+		<img alt="Ava" style="crusor:pointer" src="buttons/settings2.png" width="50" height="50">
+		</a>
+		<div class="menu">
+			<a href="javascript:void(0)" id="closebutton" class="closeBtn">
+			<img alt="Sulge" src="buttons/close.png" width="30" height="30">
+			</a>
+			<div class="components">
+			
+				<h>Change size</h><br>
+				<input id="fontSlider" type="range" min="50" max="220" value="150"/>
+				<br><br>
+				
+				<h>Change color</h><br>
+					<select id="color" >
+						<option value="white">White</option>
+						<option value="Tan">Tan</option>
+						<option value="Pink">Pink</option>
+						<option value="LightSteelBlue">LightSteelBlue</option>
+						<option value="DarkSeaGreen">DarkSeaGreen</option>
+					</select>
+				<br><br>
+				
+				<h>Change font</h><br>
+				<select id="font" >
+					<option value="Times New Roman">Times New Roman</option>
+					<option value="Arial">Arial</option>
+					<option value="Verdana">Verdana</option>
+					<option value="Impact">Impact</option>
+				</select>
+				<br><br>
+				
+				<h>Play music</h><br>
+				<div class="music">
+					<audio controls  style="width: 135px">
+						<source src="music/Jesse Ruben - This Is Why I Need You.mp3" type="audio/mpeg">
+					</audio>
+				</div>
+				
+			</div>
+		</div>
+		<div id="main">
+			<div class="dateAndTime">
+				<div id="Clock"></div>
+				<div id="Date"></div>
+				<div id="Day"></div>
+			</div>
+			<div id="Name">by Anu Sadam </div>
+		</div>
+	</body>
+</html>
