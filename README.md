@@ -1,7 +1,7 @@
 Kell - Anu Sadam
 
 Kell on leitav:
-http://www.tlu.ee/~anuxyo/eesrakendused/kell/
+http://localhost:5555/~anusada/eesrakendused/1.ea-kodutoo/
 
 Kellal saab küljemenüüst muuta:
 1) suurust
