@@ -1,0 +1,41 @@
+body{
+
+	font-family: "Lucida Console, Monaco, monospace";
+	text-align: center;
+	
+}
+
+.button{
+	position: fixed;
+	top: 1vw;
+	float: left;
+	overflow: hidden;
+	border: 1px solid;
+	background-color: grey;
+}
+
+#colors{
+	position: fixed;
+	display: none;
+	top: 3vw;
+	
+}
+
+
+#container{
+	
+	position: absolute;
+	
+}
+#clock{
+	
+	font-size: 10vw;
+	
+}
+
+#date{
+	
+	font-size: 8vw;
+
+}
+
