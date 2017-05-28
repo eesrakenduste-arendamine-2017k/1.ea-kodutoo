@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="clock.js" charset="utf-8">
+
+
+	</script>
+</head>
+<style media="screen" type="text/css">
+
+body {
+
+background: url("https://static1.squarespace.com/static/54be2157e4b0d1f230e08b1b/54be35f8e4b0e0f45dabaf58/58370e51be6594c371d85922/1480003190707/_MG_0365.jpg?format=1500w") no-repeat;
+position: absolute;
+top: 50%;
+left: 50%;
+
+
+margin: -200px 0 0 -350px;
+text-align: center;
+background-size: cover;
+
+vmax: 25;
+
+
+
+background-color: black
+}
+
+#clock {
+font-family: 'Tahoma', arial, serif; color: #FFFFFF; line-height: 1.25; margin: 0 0 10px;
+font-size: 7.5vh; font-weight: bold;
+opacity: 0.8;
+text-shadow: 0.5px 0 0 #000, 0 -0.5px 0 #000, 0 0.5px 0 #000, -0.5px 0 0 #000;
+transform : scale(1,1.5);
+-webkit-transform:scale(1.5,1.25); /* Safari and Chrome */
+-moz-transform:scale(1.5,1.25); /* Firefox */
+-ms-transform:scale(1.5,1.25); /* IE 9+ */
+-o-transform:scale(1.5,1.25); /* Opera */
+vmax: 25;
+
+
+
+
+
+}
+h2 {
+font-family: 'Tahoma', arial, serif; color: #FFFFFF; line-height: 1.0; margin: 0 0 10px;
+font-size: 5vh; font-weight: bold;
+opacity: 0.8;
+text-shadow: 0.5px 0 0 #000, 0 -0.5px 0 #000, 0 0.5px 0 #000, -0.5px 0 0 #000;
+transform : scale(1,1.5);
+-webkit-transform:scale(1.5,1.25); /* Safari and Chrome */
+-moz-transform:scale(1.5,1.25); /* Firefox */
+-ms-transform:scale(1.5,1.25); /* IE 9+ */
+-o-transform:scale(1.5,1.25); /* Opera */
+vmax: 25;
+}
+#date {
+font-family: 'Tahoma', arial, serif; color: #FFFFFF; line-height: 1.5; margin: 0 0 10px;
+font-size: 2.5vh; font-weight: bold;
+opacity: 0.8;
+text-shadow: 0.5px 0 0 #000, 0 -0.5px 0 #000, 0 0.5px 0 #000, -0.5px 0 0 #000;
+transform : scale(1,1.5);
+-webkit-transform:scale(1.5,1.25); /* Safari and Chrome */
+-moz-transform:scale(1.5,1.25); /* Firefox */
+-ms-transform:scale(1.5,1.25); /* IE 9+ */
+-o-transform:scale(1.5,1.25); /* Opera */
+vmax: 25;
+
+}
+#changeColor {
+    
+    border: none;
+    color: white;
+    padding: 150px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 0.6vw;
+	cursor: pointer; cursor: hand;
+	
+}
+#resetColor {
+    
+    border: none;
+    color: white;
+    padding: 150px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 0.6vw;
+	cursor: pointer; cursor: hand;
+}
+
+#zoomFont {
+    
+    border: none;
+    color: white;
+    padding: 150px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 0.6vw;
+	cursor: pointer; cursor: hand;
+}
+#resetFont {
+    
+    border: none;
+    color: white;
+    padding: 150px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 0.6vw;
+	cursor: pointer; cursor: hand;
+}
+
+#calendar {
+font-family: 'Tahoma', arial, serif; color: #FFFFFF; line-height: 1.25; margin: 0 0 10px;
+font-size: 7.5vh; font-weight: bold;
+opacity: 0.8;
+text-shadow: 0.5px 0 0 #000, 0 -0.5px 0 #000, 0 0.5px 0 #000, -0.5px 0 0 #000;
+transform : scale(1,1.5);
+-webkit-transform:scale(1.5,1.25); /* Safari and Chrome */
+-moz-transform:scale(1.5,1.25); /* Firefox */
+-ms-transform:scale(1.5,1.25); /* IE 9+ */
+-o-transform:scale(1.5,1.25); /* Opera */
+vmax: 25;
+
+
+
+</style>
+
+<body>
+	
+	<div id="clock"></div>
+	<div id="date"></div>
+	<div id="calendar"></div>
+	<h2> Rihard Rüüs </h2>
+<br><br>
+<a id="changeColor">Muuda kella värvi</a>
+<a id="resetColor">Muuda kell uuesti valgeks</a>
+<a id="zoomFont" onclick="zoomFont(1)">Suurenda kella</a>
+<a id="resetFont" onclick="resetFont()">Muuda kella font tavaliseks</a>
+
+ <!--  <center>  <button id="click-me-button" type="button" name="button">Vajuta mind</button></center> -->
+
+
+</body>
+
+</html>
