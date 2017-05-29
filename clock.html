@@ -1,0 +1,87 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+
+<style>
+    #clock {
+        font-size: 1px;
+        font-family: Calibri;
+        cursor: default;
+    }
+    @font-face {
+        font-family: Font;
+        src: url(PALSCRI.TTF);
+    }
+    #grad1 {
+        background-image: url("desktop_bg_white.jpg");
+        background-size: 100% 100%;
+    }
+    .moonIcon{
+        position: fixed;
+        left: 15px;
+        top: 15px;
+        cursor: pointer;
+    }
+    .smallClock{
+        position: fixed;
+        left: 25px;
+        top: 60px;
+        color: black;
+        cursor: pointer;
+    }
+    .medClock{
+        position: fixed;
+        left: 20px;
+        top: 95px;
+        color: black;
+        cursor: pointer;
+    }
+    .largeClock{
+        position: fixed;
+        left: 25px;
+        top: 130px;
+        color: black;
+        cursor: pointer;
+    }
+    #name{
+        position: fixed;
+        right: 60px;
+        top: 0px;
+        color: black;
+    }
+
+
+</style>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="function.js" charset="utf-8"></script>
+    <script src="clock.js" charset="utf-8"></script>
+    <title>Kell</title>
+</head>
+<body id="grad1">
+<center><div class="clock" id="clock"></div></center>
+<div class="container">
+    <div class="moonIcon">
+        <img id="moon" style="width: 30px; height: 30px;" src="moonBlack.png" onclick="nightMode()">
+    </div>
+    <div id="smallClock" class="smallClock" style="font-family: Calibri; font-weight: bold; font-size: larger" onclick="clockSmall()">
+        S
+    </div>
+    <div id="medClock" class="medClock" style="font-family: Calibri; font-weight: bold; font-size: larger" onclick="clockMedium()">
+        M
+    </div>
+    <div id="largeClock" class="largeClock" style="font-family: Calibri; font-weight: bold; font-size: larger" onclick="clockLarge()">
+        L
+    </div>
+    <div id="name" style="font-family: Font; font-size: xx-large; font-weight: bold">
+        by Ats Klemmer
+    </div>
+</div>
+</body>
+</html>
