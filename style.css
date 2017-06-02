@@ -1,16 +1,224 @@
-body {
+#clock{
     font-family: 'Arial';
-    font-size: 16vw;
+    font-size: 12em;
     text-align: center;
 }
 
-.day{
-	background-color: white;
-    color: black;
-	
+#date{
+    font-size: 2em;
+    text-align: center;
 }
 
-.night{
+h1{
+    font-size: 20px;
+    text-align: center;
+}
+
+h2{
+    font-size: 15px;
+}
+
+/* Style the tab */
+.tab
+{
+    float: left;
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+}
+
+/* Style the links inside the tab */
+.tab a
+{
+    float: left;
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    transition: 0.3s;
+    font-size: 17px;
+}
+
+/* Change background color of links on hover */
+.tab a:hover
+{
+    background-color: #ddd;
+}
+
+/* Style the tab content */
+.tabcontent
+{
+    position: relative;
+    width:340px;
+    top: 50px;
+    display: none;
+    padding: 6px 30px;
+    font-family: Arial;
+	font-size: 14px;
+    text-align: left;
+    background-color: #f7f7f7;
+}
+
+
+#box{
+	background-color: black;
+}
+
+#box2{
+    background-color: white;
+}
+
+#box3{
+    background-color: #490A3D;
+}
+
+#box4{
+    background-color: #FFBC55;
+}
+
+#box5{
+    background-color: #BD1550;
+}
+
+#box6{
+    background-color: #9FDAD0;
+}
+
+#box7{
+    background-color: #F8CA00;
+}
+
+#box8{
+    background-color: #DAF7A6;
+}
+
+#box9{
+    background-color: #8A9B0F;
+}
+
+#box10{
+    background-color: #FFAB90;
+}
+
+#font1{
+    background-color: #0c7173;
+}
+
+#font2{
+     background-color: #00a0b0;
+ }
+
+#font3{
     background-color: black;
-    color: white;
+}
+
+#font4{
+    background-color: white;
+}
+
+#font5{
+    background-color: #C02942;
+}
+
+#font6{
+    background-color: #cc333f;
+}
+
+#font7{
+    background-color: #542437;
+}
+
+#font8{
+    background-color: #EB6841;
+}
+
+#font9{
+    background-color: #ECD078;
+}
+
+#font10{
+    background-color: #EDC951;
+}
+
+div.day{
+    float: left;
+    height: 27px;
+    width: 25px;
+    cursor: pointer;
+}
+div.night{
+    float: left;
+    height: 27px;
+    width: 25px;
+    cursor: pointer;
+}
+
+.dayf{
+    float: left;
+    height: 27px;
+    width: 25px;
+    cursor: pointer;
+}
+
+.nightf{
+    float: left;
+    height: 27px;
+    width: 25px;
+    cursor: pointer;
+}
+
+.dayFont{
+    position: absolute;
+    margin: -92px 0 0 200px;
+
+}
+
+.nightFont{
+    position: absolute;
+    margin: -92px 0 0 200px;
+}
+.topright{
+    position: absolute;
+    margin: -20px 0 0 340px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+p.fontFam:hover{
+    color: #0c39ff;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.slidein {
+    animation: in 0.3s forwards;
+    -webkit-animation: in 0.3s forwards;
+}
+
+.slideout {
+    animation: out 0.5s forwards;
+    -webkit-animation: out 0.5s forwards;
+}
+
+@keyframes in{
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+@keyframes out{
+    from {opacity: 1;}
+    to {opacity: 0;}
+}
+
+@-webkit-keyframes in {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+@-webkit-keyframes out{
+    from {opacity: 1;}
+    to {opacity: 0;}
+}
+
+#customize{
+    display: none;
 }
