@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css?family=Work+Sans');
+
+body {
+  background-color: #84BD00;
+  color: black;
+  font-size: 50px;
+  font-family: "Work sans", sans-serif;
+  font-style: Semi-Bold;
+}
+div {
+  text-align: center;
+  font-weight: bold;
+}
+#clock {
+  margin-top:15%;
+  font-size:100px
+}
+footer {
+  text-align: right;
+  font-size: 10px;
+  position: fixed;
+  right: 10px;
+  bottom: 0;
+
+}
+
+a {
+  font-size: 20%;
+}
+
+#audio {
+    text-align: left;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}

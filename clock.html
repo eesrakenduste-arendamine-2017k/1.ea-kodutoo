@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Elle kell</title>
+<link rel="stylesheet" type="text/css" href="clock.css">
+<script type="text/javascript" src="clock.js" defer></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+<body>
+      <div id="clock"></div>
+      <div id="date"></div>
+      <div>
+        <input type="button" value="Suurenda kella suurust" onclick="increaseFont()">
+        <input type="button" value="Vähenda kella suurust" onclick="decreaseFont()">
+
+        <select id="color">
+          <option value="#84BD00">Greenery</option>
+          <option value="#91A8D0">Serenity</option>
+          <option value="#F7CAC9">Rose Quartz</option>
+          <option value="#476A30">Treetop</option>
+          <option value="#65658E">Twilight Purple</option>
+          <option value="#425460">Orion Blue</option>
+          <option value="#EE5C6C">Calypso Coral</option>
+          <option value="#DFDFE3">Nimbus Cloud</option>
+        </select>
+      </div>
+      <div id="audio">
+        <audio id="myaudio" src="beat.mp3"></audio>
+        <a onClick="clickPlay()">Vajuta siia</a>
+      </div>
+  <footer>
+    <p>Elle Elisa Ivantsikova</p>
+  </footer>
+
+</body>
+</html>
