@@ -1,0 +1,19 @@
+body{
+	font-family: "Orbitron";
+	font-size: 16px;
+	line-height: 1.5;
+	font-weight: normal;
+	color:#01060f;
+	text-transform: uppercase;
+	text-shadow: 0 0 10px #ddd;
+}
+#main_area{
+	width:350px;
+	margin:0 auto;
+	border-radius: 5px;
+	padding: 15px;
+	margin-top: 3%;
+	text-align: center;
+	letter-spacing: 3px;
+	box-shadow: 0 0 5px #ddd
+}
