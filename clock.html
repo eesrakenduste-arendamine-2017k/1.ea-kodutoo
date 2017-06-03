@@ -5,26 +5,37 @@
 	<title>Kellarakendus</title>
 
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link type="text/css" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poiret+One">
+	<link href='https://fonts.googleapis.com/css?family=Poiret+Onetype=' rel='stylesheet' type='text/css' >
 	<link href='https://fonts.googleapis.com/css?family=Orbitron:400,700' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="style.css">
 
 </head>
-<body>
+<body id="output-text">
 	<div class="with-bg-size" style="position:fixed; top:0px; left:0px; z-index:-2; width:100%; margin:auto;">
 	  <div id="color-overlay"></div>
 	</div>
 
 	<div style="color:black" id="main_area">
-		<h1 style="color:black">Tere Kristel!</h1>
-		<h3 style="color:black">Kuupäev on</h3>
+		<h1>Tere Kristel!</h1>
+		<h3 id="clr">Kuupäev on</h3>
 		<p style="color:black" id="fullDayId"></p>
-		<h3 style="color:black">Päev on </h3>
+		<h3>Päev on </h3>
 		<p style="color:black" id="dayId"></p>
-		<h3 style="color:black">Kell on</h3>
+		<h3>Kell on</h3>
 		<p style="color:black" id="timeId"></p>
 	</div>
-
+	<br>
+	<select id="input-font" class="input"  onchange="changeFont (this);">
+		<option selected disabled>Muuda fonti</option>
+		 <option value="Times New Roman">Times New Roman</option>
+		 <option value="Arial">Arial</option>
+		 <option value="Faktur">Faktur</option>
+		 <option value="Modern">Modern</option>
+		 <option value="Verdana">Verdana</option>
+		 <option value="Orbitron">Originaal</option>
+	 </select>
+	 <br><br>
+	 <button type="button" onclick="randomize()">Muuda fondi värvi</button>
 	<script src="clock.js"></script>
 </body>
 

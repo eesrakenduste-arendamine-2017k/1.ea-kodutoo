@@ -3,7 +3,6 @@ body{
 	font-size: 16px;
 	line-height: 1.5;
 	font-weight: normal;
-	color:#01060f;
 	text-transform: uppercase;
 	text-shadow: 0 0 10px #ddd;
 	text-align: center;
@@ -37,14 +36,14 @@ body{
   background-size: cover;
 
 
-	-webkit-animation: back 10s infinite;
-  -moz-animation:    back 10s infinite;
-  -o-animation:      back 10s infinite;
-	animation:         back 10s infinite;
+	-webkit-animation: back 15s infinite;
+  -moz-animation:    back 15s infinite;
+  -o-animation:      back 15s infinite;
+	animation:         back 15s infinite;
 
 
 }
-/* The Keyframes*/
+
 @keyframes back {
   25% {
     background-image: url("http://wall.rimbuz.com/wp-content/uploads/4K-Wallpaper-Download-HD.jpg");
@@ -56,6 +55,4 @@ body{
   75%{
     background-image: url("https://images.unsplash.com/photo-1461770354136-8f58567b617a?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&s=f0c8c34fe56f9669d1c6d129f597f895");
   }
-
-/* Animation Does Not End At 100% Because It Makes The Images Transition In/Out Better For Some Reason*/
 }

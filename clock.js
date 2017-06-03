@@ -5,28 +5,40 @@ var first,last;
 window.onload = (function(){
 	'use strict';
 
-	var date = new Date();
-	var toYear = date.getFullYear();
-	var toMonth = date.getMonth() +1;
-	var toDate = date.getDate();
+	var now = new Date();
+	var toYear = now.getFullYear();
+	var toMonth = now.getMonth() +1;
+	var toDate = now.getDate();
 
-	var toDay = date.getDay();
+	var toDay = now.getDay();
 
-	var toHour = date.getHours();
-	var toMunit = date.getMinutes();
-	var toSecond = date.getSeconds();
+	var toHour = now.getHours();
+	var toMunit = now.getMinutes();
+	var toSecond = now.getSeconds();
 	var days = ['Pühapäev', 'Esmaspäev', 'Teisipäev', 'Kolmapäev', 'Neljapäev', 'Reede', 'Laupäev'];
 	document.getElementById("fullDayId").innerHTML = toDate + " / " + toMonth + " / " + toYear;
-	var currentTime = document.getElementById("timeId").innerHTML = toHour + " : " + toMunit;
-	// setInterval(currentTime, 1000);
+	var currentTime = document.getElementById("timeId").innerHTML = toHour + " : " + toMunit + " : " +toSecond;
+	setInterval(currentTime, 1000);
 	document.getElementById("dayId").innerHTML = (days[toDay]);
 
 	addAuthor("Kristel Roosimaa");
 
 }());
 
+function changeFont(font){
+		document.getElementById("output-text").style.fontFamily = font.value;
+	}
+
+	function randomize() {
+	  document.getElementById("output-text").style.color = randomColors();
+		document.getElementById("h3").style.color = randomColors();
+
+	}
 
 
+	function randomColors() {
+	  return '#' + Math.floor(Math.random() * 16777215).toString(16);
+	}
 
 
 function addAuthor(name){
