@@ -30,8 +30,7 @@ function changeFont(font){
 	}
 
 	function randomize() {
-	  document.getElementById("output-text").style.color = randomColors();
-		document.getElementById("h3").style.color = randomColors();
+	  document.getElementById("clr").style.color = randomColors();
 
 	}
 
