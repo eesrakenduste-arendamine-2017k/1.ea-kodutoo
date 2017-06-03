@@ -25,12 +25,7 @@ window.onload = (function(){
 
 }());
 
-function backgroundImage() {
-		var a = ["",]//teeb massiivi url
-    document.body.style.backgroundSize = "cover";
-    document.body.style.backgroundImage = "url('http://wall.rimbuz.com/wp-content/uploads/4K-Wallpaper-Download-HD.jpg')";
-		//loosi randomiga var a-st var random_link = links[math.random*links.length-1]
-}
+
 
 
 

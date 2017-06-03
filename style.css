@@ -6,6 +6,7 @@ body{
 	color:#01060f;
 	text-transform: uppercase;
 	text-shadow: 0 0 10px #ddd;
+	text-align: center;
 }
 #main_area{
 	width:350px;
@@ -16,4 +17,45 @@ body{
 	text-align: center;
 	letter-spacing: 3px;
 	box-shadow: 0 0 5px #ddd
+}
+#color-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(to bottom right, #34495e, #2c3e50);
+  opacity: 0.6;
+  z-index: -1;
+}
+
+.with-bg-size {
+  background-image: url("http://www.no-zaku.com/picture-4/wp-content/uploads/sites/17/2016/11/Ideal-Machu-Picchu-Pictures-High-Resolution.jpg");
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+
+
+	-webkit-animation: back 10s infinite;
+  -moz-animation:    back 10s infinite;
+  -o-animation:      back 10s infinite;
+	animation:         back 10s infinite;
+
+
+}
+/* The Keyframes*/
+@keyframes back {
+  25% {
+    background-image: url("http://wall.rimbuz.com/wp-content/uploads/4K-Wallpaper-Download-HD.jpg");
+  }
+  50% {
+    background-image: url("http://static.thousandwonders.net/Navagio.original.1989.jpg");
+  }
+
+  75%{
+    background-image: url("https://images.unsplash.com/photo-1461770354136-8f58567b617a?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&s=f0c8c34fe56f9669d1c6d129f597f895");
+  }
+
+/* Animation Does Not End At 100% Because It Makes The Images Transition In/Out Better For Some Reason*/
 }
