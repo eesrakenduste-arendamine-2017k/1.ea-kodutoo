@@ -1,0 +1,29 @@
+
+body {
+	background: url(http://i.imgur.com/9WgJg0G.gif);
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+
+}
+
+.Date {
+	font-size: 100px;
+	text-align: center;
+	color: black;
+	text-shadow: 2px 2px;
+	font-weight: bold;
+	padding: 300px 50px 50px 80px;
+
+}
+
+.Name {
+	font-size: 70px;
+	text-align: center;
+	font-weight: bold;
+	text-shadow: 2px 2px;
+
+}
+
+
