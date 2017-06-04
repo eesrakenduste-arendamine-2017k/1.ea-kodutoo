@@ -1,0 +1,120 @@
+@font-face{
+	font-family: ONE DAY; src: url('ONEDAY.otf'); 
+}
+
+#html{
+	font-family:ONE DAY;
+	color:white;
+	text-align:center;
+	background:no-repeat center center fixed;
+	-webkit-background-size:cover;
+	-moz-background-size:cover;
+	-o-background-size:cover;
+	background-size:cover;
+}
+
+#clock{
+	font-size:700%;
+	transition: color 1s;
+}
+
+#greet{
+	font-size:550%;
+}
+
+.dropdown-span{
+	color:rgba(255,255,255,0.8);
+	font-size:90%;
+	position:absolute;
+}
+.dropdown-span:hover {
+	color: rgba(255,255,255,1);
+	transition: color 0.2s ease-in-out;
+}
+
+.dropdown {
+	text-align:left;
+	color:white;
+	font-family:helvetica;
+	min-width:300px;
+	position:relative;
+}
+
+.dropdown-content {
+	padding-left:15px;
+    display: none;
+    position: fixed;
+	margin-top:16px;
+	opacity: 0;
+	transition: opacity 0.2s ease-in-out;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+	opacity: 1;
+	transition: opacity 0.2 ease-in-out;
+}
+
+ul{
+	list-style-type: none;
+    margin: 0;
+    padding: 0;
+	
+}
+
+.ained{
+	background:black;
+	color:white;
+	opacity:0.7;
+	text-decoration:none;
+	font-family:helvetica;
+	font-size:90%;
+	transition: opacity 0.1s ease-in-out;
+}
+
+.ained:hover{
+	opacity:1;
+	transition: opacity 0.1s ease-in-out;
+}
+
+img{
+	position:relative;
+	height:55px;
+	transform:scale(1);
+	transition: transform 0.1s ease-in-out;
+	opacity:1;
+}
+
+
+
+img:hover{
+	opacity:1;
+	transform:scale(1.2);
+}
+
+.ikoonid{
+	padding-top:30px;
+	padding-left:81px;
+	margin:auto;
+	width:38%;
+	display:flex;
+	flex-direction:row;
+	flex-wrap:wrap;
+}
+
+.ikoonid div{
+	flex-basis:0px;
+	flex-grow:1;
+	flex-shrink:1;
+	max-width:80px;
+	min-width:55px;
+	margin-left:13px;
+	margin-right:13px;
+}
+
+@keyframes varin{
+	
+	0%{transform:scale(1);}
+	50%{transform:scale(1.45);}
+	100%{transform:scale(1);}
+}
