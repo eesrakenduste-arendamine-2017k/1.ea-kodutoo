@@ -1,0 +1,201 @@
+<script>
+	var bg = 0;
+	var cc = 0;
+	var ct = 2;
+	var canvas = document.getElementById('canvasTest');
+	var ctx = canvas.getContext("2d");
+	ctx.font = "italic bold 120px Times New Roman"
+	var txtClock = document.getElementById('txtClock');
+	function startTime() {
+
+			var today = new Date();
+			var h = today.getHours();
+			var m = today.getMinutes();
+			var s = today.getSeconds();
+			var dd = today.getDate();
+			var d = today.getDay();
+			var mm = today.getMonth();
+			var päev = "";
+			var kuu = "";
+			m = checkTime(m);
+			s = checkTime(s);
+			switch (d){
+				case 1:
+					päev = "Esmaspäev";
+					break;
+				case 2:
+					päev = "Teisipäev";
+					break;
+				case 3:
+					päev = "Kolmapäev";
+					break;
+				case 4:
+					päev = "Neljapäev";
+					break;
+				case 5:
+					päev = "Reede";
+					break;
+				case 6:
+					päev = "Laupäev";
+					break;
+				case 7:
+					päev = "Pühapäev";
+					break;
+			}
+			switch (mm){
+				case 0:
+					kuu = "Jaanuar";
+					break;
+				case 1:
+					kuu = "Veebruar";
+					break;
+				case 2:
+					kuu = "Märts";
+					break;
+				case 3:
+					kuu = "Aprill";
+					break;
+				case 4:
+					kuu = "Mai";
+					break;
+				case 5:
+					kuu = "Juuni";
+					break;
+				case 6:
+					kuu = "Juuli";
+					break;
+				case 7:
+					kuu = "August";
+					break;
+				case 8:
+					kuu = "September";
+					break;
+				case 9:
+					kuu = "Oktoober";
+					break;
+				case 10:
+					kuu = "November";
+					break;
+				case 11:
+					kuu = "Detsember";
+					break;
+			}
+			document.getElementById('txtClock').innerHTML =
+			h + ":" + m + ":" + s;
+			/*ctx.clearRect(0,0,500,200);
+			ctx.fillText( h + ":" + m + ":" + s, 0, 100);*/
+			document.getElementById('kuupäev').innerHTML =
+			päev+" "+dd+" " + kuu;
+			var t = setTimeout(startTime, 500);
+
+	}
+	
+	function checkTime(i) {
+		if (i < 10) {i = "0" + i};
+		return i;
+	}
+	
+	function changeBGImage(){
+		bg = bg+1;
+		switch (bg){
+			case 1: 
+				document.body.background = "../CSS/Wallpapers/Sunset.jpg";
+				document.getElementById('txtClock').style.color = "black";
+				document.getElementById('kuupäev').style.color = "black";
+				cc=1;
+				break;
+			case 2: 
+				document.body.background = "../CSS/Wallpapers/Space1.jpg";
+				document.getElementById('txtClock').style.color = "white";
+				document.getElementById('kuupäev').style.color = "white";
+				cc=2;
+				break;
+			case 3: 
+				document.body.background = "../CSS/Wallpapers/Space2.jpg";
+				txtClock.style.color = "#680000";
+				document.getElementById('kuupäev').style.color = "#680000";
+				break;
+			case 4: 
+				document.body.background = "../CSS/Wallpapers/Space3.jpg";
+				txtClock.style.color = "#0a1496";
+				document.getElementById('kuupäev').style.color = "#0a1496";
+				break;
+			case 5: 
+				document.body.background = "../CSS/Wallpapers/Space4.jpg"; bg = 0;
+				txtClock.style.color = "#0a1496";
+				document.getElementById('kuupäev').style.color = "#0a1496";
+				break;
+		}
+	}
+	
+	function changeClockColor(){
+		if (document.body.background == "../CSS/Wallpapers/Sunset.jpg") { //Igale pildile maksimaalselt kontrastsed värvid, 3 tükki.
+			cc = cc+1;
+			switch (cc){
+				case 1: 
+					txtClock.style.color = "#000000";
+					//txtClock.style.textShadow = "5px 0px 0px white"; 
+					break;
+				case 2: 
+					txtClock.style.color = "#FFFFFF";
+					break;
+				case 3: 
+					txtClock.style.color = "#0a1496";cc = 0;
+					break;
+			}
+		} else if (document.body.background == "../CSS/Wallpapers/Space1.jpg"){
+			cc = cc+1;
+			switch (cc){
+				case 1: 
+					txtClock.style.color = "white";
+					break;
+				case 2: 
+					txtClock.style.color = "yellow";
+					break;
+				case 3: 
+					txtClock.style.color = "red";cc = 0;
+					break;
+			}
+	
+		} else if (document.body.background == "../CSS/Wallpapers/Space2.jpg"){
+			cc = cc+1;
+			switch (cc){
+				case 1: 
+					txtClock.style.color = "white";
+					break;
+				case 2: 
+					txtClock.style.color = "yellow";
+					break;
+				case 3: 
+					txtClock.style.color = "red";cc = 0;
+			}
+	
+		} else if (document.body.background == "../CSS/Wallpapers/Space3.jpg"){
+			cc = cc+1;
+			switch (cc){
+				case 1: 
+					txtClock.style.color = "white";
+					break;
+				case 2: 
+					txtClock.style.color = "yellow";
+					break;
+				case 3: 
+					txtClock.style.color = "red";cc = 0;
+			}
+	
+		} else if (document.body.background == "../CSS/Wallpapers/Space4.jpg"){
+			cc = cc+1;
+			switch (cc){
+				case 1: 
+					txtClock.style.color = "white";
+					break;
+				case 2: 
+					txtClock.style.color = "yellow";
+					break;
+				case 3: 
+					txtClock.style.color = "red";cc = 0;
+			}
+	
+		}
+	}
+</script>

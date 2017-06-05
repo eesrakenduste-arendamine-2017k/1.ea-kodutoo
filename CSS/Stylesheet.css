@@ -1,0 +1,101 @@
+html {
+	height: auto;
+	width: auto;
+}
+
+body {
+	background-size:     auto;
+    background-repeat:   no-repeat;
+	transition: background 0.5s linear;
+    -webkit-transition: background 1s linear;
+}
+
+.ClockContainerouter {
+    display: table;
+    position: absolute;
+    height: 93%;
+    width: 99%;
+}
+
+.ClockContainerinner {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.kell {
+	text-align: Center;
+	margin-left: auto;
+    margin-right: auto;
+	font-size:120px;
+	font-weight:bold;
+	font-style:italic;
+	font-family: "Times New Roman", Times, serif;
+	width:25%;
+}
+
+.kell2 {
+	display: inline;
+	margin-left: 38%;
+    margin-right: 40%;
+}
+
+.kuupaev{
+	font-size:60px;
+	text-align: Center;
+	margin-left: auto;
+	margin-right: auto;
+	font-weight:bold;
+	font-style:italic;
+	font-family: "Times New Roman", Times, serif;
+
+}
+.WPButton {
+	-moz-box-shadow: 3px 3px 0px 0px #175406;
+	-webkit-box-shadow: 3px 3px 0px 0px #175406;
+	box-shadow: 3px 3px 0px 0px #175406;
+	background-color:#00b330;
+	-moz-border-radius:11px;
+	-webkit-border-radius:11px;
+	border-radius:11px;
+	border:1px solid #0f0f0f;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Times New Roman;
+	font-size:20px;
+	font-weight:bold;
+	padding:14px 20px;
+	text-decoration:none;
+}
+.WPButton:hover {
+	background-color:#ffffff;
+}
+.WPButton:active {
+	position:relative;
+	top:1px;
+}
+.WPButton2 {
+	-moz-box-shadow: 3px 3px 0px 0px #175406;
+	-webkit-box-shadow: 3px 3px 0px 0px #175406;
+	box-shadow: 3px 3px 0px 0px #175406;
+	background-color:#00b330;
+	-moz-border-radius:11px;
+	-webkit-border-radius:11px;
+	border-radius:11px;
+	border:1px solid #0f0f0f;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Times New Roman;
+	font-size:20px;
+	font-weight:bold;
+	padding:14px 20px;
+	text-decoration:none;
+}
+.WPButton2:hover {
+	background-color:#ffffff;
+}
+.WPButton2:active {
+	position:relative;
+	top:1px;
+}
