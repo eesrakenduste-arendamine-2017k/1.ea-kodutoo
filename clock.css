@@ -1,0 +1,57 @@
+body {
+	opacity: 0;
+	padding: 0;
+	margin: 0;
+}
+
+#wrapper {
+	height: 100%;
+	width: 100%;
+	overflow: hidden;
+}
+body.lightGray, body.whitebg {
+}
+
+body.lightGray #clock, body.whitebg #clock {
+}
+
+body.loaded, body.loaded #clock {
+	opacity: 1.0;
+}
+
+
+div#topPadding {
+	font-size: 125%;
+	height: 22%;
+	text-align: center;
+	opacity: 0;
+}
+
+div#topPadding.showTip {
+	opacity: 1.0;
+}
+
+div#clock, div#thedate {
+	vertical-align: 50%;
+	text-align: center;
+	font-size: 250px;
+	font-weight: 100;
+	line-height: 1em;
+	opacity: 0;
+}
+
+div#thedate {
+	font-size: 32px;
+	padding-top: 30px;
+	opacity: 0.4;
+	font-weight: 300;
+}
+
+span#colon {
+	opacity: 1;
+	vertical-align: 7%;
+}
+
+span#colon.on {
+	opacity: 0.5;
+}

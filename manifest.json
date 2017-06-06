@@ -1,0 +1,12 @@
+{
+   "chrome_url_overrides": {
+      "newtab": "clock.html"
+   },
+
+   "description": "Puts a clock on default New Tab page",
+
+   "manifest_version": 2,
+   "name": "Rock Around the Clock",
+   "permissions": [ "activeTab" ],
+   "version": "0.1"
+}
