@@ -1,49 +1,60 @@
 
 body {
-	opacity: 50;
-	padding: 0;
-	margin: 0;
+  background-color: #F0F8FF;
+  color: black;
+  /*font-size: 50px;
+  font-style: Semi-Bold;*/
 }
 
-#wrapper {
-	height: 100%;
-	width: 100%;
-	overflow: hidden;
+p {
+    color: black;
+	opacity: 0.5;
+}
+
+div {
+  text-align: center;
+  font-weight: bold;
+}
+
+h1 {
+    color: ;
+	font-size: 150%;
 }
 
 
-div#topPadding {
-	font-size: 125%;
-	height: 22%;
-	text-align: center;
-	opacity: 0;
+div #cchange{
+	font-size: 150%
+	word-spacing: 30px;
+	opacity: 0.5;
 }
 
-div#topPadding.showTip {
-	opacity: 1.0;
+footer {
+  text-align: right;
+  font-size: 10px;
+  position: fixed;
+  right: 10px;
+  bottom: 0;
+
 }
 
-#clock, #date {
+
+#clock {
+	margin-top:18%;
 	vertical-align: 50%;
 	text-align: center;
-	font-size: 250px;
+	font-size: 120px;
 	font-weight: 100;
 	line-height: 1em;
 	opacity: 100;
 }
-/*
-div#date {
-	font-size: 32px;
-	padding-top: 30px;
-	opacity: 0.4;
-	font-weight: 300;
-}
 
-span#colon {
-	opacity: 1;
-	vertical-align: 7%;
-}
-
-span#colon.on {
+#date {
+	vertical-align: 50%;
+	text-align: center;
+	font-size: 240%;
+	font-weight: 100;
+	line-height: 1em;
 	opacity: 0.5;
-}*/
+}
+
+
