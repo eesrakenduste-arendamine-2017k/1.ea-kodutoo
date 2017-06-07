@@ -1,0 +1,49 @@
+
+body {
+	opacity: 50;
+	padding: 0;
+	margin: 0;
+}
+
+#wrapper {
+	height: 100%;
+	width: 100%;
+	overflow: hidden;
+}
+
+
+div#topPadding {
+	font-size: 125%;
+	height: 22%;
+	text-align: center;
+	opacity: 0;
+}
+
+div#topPadding.showTip {
+	opacity: 1.0;
+}
+
+#clock, #date {
+	vertical-align: 50%;
+	text-align: center;
+	font-size: 250px;
+	font-weight: 100;
+	line-height: 1em;
+	opacity: 100;
+}
+/*
+div#date {
+	font-size: 32px;
+	padding-top: 30px;
+	opacity: 0.4;
+	font-weight: 300;
+}
+
+span#colon {
+	opacity: 1;
+	vertical-align: 7%;
+}
+
+span#colon.on {
+	opacity: 0.5;
+}*/
