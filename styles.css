@@ -41,6 +41,19 @@ video{
 		-1px 1px 0 #000000,
 		1px 1px 0 #000000;
 }
+#party{
+	position: absolute;
+	top: 40px;
+	z-index:2;
+	font-size: 2vw;
+	color: #ffffff;
+	padding:20px;
+	text-shadow:
+		-1px -1px 0 #000000,
+		1px -1px 0 #000000,
+		-1px 1px 0 #000000,
+		1px 1px 0 #000000;
+}
 #date{
     font-size: 10vw;
 	top: 500px;

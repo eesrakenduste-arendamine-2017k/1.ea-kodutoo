@@ -3,6 +3,8 @@ window.onload = function(){
 	var clockDiv = document.getElementById('clock');
 	var dateDiv = document.getElementById('date');
 	
+	changeVideo();
+	
 	clockDiv.innerHTML = getCurrentDateTime();
 	dateDiv.innerHTML = getCurrentDate();
 	
@@ -10,9 +12,18 @@ window.onload = function(){
 	alert("Cleven Lehispuu");
 	});
 	
+	document.getElementById("party").addEventListener("click", function(){
+		
+		if (document.getElementById('clock').style.background === ''){
+			var partyInterval = window.setInterval(function(){party()}, 1000);
+		}else{
+			clearInterval(partyInterval);
+			partyOff();
+		}
+	});
+
 	window.setInterval(function(){
 		clockDiv.innerHTML = getCurrentDateTime();
-		party();
 	}, 1000);
 	
 };
@@ -24,7 +35,10 @@ function party(){
 	b=Math.round(Math.random()*255);
 
 	document.getElementById('clock').style.background = 'rgba('+r+','+g+','+b+', 0.2)';
-	console.log('rgba('+r+','+g+','+b+',0.4)');
+};
+
+function partyOff(){
+	document.getElementById('clock').style.background = '';
 };
 
 
@@ -41,6 +55,21 @@ var getCurrentDateTime = function(){
    return dateString;
 };
 
+function changeVideo(){
+	var currentDate = new Date();
+	var hours = currentDate.getHours();
+	
+	var video = document.getElementById('vid');
+	var source = document.getElementById('source');
+	
+	if(hours < 12){
+		video.pause()
+		source.setAttribute('src', 'liblikas.mp4');
+		video.load();
+		video.play();
+	}
+}
+
 function addZeroBefore(dateNumber) {
    if (dateNumber < 10) {
        dateNumber = '0' + dateNumber;
@@ -52,74 +81,72 @@ function addZeroBefore(dateNumber) {
 var  getCurrentDate = function(){
 	var currentDate = new Date();
 
-	var weekdays = currentDate.getDay();
-	var days = currentDate.getDate();
-	var months = currentDate.getMonth();
+	var day = currentDate.getDay();
+	var date = currentDate.getDate();
+	var month = currentDate.getMonth();
 
-	switch(weekdays){
+	switch(day){
 		case 0:
-			weekdays="Pühapäev";
+			day="Pühapäev";
 			break;
 		case 1:
-			weekdays="Esmaspäev";
+			day="Esmaspäev";
 			break;
 		case 2:
-			weekdays="Teisipäev";
+			day="Teisipäev";
 			break;
 		case 3:
-			weekdays="Kolmapäev";
+			day="Kolmapäev";
 			break;
 		case 4:
-			weekdays="Neljapäev";
+			day="Neljapäev";
 			break;
 		case 5:
-			weekdays="Reede";
+			day="Reede";
 			break;
 		case 6:
-			weekdays="Laupäev";
+			day="Laupäev";
 			break;
-
 	}
 
-	switch(months){
+	switch(month){
 		case 0:
-			months="Jaanuar";
+			month="jaanuar";
 			break;
 		case 1:
-			months="Veebruar";
+			month="veebruar";
 			break;
 		case 2:
-			months="Märts";
+			month="märts";
 			break;
 		case 3:
-			months="Aprill";
+			month="aprill";
 			break;
 		case 4:
-			months="Mai";
+			month="mai";
 			break;
 		case 5:
-			months="Juuni";
+			month="juuni";
 			break;
 		case 6:
-			months="Juuli";
+			month="juuli";
 			break;
 		case 7:
-			months="August";
+			month="august";
 			break;
 		case 8:
-			months="September";
+			month="september";
 			break;
 		case 9:
-			months="Oktoober";
+			month="oktoober";
 			break;
 		case 10:
-			months="November";
+			month="november";
 			break;
 		case 11:
-			months="Detsember";
+			month="detsember";
 			break;
 	}
-	var fullDate = weekdays+ ', ' + days + '. ' + months;
 
-	return fullDate;
+	return day+ ', ' + date + '. ' + month;
 };
