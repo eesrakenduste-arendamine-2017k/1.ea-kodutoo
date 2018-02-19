@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css?family=Nova+Mono');
+
+body {
+	background: #302e34;
+}
+
+#clock{
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+	font-family: 'Nova Mono', monospace;
+	font-size: 100px;
+	color: white;
+}
+
+p{
+	font-family: 'Nova Mono', monospace;
+	color: white;
+	font-size: 20px;
+}
+
+a{
+	font-family: 'Nova Mono', monospace;
+	color: white;
+	font-size: 20px; 
+}
+
+button {
+  background: #3e454a;
+  background-image: -webkit-linear-gradient(top, #3e454a, #adadad);
+  background-image: -moz-linear-gradient(top, #3e454a, #adadad);
+  background-image: -ms-linear-gradient(top, #3e454a, #adadad);
+  background-image: -o-linear-gradient(top, #3e454a, #adadad);
+  background-image: linear-gradient(to bottom, #3e454a, #adadad);
+  -webkit-border-radius: 52;
+  -moz-border-radius: 52;
+  border-radius: 52px;
+  -webkit-box-shadow: 0px 1px 3px #676769;
+  -moz-box-shadow: 0px 1px 3px #676769;
+  box-shadow: 0px 1px 3px #676769;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 26px;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+}
+
+button:hover {
+  background: #525557;
+  background-image: -webkit-linear-gradient(top, #525557, #242a2e);
+  background-image: -moz-linear-gradient(top, #525557, #242a2e);
+  background-image: -ms-linear-gradient(top, #525557, #242a2e);
+  background-image: -o-linear-gradient(top, #525557, #242a2e);
+  background-image: linear-gradient(to bottom, #525557, #242a2e);
+  text-decoration: none;
+}
+ 
